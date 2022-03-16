@@ -5,15 +5,38 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
   <title>Home</title>
 </head>
 
 <body>
-  <header>
-    <div class="logo">
+  <header class="header">
+ 
+    <div class="header__logo">
       <img src="./images/logo/ohmyfood.png">
     </div>
+    <div class="header__location">
+      <form>
+        <input type="text" name="name" placeholder="Paris, Belleville">
+        <input type="submit" name="name" type="submit">
 
+      </form>
+    </div>
+    <div class="header__explore">
+      <h2>Book the menu you like</h2>
+      <p>Discover top-of-the-art restaurants we picked for you</p>
+      <div class="header__explore btn-primary" href="#restaurants">Explore our restaurants</div>
+    </div>
+    <div class="header__howItWorks">
+      <h2>How it works</h2>
+      <ul>
+        <li>Choose a restaurant</li>
+        <li>Create your menu</li>
+        <li>Go enjoy it at the restaurant</li>
+      </ul>
+    </div>
   </header>
   <main>
     <div class="location">Location</div>
@@ -41,18 +64,18 @@
           </figure>
         </div>
       </a>
-     <a href="enchanged.html">
-      <div class="card">
-        <figure>
-          <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image of full palette dish">
-          <figcaption>
-            <h3>The Enchanted Palette</h3>
-            <p>New York</p>
-          </figcaption>
-        </figure>
-      </div>
-     </a>
-      
+      <a href="enchanged.html">
+        <div class="card">
+          <figure>
+            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image of full palette dish">
+            <figcaption>
+              <h3>The Enchanted Palette</h3>
+              <p>New York</p>
+            </figcaption>
+          </figure>
+        </div>
+      </a>
+
       <a href="bastille.html">
         <div class="card">
           <figure>
@@ -75,7 +98,7 @@
           </figure>
         </div>
       </a>
-      
+
     </div>
   </main>
   <footer>
@@ -88,7 +111,7 @@
       <li>Legal</li>
       <li>Contact</li>
     </ul>
-      </footer>
+  </footer>
 </body>
 
 </html>
