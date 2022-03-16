@@ -4,7 +4,7 @@
   "description": "web dev project",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./main.css"
+    "sass": "sass --watch ./sass/main.scss ./main.css"
   },
   "author": "Kate Lee",
   "license": "ISC",

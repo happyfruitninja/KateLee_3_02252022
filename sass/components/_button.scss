@@ -1,0 +1,8 @@
+.btn-primary {
+    height: 50px;
+    width: 180px;
+    border-radius: 50px;
+    &:hover {
+        filter:drop-shadow(3px 3px 3px darken(#9356DC, 10%));
+    }
+}
