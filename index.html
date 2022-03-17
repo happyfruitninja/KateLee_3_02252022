@@ -7,54 +7,51 @@
   <link rel="stylesheet" href="main.css" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"
+    rel="stylesheet">
   <title>Home</title>
 </head>
 
 <body>
   <header class="header">
- 
     <div class="header__logo">
       <img src="./images/logo/ohmyfood.png">
     </div>
-    <div class="header__location">
+    <div class="header__search">
       <form>
         <input type="text" name="name" placeholder="Paris, Belleville">
         <input type="submit" name="name" type="submit">
-
       </form>
     </div>
     <div class="header__explore">
       <h2>Book the menu you like</h2>
       <p>Discover top-of-the-art restaurants we picked for you</p>
-      <div class="header__explore btn-primary" href="#restaurants">Explore our restaurants</div>
+      <a href="#">
+        <div class="btn-primary">Explore our restaurants </div>
+      </a>
+
     </div>
     <div class="header__howItWorks">
       <h2>How it works</h2>
-      <ul>
-        <li>Choose a restaurant</li>
-        <li>Create your menu</li>
-        <li>Go enjoy it at the restaurant</li>
-      </ul>
-    </div>
+      <div class="header__howItWorks__steps">1
+        <div class="icon">
+          <img src="./images/icons/mobile-screen-button.svg" alt="">
+        </div>Choose a restaurant</div>
+      <div class="header__howItWorks__step"> 2
+        <div class="icon">
+          <img src="./images/icons/mobile-screen-button.svg" alt=""></div>Create your menu</div>
+        <div class="header__howItWorks__step">3
+          <div class="icon">
+             <img src="./images/icons/mobile-screen-button.svg" alt=""></div>Go enjoy it at the restaurant</div>
+        </div>
+      </div>
   </header>
   <main>
-    <div class="location">Location</div>
-    <div class="explore">
-      <h2>Book the menu you like</h2>
-      <p>Discover top-of-the-art restaurants we picked for you</p>
-    </div>
-    <div class="howItWorks">
-      <h2>How it works</h2>
-      <ul>
-        <li>Choose a restaurant</li>
-        <li>Create your menu</li>
-        <li>Go enjoy it at the restaurant</li>
-      </ul>
-    </div>
-    <div class="restaurants">
+
+    <div class="menu">
+      <h3>Restaurants</h3>
       <a href="fullPalette.html">
-        <div class="card">
+        <div class="menu__type">
           <figure>
             <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image of full palette dish">
             <figcaption>
@@ -64,8 +61,8 @@
           </figure>
         </div>
       </a>
-      <a href="enchanged.html">
-        <div class="card">
+      <a href="enchanted.html">
+        <div class="menu__type">
           <figure>
             <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image of full palette dish">
             <figcaption>
@@ -77,7 +74,7 @@
       </a>
 
       <a href="bastille.html">
-        <div class="card">
+        <div class="menu__type">
           <figure>
             <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image of full palette dish">
             <figcaption>
@@ -88,7 +85,7 @@
         </div>
       </a>
       <a href="leGourmand.html">
-        <div class="card">
+        <div class="menu__type">
           <figure>
             <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image of full palette dish">
             <figcaption>
@@ -101,10 +98,11 @@
 
     </div>
   </main>
-  <footer>
-    <div class="logo inverted">
+  <footer class="footer">
+    <div class="footer__logo">
       <img src="./images/logo/ohmyfood.png">
     </div>
+
     <ul>
       <li>Suggest a restaurant</li>
       <li>Become a Partner</li>
