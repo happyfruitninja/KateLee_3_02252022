@@ -1,0 +1,13 @@
+.header {
+    border: 3px dashed blue;
+    background-color: pink;
+    margin: 10px 0;
+
+    &__logo {
+        margin: 0;
+
+        & img {
+            width: 200px;
+        }
+    }
+}

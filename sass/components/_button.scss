@@ -1,8 +1,18 @@
 .btn-primary {
     height: 50px;
-    width: 180px;
+    width: 200px;
     border-radius: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &:hover {
+        cursor: pointer;
         filter:drop-shadow(3px 3px 3px darken(#9356DC, 10%));
+    }
+
+    &:active{
+        transform: translate(0.5px, 0.5px);
     }
 }

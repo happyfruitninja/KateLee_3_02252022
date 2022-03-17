@@ -1,5 +1,19 @@
+.footer {
+  padding: 15px;
 
+  &__logo {
+    filter: invert(100%);
+    
+    & img{
+      width: 150px;
+    }
+  }
 
-.inverted {
-  filter:invert(100%);
+  & ul {
+    margin: 5px;
+  }
+
+  & li {
+    margin-bottom: 10px;
+  }
 }
