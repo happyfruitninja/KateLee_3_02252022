@@ -12,21 +12,9 @@
 @import "./utils/variables.scss";
 
 
-
-
 .menu {
   border: 4px dashed blue;
   padding: 10px;
-
-  & img {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px 15px 0 0;
-  }
-
-  & figure {
-    border-radius: 15px;
-  }
 }
 
 
@@ -34,7 +22,6 @@
   @extend card-simple;
   background-color: white;
   padding: 10px;
-
 }
 
 .btn-primary {

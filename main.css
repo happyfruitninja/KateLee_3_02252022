@@ -14,7 +14,7 @@ body {
 
 main {
   background-color: #4aad52;
-  padding: 10px 0;
+  padding: 40px 0;
 }
 
 li {
@@ -25,9 +25,15 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, p {
-  padding: 1px;
-  margin: 1px;
+svg {
+  width: 19px;
+  fill: #686868;
+  margin: 0;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
 }
 
 .title {
@@ -66,7 +72,7 @@ h3 {
 }
 
 .header {
-  border: 3px dashed blue;
+  border: 3px dashed darkgreen;
   background-color: pink;
 }
 .header__logo {
@@ -89,7 +95,8 @@ h3 {
   margin: 10px;
 }
 .footer__links li img {
-  margin-right: 8px;
+  width: 15px;
+  margin: 0 10px -3px 0;
 }
 .footer a {
   color: white;
@@ -105,7 +112,6 @@ h3 {
 .header__search {
   background-color: orange;
   padding: 10px;
-  border: 2px dashed red;
 }
 .header__explore {
   background-color: wheat;
@@ -114,11 +120,11 @@ h3 {
 .header__explore h2,
 .header__explore p {
   width: 300px;
-  margin: 30px;
+  margin: 30px auto;
   border: 2px dashed red;
 }
 .header__howItWorks {
-  padding: 10px;
+  padding: 20px 10px;
   border: 2px dashed red;
 }
 .header__howItWorks h2 {
@@ -126,27 +132,43 @@ h3 {
   padding: 0 5px;
 }
 .header__howItWorks__steps {
-  background-color: cyan;
+  background-color: #ebe9e9;
   display: flex;
   align-items: center;
   position: relative;
+  font-weight: 700;
 }
-.header__howItWorks__steps img {
+.header__howItWorks__steps svg {
   margin: 0 20px;
+}
+.header__howItWorks__steps:hover {
+  background-color: #f6e4fd;
+}
+.header__howItWorks__steps:hover svg {
+  fill: #8559bb;
+}
+
+.reduce {
+  width: 15px;
 }
 
 .circle {
-  background-color: #c761c7;
+  background-color: #8559bb;
   color: white;
-  padding: 6px;
+  padding: 4px;
   margin: 0;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   position: absolute;
   left: -15px;
+  font-weight: 300;
+  font-size: 0.9rem;
 }
 
+.menu__type {
+  border: 2px dashed red;
+}
 .menu__type figure {
   width: 100%;
   border: 2px dashed orange;
@@ -158,44 +180,37 @@ h3 {
 }
 .menu__type figure figcaption {
   background-color: white;
-  margin: 5px 10px;
+  margin: 5px 20px 5px 5px;
+  display: flex;
+  justify-content: space-between;
 }
-.menu__type figure figcaption h3,
-.menu__type figure figcaption p {
-  margin-top: 5px;
+.menu__type figure figcaption .menu__type__texts {
+  margin: 0;
 }
 
 card-full, .menu__type {
-  border-radius: 15px;
-  margin: 10px auto;
+  border-radius: 20px;
+  margin: 15px auto;
   text-transform: capitalize;
-  height: 250px;
+  height: 220px;
 }
 
 card-simple, .menu__item {
-  border-radius: 15px;
-  margin: 10px auto;
+  border-radius: 20px;
+  margin: 15px auto;
 }
 
 card-steps, .header__howItWorks__steps {
-  border-radius: 15px;
-  margin: 10px auto;
-  height: 60px;
-  margin: 10px 0 0 20px;
+  border-radius: 20px;
+  margin: 15px auto;
+  height: 70px;
+  margin: 15px 0 0 20px;
   padding-left: 10px;
 }
 
 .menu {
   border: 4px dashed blue;
   padding: 10px;
-}
-.menu img {
-  object-fit: cover;
-  object-position: center;
-  border-radius: 15px 15px 0 0;
-}
-.menu figure {
-  border-radius: 15px;
 }
 
 .menu__item {

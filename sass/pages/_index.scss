@@ -4,7 +4,6 @@
     &__search {
         background-color: orange;
         padding: 10px;
-        border: 2px dashed red;
     }
 
     &__explore {
@@ -14,13 +13,13 @@
         & h2,
         p {
             width: 300px;
-            margin: 30px;
+            margin: 30px auto;
             border: 2px dashed red;
         }
     }
 
     &__howItWorks {
-        padding: 10px;
+        padding: 20px 10px;
         border: 2px dashed red;
 
         & h2 {
@@ -30,38 +29,55 @@
 
         &__steps {
             @extend card-steps;
-            background-color: cyan;
+            background-color: rgb(235, 233, 233);
             display: flex;
             align-items: center;
             position: relative;
+            font-weight: 700;
 
-            & img {
+            svg {
                 margin: 0 20px;
             }
 
+            &:hover {
+                background-color: rgb(246, 228, 253);
+
+                svg {
+                    fill: #8559bb;
+                }
+            }
         }
     }
+
+}
+
+.reduce {
+    width: 15px;
 }
 
 .circle {
-    background-color: rgb(199, 97, 199);
+    background-color: #8559bb;
     color: white;
-    padding: 6px;
+    padding: 4px;
     margin: 0;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     position: absolute;
     left: -15px;
+    font-weight: 300;
+    font-size: 0.9rem;
 }
 
 .menu__type {
     @extend card-full;
+    border: 2px dashed red;
 
     & figure {
         width: 100%;
         border: 2px dashed orange;
         height: 100%;
+
 
         & img {
             width: 100%;
@@ -70,13 +86,13 @@
 
         & figcaption {
             background-color: white;
-            margin: 5px 10px;
+            margin: 5px 20px 5px 5px;
+            display: flex;
+            justify-content: space-between;
 
-            & h3,
-            p {
-                margin-top: 5px;
+            .menu__type__texts {
+                margin: 0;
             }
         }
-
     }
 }
