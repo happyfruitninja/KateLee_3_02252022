@@ -1,23 +1,26 @@
 .footer {
-  padding: 15px;
+  padding: 25px 15px;
   color: white;
 
   &__logo {
-    border: 2px dashed rgb(69, 23, 175);
-    & img {
-      width: 150px;
+    width: 120px;
+    padding-left: 10px;
+  }
+
+  &__links {
+    & li {
+      margin: 10px;
+
+      img {
+        margin-right: 8px;
+      }
     }
   }
 
-&__links{
-  border: 2px dashed rgba(236, 12, 12, 0.74);
+  & a {
+    color: white;
 
-}
-& a{
-  width :250px;
-  border: 2px dashed rgba(255, 255, 255, 0.74);
-
-}
+  }
 }
 
 .inverted {

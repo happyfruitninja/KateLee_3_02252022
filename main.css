@@ -21,6 +21,10 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, p {
   padding: 1px;
   margin: 1px;
@@ -51,7 +55,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
+  margin: 20px auto 30px;
 }
 .btn-primary:hover {
   cursor: pointer;
@@ -64,31 +68,31 @@ h3 {
 .header {
   border: 3px dashed blue;
   background-color: pink;
-  margin: 10px 0;
 }
 .header__logo {
-  margin: 0;
+  margin: 10px 0;
+  border: 3px dashed blue;
 }
 .header__logo img {
   width: 200px;
 }
 
 .footer {
-  padding: 15px;
+  padding: 25px 15px;
   color: white;
 }
 .footer__logo {
-  border: 2px dashed #4517af;
+  width: 120px;
+  padding-left: 10px;
 }
-.footer__logo img {
-  width: 150px;
+.footer__links li {
+  margin: 10px;
 }
-.footer__links {
-  border: 2px dashed rgba(236, 12, 12, 0.74);
+.footer__links li img {
+  margin-right: 8px;
 }
 .footer a {
-  width: 250px;
-  border: 2px dashed rgba(255, 255, 255, 0.74);
+  color: white;
 }
 
 .inverted {
@@ -100,10 +104,18 @@ h3 {
 }
 .header__search {
   background-color: orange;
-  margin: 0 auto;
+  padding: 10px;
+  border: 2px dashed red;
 }
 .header__explore {
   background-color: wheat;
+  padding: 10px 0;
+}
+.header__explore h2,
+.header__explore p {
+  width: 300px;
+  margin: 30px;
+  border: 2px dashed red;
 }
 .header__howItWorks {
   padding: 10px;
@@ -120,7 +132,7 @@ h3 {
   position: relative;
 }
 .header__howItWorks__steps img {
-  margin: 0 25px;
+  margin: 0 20px;
 }
 
 .circle {
@@ -200,7 +212,6 @@ card-steps, .header__howItWorks__steps {
 }
 
 .icon {
-  margin: 0;
   width: 15px;
 }
 
