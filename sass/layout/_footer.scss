@@ -1,19 +1,25 @@
 .footer {
   padding: 15px;
+  color: white;
 
   &__logo {
-    filter: invert(100%);
-    
-    & img{
+    border: 2px dashed rgb(69, 23, 175);
+    & img {
       width: 150px;
     }
   }
 
-  & ul {
-    margin: 5px;
-  }
+&__links{
+  border: 2px dashed rgba(236, 12, 12, 0.74);
 
-  & li {
-    margin-bottom: 10px;
-  }
+}
+& a{
+  width :250px;
+  border: 2px dashed rgba(255, 255, 255, 0.74);
+
+}
+}
+
+.inverted {
+  filter: invert(100%);
 }

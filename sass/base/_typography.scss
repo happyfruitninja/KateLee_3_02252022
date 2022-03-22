@@ -3,3 +3,14 @@
     font-style: italic;
  letter-spacing: 1px;
 }
+
+h3 {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 0 5px;
+    font-size: 1.07rem;
+}

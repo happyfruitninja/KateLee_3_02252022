@@ -10,17 +10,41 @@
         background-color: wheat;
     }
 
-    &__howItWorks{
-        @extend card-steps;
-        
-        &__steps{
+    &__howItWorks {
+        padding: 10px;
+        border: 2px dashed red;
+
+        & h2 {
+            text-align: left;
+            padding: 0 5px;
+        }
+
+        &__steps {
+            @extend card-steps;
             background-color: cyan;
-            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            & img {
+                margin: 0 25px;
+            }
+
         }
     }
 }
 
-
+.circle {
+    background-color: rgb(199, 97, 199);
+    color: white;
+    padding: 6px;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: -15px;
+}
 
 .menu__type {
     @extend card-full;
@@ -39,7 +63,8 @@
             background-color: white;
             margin: 5px 10px;
 
-            & h3, p {
+            & h3,
+            p {
                 margin-top: 5px;
             }
         }

@@ -16,9 +16,8 @@
 
 .menu {
   border: 4px dashed blue;
-  padding: 0 10px;
-  font-weight: 300;
-  & img{
+  padding:  10px;
+    & img{
     object-fit: cover;
     object-position: center;
     border-radius: 15px 15px 0 0;
@@ -31,7 +30,9 @@
 
 .menu__item {
   @extend card-simple;
-  
+  background-color: white;
+  padding: 10px;
+ 
 }
 
 .btn-primary {
@@ -42,18 +43,16 @@
 
 .footer {
   background-color: $color-footer;
-  color: white;
+
 
 }
 
 
 .icon {
   margin: 0;
+  width: 15px;
   & img{
-    width: 15px;
-  }
-
-.steps{
-  
+   
+    
   }
 }
