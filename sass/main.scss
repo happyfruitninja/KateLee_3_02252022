@@ -2,6 +2,7 @@
 @import "./base/typography.scss";
 
 @import "./components/button.scss";
+@import "./components/cards.scss";
 
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
@@ -18,7 +19,7 @@
 }
 
 
-.menu__item {
+.menu__simple {
   @extend card-simple;
   background-color: white;
   padding: 10px;
@@ -28,14 +29,6 @@
   background-image: linear-gradient(170deg, $color-secondary, $color-primary);
 }
 
-
-
 .footer {
   background-color: $color-footer;
-}
-
-
-.icon {
-  width: 15px;
-
 }

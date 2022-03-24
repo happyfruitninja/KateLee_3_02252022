@@ -1,0 +1,41 @@
+
+.menu__full {
+    @extend card-full;
+    border: 2px dashed red;
+  
+    & figure {
+      width: 100%;
+      border: 2px dashed orange;
+      height: 100%;
+      position: relative;
+  
+      & span {
+        position: absolute;
+        display: flex;
+        top: 6%;
+        right: 3%;
+        width: 75px;
+        height: 30px;
+        background-color: cyan;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: blue;
+        border-radius: 3px;
+      }
+  
+      & figcaption {
+        background-color: white;
+        margin: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+  
+        .menu__full__texts {
+          margin: 0;
+        }
+      }
+    }
+  }
+  

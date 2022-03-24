@@ -25,11 +25,12 @@ li {
 
 a {
     text-decoration: none;
+    color: black;
+   
 }
 
 svg {
-    width: 19px;
-    fill: rgb(104, 104, 104);
+    width: 19px;   
     margin: 0;
 }
 
@@ -37,3 +38,8 @@ img {
     object-fit: cover;
     object-position: center;
 }
+.icon {
+    width: 15px;
+    margin: 0 10px -3px 0;
+    border: 2px dashed blue;
+  } 
