@@ -39,7 +39,6 @@ img {
 .icon {
   width: 15px;
   margin: 0 10px -3px 0;
-  border: 2px dashed blue;
 }
 
 .title {
@@ -116,13 +115,21 @@ h3 {
 .header {
   border: 3px dashed darkgreen;
   background-color: pink;
+  /*
+  */
 }
-.header__logo {
-  margin: 10px 0;
+.header__nav {
+  display: flex;
+  align-items: center;
+  border: 3px dashed hotpink;
+}
+.header__nav__logo {
+  margin: 10px auto;
   border: 3px dashed blue;
-}
-.header__logo img {
   width: 200px;
+}
+.header__nav a {
+  margin: 0 0 0 25px;
 }
 
 .footer {

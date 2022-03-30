@@ -1,12 +1,23 @@
 .header {
     border: 3px dashed darkgreen;
     background-color: pink;
-    &__logo {
-        margin: 10px 0;
-        border: 3px dashed blue;
 
-        & img {
-            width: 200px;
-        }
+    &__nav {
+        display: flex;
+        align-items: center;
+        border: 3px dashed hotpink;
+
+        &__logo {
+            margin: 10px auto;
+            border: 3px dashed blue;
+                       width: 200px;
+    
+        }     
+        & a {
+            margin: 0 0 0 25px;
+        } 
     }
+    
+    /*
+    */
 }
