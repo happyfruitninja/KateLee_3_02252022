@@ -1,7 +1,7 @@
 .title {
     font-family: shrikhand, serif;
     font-style: italic;
- letter-spacing: 1px;
+    letter-spacing: 1px;
 }
 
 h3 {
@@ -14,4 +14,16 @@ h3 {
     font-weight: 300;
     padding: 0 5px;
     font-size: 1.07rem;
+    position:relative;
+    margin-bottom: 10px;
+
+    &:after {
+        content: "";
+        width: 45px;
+        height: 2px;
+        background-color: cyan;
+       left: 5px;
+        bottom: -6px;
+        position: absolute;
+    }
 }

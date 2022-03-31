@@ -53,6 +53,17 @@ h3 {
   font-weight: 300;
   padding: 0 5px;
   font-size: 1.07rem;
+  position: relative;
+  margin-bottom: 10px;
+}
+.uppercase:after {
+  content: "";
+  width: 45px;
+  height: 2px;
+  background-color: cyan;
+  left: 5px;
+  bottom: -6px;
+  position: absolute;
 }
 
 .btn-primary {
@@ -293,7 +304,7 @@ border-radius-15, .menu__full figure {
 }
 
 border-top-radius-25, .container {
-  border-radius: 25px;
+  border-radius: 25px 25px 0 0;
 }
 
 .btn-primary {

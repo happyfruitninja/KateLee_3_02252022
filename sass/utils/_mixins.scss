@@ -40,6 +40,6 @@ border-radius-15 {
 }
 
 border-top-radius-25 {
-    @include cornerRadius(25px);
+    @include cornerRadius(25px 25px 0 0);
 }
 
