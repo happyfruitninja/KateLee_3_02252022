@@ -11,3 +11,11 @@ $color-cyan: cyan;
 $color-lightgreen:lightgreen;
 
 
+.btn-primary {
+    background-image: linear-gradient(170deg, $color-secondary, $color-primary);
+  }
+
+  .footer {
+    background-color: $color-footer;
+  }
+  

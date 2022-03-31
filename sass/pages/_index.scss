@@ -1,6 +1,11 @@
 .header {
     text-align: center;
 
+    &__logo {
+        margin: 15px auto;
+        width: 200px;
+    }
+
     &__search {
         background-color: orange;
 
@@ -83,7 +88,7 @@
     margin: 0;
     width: 25px;
     height: 25px;
-    border-radius: 50%;
+    @extend border-radius;
     position: absolute;
     left: -15px;
     font-weight: 300;

@@ -4,6 +4,7 @@
 @import "./components/button.scss";
 @import "./components/cards.scss";
 
+@import "./layout/body.scss";
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 
@@ -13,22 +14,5 @@
 @import "./utils/variables.scss";
 
 
-.menu {
-  border: 4px dashed blue;
-  padding: 10px;
-}
 
 
-.menu__simple {
-  @extend card-simple;
-  background-color: white;
-  padding: 10px;
-}
-
-.btn-primary {
-  background-image: linear-gradient(170deg, $color-secondary, $color-primary);
-}
-
-.footer {
-  background-color: $color-footer;
-}
