@@ -12,10 +12,8 @@ body {
     font-weight: 300;
     margin: 0;
     min-width: 350px;
-    width:100%;
-  
+    width: 100%;
 }
-
 
 li {
     list-style: none;
@@ -24,11 +22,11 @@ li {
 a {
     text-decoration: none;
     color: black;
-    
-   }
+
+}
 
 svg {
-    width: 19px;   
+    width: 19px;
     margin: 0;
 }
 
@@ -36,7 +34,8 @@ img {
     object-fit: cover;
     object-position: center;
 }
+
 .icon {
     width: 15px;
     margin: 0 10px -3px 0;
-    } 
+}

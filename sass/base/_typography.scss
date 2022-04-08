@@ -2,12 +2,15 @@
     font-family: shrikhand, serif;
     font-style: italic;
     letter-spacing: 1px;
+    margin: 0 15px;
+    text-transform: capitalize;
 }
 
 h3 {
     text-transform: capitalize;
-    margin: 2px 0;
+    margin: 3px 0;
 }
+
 
 .uppercase {
     text-transform: uppercase;
@@ -27,3 +30,8 @@ h3 {
         position: absolute;
     }
 }
+
+.lowercase {
+    text-transform: lowercase;
+   
+  }

@@ -74,7 +74,6 @@
             }
         }
     }
-
 }
 
 .reduce {
@@ -93,4 +92,13 @@
     left: -15px;
     font-weight: 300;
     font-size: 0.9rem;
+}
+
+.heart {
+    background-color: green;
+    
+    &:hover {
+        fill: red;
+        background-color: blue;
+        }
 }

@@ -19,3 +19,11 @@ $color-lightgreen:lightgreen;
     background-color: $color-footer;
   }
   
+  .menu__simple__static {
+    background-color: $color-tertiary;
+    & svg{
+      background-color: white;
+      fill:$color-tertiary;
+    }
+  }
+  

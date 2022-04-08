@@ -1,51 +1,112 @@
-.menu__full {
-  @extend card-full;
- 
-  & figure {
-    width: 100%;
-   background-color: white;
-    height: 100%;
-    position: relative;
-    @extend border-radius-15;
+.menu {
+  border: 2px dashed darkcyan;
 
-    & span {
-      position: absolute;
-      display: flex;
-      top: 6%;
-      right: 3%;
-      width: 75px;
-      height: 30px;
-      background-color: cyan;
-      justify-content: center;
-      align-items: center;
-      padding: 2px;
-      font-weight: 700;
-      font-size: 0.8rem;
-      color: blue;
-      border-radius: 3px;
-    }
+  &__full {
+    @extend card-full;
 
-    & figcaption {
+    & figure {
+      width: 100%;
       background-color: white;
-      margin: 5px 10px;
-      display: flex;
-      justify-content: space-between;
+      height: 100%;
+      position: relative;
+      @extend border-radius-15;
 
-      .menu__full__texts {
-        margin: 0;
+      & span {
+        position: absolute;
+        display: flex;
+        top: 6%;
+        right: 3%;
+        width: 75px;
+        height: 30px;
+        background-color: cyan;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: blue;
+        border-radius: 3px;
+      }
+
+      & figcaption {
+        background-color: white;
+        margin: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+
+        .menu__full__texts {
+          margin: 0;
+        }
       }
     }
   }
-}
 
-.menu__transform {
-  @extend card-simple;
-  background-color: white;
-  padding: 10px;
-
-  &__subText {
+  &__simple {
     display: flex;
-    justify-content: space-between;
-  }
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+    height: 70px;
 
+
+    &:hover &__transform {
+      width: 85%;
+      margin-left: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:hover &__static {
+      cursor: pointer;
+
+    }
+
+    &__transform {
+      @extend card-simple;
+      margin: 0 !important;
+      background-color: white;
+      padding: 10px 20px 10px 10px;
+      width: 100%;
+      position: absolute;
+      transition: width 300ms linear;
+      height: 70px;
+
+      &__subText {
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+
+        &--bold {
+          font-weight: 700;
+        }
+
+        & p {
+          margin: 0;
+        }
+      }
+    }
+
+
+    &__static {
+      @extend border-right-radius-15;
+      width: 15%;
+      justify-content: flex-end;
+      position: absolute;
+      height: 70px;
+      display: flex;
+      margin: 0 !important;
+      right: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      & svg {
+        margin: auto;
+        border-radius: 50px;
+        padding: 5px;
+        width: 22px;
+
+      }
+    }
+  }
 }
