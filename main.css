@@ -386,7 +386,7 @@ border-top-radius-25, .container {
   background-color: white;
   fill: #99E2D0;
 }
-.btn-tertiary:active {
+.btn-tertiary:focus {
   background-color: #51e0bc;
 }
 .btn-tertiary:active svg {
