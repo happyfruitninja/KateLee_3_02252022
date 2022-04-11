@@ -96,6 +96,12 @@ h3 {
   width: 100%;
   border: none;
 }
+.btn-tertiary:focus {
+  background-color: #51e0bc;
+}
+.btn-tertiary:active svg {
+  transform: translate(1px, 1px);
+}
 
 .menu {
   border: 2px dashed darkcyan;
@@ -385,12 +391,6 @@ border-top-radius-25, .container {
 .btn-tertiary svg {
   background-color: white;
   fill: #99E2D0;
-}
-.btn-tertiary:focus {
-  background-color: #51e0bc;
-}
-.btn-tertiary:active svg {
-  transform: translate(1px, 1px);
 }
 
 .footer {

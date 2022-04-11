@@ -17,27 +17,15 @@ $color-lightgreen:lightgreen;
 .btn-tertiary {
   & svg {
     background-color: white;
-    fill:$color-tertiary;
+    fill: $color-tertiary;
   }
-  &:focus {
-    background-color: #51e0bc;
-
-  }
-  &:active svg {
-   transform: translate(1px, 1px);
-  }
-  
 }
 
 .footer {
   background-color: $color-footer;
 }
 
-
 .menu__simple__static {
   background-color: $color-tertiary;
-  
+
 }
-
-
-
