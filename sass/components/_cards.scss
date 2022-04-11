@@ -102,7 +102,7 @@
 
       & svg {
         margin: auto;
-        border-radius: 50px;
+        @extend border-radius;
         padding: 5px;
         width: 22px;
 

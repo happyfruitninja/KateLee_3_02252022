@@ -10,11 +10,18 @@
 
     &:hover {
         cursor: pointer;
-        filter:drop-shadow(3px 3px 3px darken(#9356DC, 10%));
+        filter: drop-shadow(3px 3px 3px darken(#9356DC, 10%));
     }
 
-    &:active{
-        transform: translate(0.5px, 0.5px);
+    &:active {
+        transform: translate(1px, 1px);
     }
 }
 
+.btn-tertiary {
+    cursor: pointer;
+    background: transparent;
+    width: 100%;
+   border: none;
+   @extend border-right-radius-15;
+}
