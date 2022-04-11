@@ -19,9 +19,9 @@ $color-lightgreen:lightgreen;
     background-color: white;
     fill:$color-tertiary;
   }
-  &:hover {
+  &:active {
     background-color: #51e0bc;
-    
+
   }
   &:active svg {
    transform: translate(1px, 1px);
