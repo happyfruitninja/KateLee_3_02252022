@@ -37,7 +37,7 @@ img {
   margin: 0 10px -3px 0;
 }
 
-.title {
+.title h1 {
   font-family: shrikhand, serif;
   font-style: italic;
   letter-spacing: 1px;
@@ -70,6 +70,27 @@ h3 {
 
 .lowercase {
   text-transform: lowercase;
+}
+
+.menu__simple__transform {
+  margin: 0 !important;
+  background-color: white;
+  padding: 10px 20px 10px 10px;
+  width: 100%;
+  position: absolute;
+  transition: width 300ms linear;
+  height: 70px;
+}
+.menu__simple__transform__subText {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+.menu__simple__transform__subText--bold {
+  font-weight: 700;
+}
+.menu__simple__transform__subText p {
+  margin: 0;
 }
 
 .btn-primary {
@@ -154,26 +175,6 @@ h3 {
 .menu__simple:hover .menu__simple__static {
   cursor: pointer;
 }
-.menu__simple__transform {
-  margin: 0 !important;
-  background-color: white;
-  padding: 10px 20px 10px 10px;
-  width: 100%;
-  position: absolute;
-  transition: width 300ms linear;
-  height: 70px;
-}
-.menu__simple__transform__subText {
-  display: flex;
-  margin: 0;
-  justify-content: space-between;
-}
-.menu__simple__transform__subText--bold {
-  font-weight: 700;
-}
-.menu__simple__transform__subText p {
-  margin: 0;
-}
 .menu__simple__static {
   width: 15%;
   justify-content: flex-end;
@@ -214,6 +215,15 @@ h3 {
 .menu {
   background-color: silver;
   padding: 25px 15px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  border: 2px dashed blue;
+}
+.title svg {
+  margin-right: 15px;
 }
 
 .header {

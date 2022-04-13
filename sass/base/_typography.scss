@@ -1,9 +1,12 @@
 .title {
-    font-family: shrikhand, serif;
-    font-style: italic;
-    letter-spacing: 1px;
-    margin: 0 15px;
-    text-transform: capitalize;
+    & h1{
+        font-family: shrikhand, serif;
+        font-style: italic;
+        letter-spacing: 1px;
+        margin: 0 15px;
+        text-transform: capitalize;
+    }
+   
 }
 
 h3 {
