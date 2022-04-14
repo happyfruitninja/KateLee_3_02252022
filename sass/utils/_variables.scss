@@ -10,14 +10,43 @@ $color-cyan: cyan;
 $color-lightgreen:lightgreen;
 
 
-.btn-primary {
+.primary {
   background-image: linear-gradient(170deg, $color-secondary, $color-primary);
+
+  &:hover {
+    filter: drop-shadow(3px 3px 3px darken(#9356DC, 10%));
+  }
 }
 
-.btn-tertiary {
+.secondary {
+  &--line {
+    background-color: transparent;
+    fill: $color-primary;
+    width: 20px;
+    height: 20px;
+  }
+
+  &--solid {
+    fill: red;
+
+    &:focus {
+      background-image: linear-gradient(170deg, $color-secondary, $color-primary);
+
+    }
+  }
+
+}
+
+.tertiary {
+  background-color: $color-tertiary;
+
   & svg {
     background-color: white;
     fill: $color-tertiary;
+  }
+
+  &:focus {
+    background-color: #51e0bc;
   }
 }
 
@@ -27,5 +56,14 @@ $color-lightgreen:lightgreen;
 
 .menu__simple__static {
   background-color: $color-tertiary;
+}
 
+
+
+.menu__full {
+  & figure {
+    & figcaption {
+      border: 2px dashed hotpink;
+    }
+  }
 }

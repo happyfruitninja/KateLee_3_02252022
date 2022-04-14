@@ -93,7 +93,11 @@ h3 {
   margin: 0;
 }
 
-.btn-primary {
+.btn {
+  cursor: pointer;
+}
+
+.primary {
   height: 50px;
   width: 200px;
   border-radius: 50px;
@@ -103,24 +107,33 @@ h3 {
   align-items: center;
   margin: 20px auto 30px;
 }
-.btn-primary:hover {
-  cursor: pointer;
-  filter: drop-shadow(3px 3px 3px #782cd3);
-}
-.btn-primary:active {
+.primary:active {
   transform: translate(1px, 1px);
 }
 
-.btn-tertiary {
-  cursor: pointer;
-  background: transparent;
+.menu__full {
+  position: relative;
+}
+.menu__full .secondary {
+  margin: auto 0;
+  display: flex;
+  border: none;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.menu__full .secondary--line {
+  order: 0;
+}
+.menu__full .secondary--solid {
+  order: 1;
+}
+
+.tertiary {
   width: 100%;
   border: none;
 }
-.btn-tertiary:focus {
-  background-color: #51e0bc;
-}
-.btn-tertiary:active svg {
+.tertiary:active svg {
   transform: translate(1px, 1px);
 }
 
@@ -152,11 +165,6 @@ h3 {
 .menu__full figure figcaption {
   background-color: white;
   margin: 5px 10px;
-  display: flex;
-  justify-content: space-between;
-}
-.menu__full figure figcaption .menu__full__texts {
-  margin: 0;
 }
 .menu__simple {
   display: flex;
@@ -345,14 +353,6 @@ h3 {
   font-size: 0.9rem;
 }
 
-.heart {
-  background-color: green;
-}
-.heart:hover {
-  fill: red;
-  background-color: blue;
-}
-
 card-full, .menu__full {
   border-radius: 15px;
   margin: 15px auto;
@@ -386,7 +386,7 @@ border-radius-15, .menu__full figure {
   border-radius: 15px;
 }
 
-border-right-radius-15, .btn-tertiary, .menu__simple__static {
+border-right-radius-15, .tertiary, .menu__simple__static {
   border-radius: 0 15px 15px 0;
 }
 
@@ -394,13 +394,35 @@ border-top-radius-25, .container {
   border-radius: 25px 25px 0 0;
 }
 
-.btn-primary {
+.primary {
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+}
+.primary:hover {
+  filter: drop-shadow(3px 3px 3px #782cd3);
+}
+
+.secondary--line {
+  background-color: transparent;
+  fill: #9356DC;
+  width: 20px;
+  height: 20px;
+}
+.secondary--solid {
+  fill: red;
+}
+.secondary--solid:focus {
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
 }
 
-.btn-tertiary svg {
+.tertiary {
+  background-color: #99E2D0;
+}
+.tertiary svg {
   background-color: white;
   fill: #99E2D0;
+}
+.tertiary:focus {
+  background-color: #51e0bc;
 }
 
 .footer {
@@ -409,6 +431,10 @@ border-top-radius-25, .container {
 
 .menu__simple__static {
   background-color: #99E2D0;
+}
+
+.menu__full figure figcaption {
+  border: 2px dashed hotpink;
 }
 
 /*# sourceMappingURL=main.css.map */

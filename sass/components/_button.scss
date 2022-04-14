@@ -1,4 +1,9 @@
-.btn-primary {
+.btn {
+    cursor: pointer;
+}
+
+//oblong purple button
+.primary {
     height: 50px;
     width: 200px;
     border-radius: 50px;
@@ -8,26 +13,39 @@
     align-items: center;
     margin: 20px auto 30px;
 
-    &:hover {
-        cursor: pointer;
-        filter: drop-shadow(3px 3px 3px darken(#9356DC, 10%));
-    }
-
     &:active {
         transform: translate(1px, 1px);
     }
 }
 
-.btn-tertiary {
-    cursor: pointer;
-    background: transparent;
+//heart icon button
+.menu__full {
+    position: relative;
+
+    .secondary {
+        margin: auto 0;
+        display: flex;
+        border: none;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+
+        &--line {
+            order: 0;
+        }
+
+        &--solid {
+            order: 1;
+        }
+    }
+
+}
+
+//menu-item click button
+.tertiary {
     width: 100%;
     border: none;
     @extend border-right-radius-15;
-
-    &:focus {
-        background-color: #51e0bc;
-    }
 
     &:active svg {
         transform: translate(1px, 1px);

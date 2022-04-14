@@ -1,27 +1,33 @@
-.menu__simple {
-     &__transform {
-      @extend card-simple;
-      margin: 0 !important;
-      background-color: white;
-      padding: 10px 20px 10px 10px;
-      width: 100%;
-      position: absolute;
-      transition: width 300ms linear;
-      height: 70px;
+.heart { //heart icon transform
+    
+    
 
-      &__subText {
-        display: flex;
-        margin: 0;
-        justify-content: space-between;
+  
+}
 
-        &--bold {
-          font-weight: 700;
+.menu__simple { //menu-item tranform 
+    &__transform {
+        @extend card-simple;
+        margin: 0 !important;
+        background-color: white;
+        padding: 10px 20px 10px 10px;
+        width: 100%;
+        position: absolute;
+        transition: width 300ms linear;
+        height: 70px;
+
+        &__subText {
+            display: flex;
+            margin: 0;
+            justify-content: space-between;
+
+            &--bold {
+                font-weight: 700;
+            }
+
+            & p {
+                margin: 0;
+            }
         }
-
-        & p {
-          margin: 0;
-        }
-      }
     }
-
-  }
+}
