@@ -5,13 +5,15 @@
 //oblong purple button
 .primary {
     height: 50px;
-    width: 200px;
+    width: 220px;
     border-radius: 50px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px auto 30px;
+    letter-spacing: 0.5px;
+    padding: 0 15px;
 
     &:active {
         transform: translate(1px, 1px);
@@ -19,26 +21,42 @@
 }
 
 //heart icon button
-.menu__full {
+.secondary {
+    border: none;
+    display: flex;
     position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
 
-    .secondary {
-        margin: auto 0;
-        display: flex;
-        border: none;
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-
-        &--line {
-            order: 0;
-        }
-
-        &--solid {
-            order: 1;
-        }
+    & svg {
+        width: 25px;
     }
 
+    &__line,
+    &__solid {
+        margin: 0;
+        position: absolute;
+        bottom: 15px;
+    }
+
+    &__solid {
+        right: 100000000px;
+        
+    }
+
+    &__line {
+        right: 10px;
+       
+    }
+
+    &:active {
+        transform: translate(2px, 2px);
+    }
+
+    &:focus &__solid {
+        right: 10px;
+    }
 }
 
 //menu-item click button

@@ -3,13 +3,9 @@ $color-secondary:#FF79DA;
 $color-tertiary: #99E2D0;
 $color-footer: #353535;
 
-$color-white: white;
-$color-red:red;
-$color-blue:blue;
-$color-cyan: cyan;
-$color-lightgreen:lightgreen;
 
 
+//button
 .primary {
   background-image: linear-gradient(170deg, $color-secondary, $color-primary);
 
@@ -18,52 +14,46 @@ $color-lightgreen:lightgreen;
   }
 }
 
+
+//button
 .secondary {
-  &--line {
-    background-color: transparent;
+
+  &__line {
     fill: $color-primary;
-    width: 20px;
-    height: 20px;
   }
 
-  &--solid {
-    fill: red;
+  &__solid { 
+    
+  }
+}
+
+
+  //button
+  .tertiary {
+    background-color: $color-tertiary;
+
+    & svg {
+      background-color: white;
+      fill: $color-tertiary;
+    }
 
     &:focus {
-      background-image: linear-gradient(170deg, $color-secondary, $color-primary);
-
+      background-color: #51e0bc;
     }
   }
 
-}
-
-.tertiary {
-  background-color: $color-tertiary;
-
-  & svg {
-    background-color: white;
-    fill: $color-tertiary;
+  .footer {
+    background-color: $color-footer;
   }
 
-  &:focus {
-    background-color: #51e0bc;
+  .menu__simple__static {
+    background-color: $color-tertiary;
   }
-}
 
-.footer {
-  background-color: $color-footer;
-}
-
-.menu__simple__static {
-  background-color: $color-tertiary;
-}
-
-
-
-.menu__full {
-  & figure {
-    & figcaption {
-      border: 2px dashed hotpink;
+  .menu__full {
+    & figure {
+      & figcaption {
+        border: 2px dashed hotpink;
+      }
     }
   }
-}
