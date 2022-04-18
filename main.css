@@ -11,6 +11,7 @@ body {
   margin: 0;
   min-width: 350px;
   width: 100%;
+  background-color: sandybrown;
 }
 
 li {
@@ -37,6 +38,21 @@ img {
   margin: 0 10px -3px 0;
 }
 
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: blue;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: orange;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    background-color: pink;
+  }
+}
 .title h1 {
   font-family: shrikhand, serif;
   font-style: italic;
@@ -190,7 +206,7 @@ h3 {
   position: absolute;
   width: 50px;
   height: 50px;
-  right: 1%;
+  right: 2%;
   bottom: 2%;
 }
 .menu__simple {
