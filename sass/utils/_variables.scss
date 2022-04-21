@@ -3,9 +3,7 @@ $color-secondary:#FF79DA;
 $color-tertiary: #99E2D0;
 $color-footer: #353535;
 
-
-
-//button
+//oblong button
 .primary {
   background-image: linear-gradient(170deg, $color-secondary, $color-primary);
 
@@ -14,8 +12,7 @@ $color-footer: #353535;
   }
 }
 
-
-//button
+//heart like button
 .secondary {
 
   &__line {
@@ -23,8 +20,7 @@ $color-footer: #353535;
   }
 }
 
-
-//button
+//menu-item like button
 .tertiary {
   background-color: $color-tertiary;
 

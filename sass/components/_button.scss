@@ -32,7 +32,7 @@
 
     & svg {
         width: 25px;
-    
+
     }
 
     &__line,
@@ -44,12 +44,12 @@
 
     &__solid {
         right: 100000000px;
-       
+
     }
 
     &__line {
         right: 10px;
-       
+
     }
 
     &:active {
@@ -66,8 +66,17 @@
     width: 100%;
     border: none;
     @extend border-right-radius-15;
+    position: relative;
+
+    & svg {
+        position: absolute;
+        left: 1000px;
+        top: 25px;
+    }
 
     &:active svg {
         transform: translate(1px, 1px);
     }
+
+
 }

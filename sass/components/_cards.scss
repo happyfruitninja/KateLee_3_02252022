@@ -1,5 +1,6 @@
 .menu {
   border: 2px dashed darkcyan;
+
   &__full {
     @extend card-full;
     border: 2px dashed cyan;
@@ -10,12 +11,12 @@
       height: 100%;
       position: relative;
       @extend border-radius-15;
-      
-      & img{
+
+      & img {
         object-position: 0 -70px;
       }
 
-      & >.addPosition {
+      &>.addPosition {
         object-position: 0 -180px;
       }
 
@@ -65,19 +66,29 @@
     height: 70px;
 
     &:hover &__transform {
-      width: 85%;
+      width: 82%;
       margin-left: 0;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+      opacity: 0.5;
+    }
+
+    &:hover svg {
+      transform:  translateX(-20px) rotate(360deg) ;
+      transition: transform 400ms;
+    left: 45px;
     }
 
     &:hover &__static {
       cursor: pointer;
+
     }
+
+   
 
     &__static {
       @extend border-right-radius-15;
-      width: 15%;
+      width: 18%;
       justify-content: flex-end;
       position: absolute;
       height: 70px;
@@ -88,8 +99,7 @@
       border-bottom-left-radius: 0;
 
       & svg {
-        margin: auto;
-        @extend border-radius;
+            @extend border-radius;
         padding: 5px;
         width: 22px;
 
