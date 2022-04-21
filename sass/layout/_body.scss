@@ -25,10 +25,10 @@
 }
 
 .title {
-    display: flex;
+    display: flex;   
     justify-content: space-between;
     border: 2px dashed blue;
-    svg {
-        margin-right: 15px;
+    & button {
+             margin:0;
     }
 }

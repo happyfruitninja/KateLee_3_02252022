@@ -10,12 +10,13 @@
 card-full {
     @include card;
     text-transform: capitalize;
-    height: 220px;
+    height: 270px;
 
     & img {
         width: 100%;
-        height: 70%;
+        height: 73%;
         @include cornerRadius(15px 15px 0 0);
+        border: 2px dashed red;
     }
 }
 

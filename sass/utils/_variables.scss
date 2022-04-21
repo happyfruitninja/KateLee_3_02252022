@@ -21,39 +21,27 @@ $color-footer: #353535;
   &__line {
     fill: $color-primary;
   }
-
-  &__solid { 
-    
-  }
 }
 
 
-  //button
-  .tertiary {
-    background-color: $color-tertiary;
+//button
+.tertiary {
+  background-color: $color-tertiary;
 
-    & svg {
-      background-color: white;
-      fill: $color-tertiary;
-    }
-
-    &:focus {
-      background-color: #51e0bc;
-    }
+  & svg {
+    background-color: white;
+    fill: $color-tertiary;
   }
 
-  .footer {
-    background-color: $color-footer;
+  &:focus {
+    background-color: #51e0bc;
   }
+}
 
-  .menu__simple__static {
-    background-color: $color-tertiary;
-  }
+.footer {
+  background-color: $color-footer;
+}
 
-  .menu__full {
-    & figure {
-      & figcaption {
-        border: 2px dashed hotpink;
-      }
-    }
-  }
+.menu__simple__static {
+  background-color: $color-tertiary;
+}

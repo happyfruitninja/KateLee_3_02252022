@@ -1,7 +1,5 @@
 .menu {
   border: 2px dashed darkcyan;
-
-
   &__full {
     @extend card-full;
     border: 2px dashed cyan;
@@ -10,9 +8,16 @@
       width: 100%;
       background-color: white;
       height: 100%;
-
       position: relative;
       @extend border-radius-15;
+      
+      & img{
+        object-position: 0 -70px;
+      }
+
+      & >.addPosition {
+        object-position: 0 -180px;
+      }
 
       & span {
         position: absolute;
@@ -33,11 +38,10 @@
 
       & figcaption {
         background-color: white;
-        margin: 5px 10px;
+        margin: 7px 12px;
         width: 80%;
       }
     }
-
   }
 
   .menu__full {
@@ -51,7 +55,6 @@
     right: 2%;
     bottom: 2%;
   }
-
 
   &__simple {
     display: flex;
