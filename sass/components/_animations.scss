@@ -1,27 +1,68 @@
+.container__menu__simple {
 
-.menu__simple { //menu-item tranform 
-    &__transform {
-        @extend card-simple;
-        margin: 0 !important;
-        background-color: white;
-        padding: 10px 20px 10px 10px;
-        width: 100%;
-        position: absolute;
-        transition: width 300ms linear;
-        height: 70px;
+    &__card {
+        &__transform {
+            width: 100%;
+            transition: width 300ms linear;
+            height: 70px;
+        }
 
-        &__subText {
-            display: flex;
-            margin: 0;
-            justify-content: space-between;
+        &:hover &__transform {
+            width: 82%;
+            margin-left: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border: 2px dashed blue;
+        }
 
-            &--bold {
-                font-weight: 700;
-            }
+        &__static {
+            height: 70px;
+            border: 2px dashed black;
+        }
 
-            & p {
-                margin: 0;
+        &:hover &__static {
+            cursor: pointer;
+
+            svg {
+                transform: translateX(-30px) rotate(360deg);
+                transition: transform 300ms ease-in-out;
+                left: 95%
             }
         }
     }
 }
+
+
+@media only screen and (min-width: 1024px) {
+    .container__menu__simple {
+        &__card {
+            height: 110px;
+
+            &:hover svg {
+                top: 40%;
+            }
+
+            &__transform {
+                height: 110px;
+
+                &__subText,
+                h3 {
+                    font-size: 1.2rem;
+                    transition: border-color 0s, font-size 200ms ease-in-out;
+                }
+            }
+
+            &:hover &__transform {
+                width: 80%;
+
+                &__subText,
+                h3 {
+                    font-size: 1rem;
+                }
+            }
+           
+
+    }
+
+
+}}

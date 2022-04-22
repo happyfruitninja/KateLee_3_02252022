@@ -17,18 +17,20 @@
     order: 2;
     width: 100%;
     @extend border-top-radius-25;
-}
 
-.menu {
-    background-color: silver;
-    padding: 25px 15px;
-}
 
-.title {
-    display: flex;   
-    justify-content: space-between;
-    border: 2px dashed blue;
-    & button {
-             margin:0;
+    &__menu {
+        background-color: silver;
+        padding: 25px 20px;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        border: 2px dashed blue;
+
+        & button {
+            margin: 0;
+        }
     }
 }

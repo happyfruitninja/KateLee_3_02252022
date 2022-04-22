@@ -14,7 +14,6 @@ $color-footer: #353535;
 
 //heart like button
 .secondary {
-
   &__line {
     fill: $color-primary;
   }
@@ -38,6 +37,6 @@ $color-footer: #353535;
   background-color: $color-footer;
 }
 
-.menu__simple__static {
+.container__menu__simple__card__static {
   background-color: $color-tertiary;
 }

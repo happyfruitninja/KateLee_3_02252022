@@ -9,7 +9,7 @@
     &__search {
         background-color: rgb(236, 236, 236);
         box-shadow: inset 0px 2px 5px 0px rgb(138, 137, 137);
-      
+
         & form {
             & input {
                 height: 60px;
@@ -49,6 +49,10 @@
             padding: 0 5px;
         }
 
+        & p {
+            margin-left: 0;
+        }
+
         &__steps {
             @extend card-steps;
             background-color: rgb(235, 233, 233);
@@ -64,9 +68,17 @@
 
             &:hover {
                 background-color: rgb(246, 228, 253);
+                transform: scale(1.01);
+                transition: 300ms ease-in-out;
 
-                svg {
+                & svg {
                     fill: #8559bb;
+                }
+
+                & p {
+                    transition: 100ms ease-in-out;
+                    font-size: 1.07rem;
+
                 }
             }
         }
@@ -89,8 +101,6 @@
     left: -11px;
     font-weight: 300;
     font-size: 0.9rem;
-    display:flex;
+    display: flex;
     justify-content: center;
-   
 }
-

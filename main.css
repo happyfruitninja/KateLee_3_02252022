@@ -9,7 +9,7 @@ body {
   font-size: 16px;
   font-weight: 300;
   margin: 0;
-  min-width: 350px;
+  min-width: 380px;
   width: 100%;
   background-color: sandybrown;
 }
@@ -38,7 +38,7 @@ img {
   margin: 0 10px -3px 0;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 380px) and (max-width: 480px) {
   body {
     background-color: blue;
   }
@@ -53,7 +53,7 @@ img {
     background-color: pink;
   }
 }
-.title h1 {
+.container__title h1 {
   font-family: shrikhand, serif;
   font-style: italic;
   letter-spacing: 1px;
@@ -88,27 +88,54 @@ h3 {
   text-transform: lowercase;
 }
 
-.menu__simple__transform {
-  margin: 0 !important;
-  background-color: white;
-  padding: 10px 20px 10px 10px;
+.container__menu__simple__card__transform {
   width: 100%;
-  position: absolute;
   transition: width 300ms linear;
   height: 70px;
 }
-.menu__simple__transform__subText {
-  display: flex;
-  margin: 0;
-  justify-content: space-between;
+.container__menu__simple__card:hover .container__menu__simple__card__transform {
+  width: 82%;
+  margin-left: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 2px dashed blue;
 }
-.menu__simple__transform__subText--bold {
-  font-weight: 700;
+.container__menu__simple__card__static {
+  height: 70px;
+  border: 2px dashed black;
 }
-.menu__simple__transform__subText p {
-  margin: 0;
+.container__menu__simple__card:hover .container__menu__simple__card__static {
+  cursor: pointer;
+}
+.container__menu__simple__card:hover .container__menu__simple__card__static svg {
+  transform: translateX(-30px) rotate(360deg);
+  transition: transform 300ms ease-in-out;
+  left: 95%;
 }
 
+@media only screen and (min-width: 1024px) {
+  .container__menu__simple__card {
+    height: 110px;
+  }
+  .container__menu__simple__card:hover svg {
+    top: 40%;
+  }
+  .container__menu__simple__card__transform {
+    height: 110px;
+  }
+  .container__menu__simple__card__transform__subText,
+.container__menu__simple__card__transform h3 {
+    font-size: 1.2rem;
+    transition: border-color 0s, font-size 200ms ease-in-out;
+  }
+  .container__menu__simple__card:hover .container__menu__simple__card__transform {
+    width: 80%;
+  }
+  .container__menu__simple__card:hover .container__menu__simple__card__transform__subText,
+.container__menu__simple__card:hover .container__menu__simple__card__transform h3 {
+    font-size: 1rem;
+  }
+}
 .btn {
   cursor: pointer;
 }
@@ -166,32 +193,37 @@ h3 {
 }
 .tertiary svg {
   position: absolute;
-  left: 1000px;
-  top: 25px;
+  right: 1000px;
+  top: 35%;
+  left: 10000px;
 }
 .tertiary:active svg {
   transform: translate(1px, 1px);
 }
 
-.menu {
+.container__menu {
   border: 2px dashed darkcyan;
 }
-.menu__full {
-  border: 2px dashed cyan;
+.container__menu h3 {
+  border: 2px dashed hotpink;
 }
-.menu__full figure {
+.container__menu__full {
+  border: 2px dashed cyan;
+  width: 100%;
+  min-width: 350px;
+}
+.container__menu__full figure {
   width: 100%;
   background-color: white;
   height: 100%;
   position: relative;
+  border: 2px dashed red;
 }
-.menu__full figure img {
-  object-position: 0 -70px;
+.container__menu__full figure img {
+  width: 100%;
+  height: 73%;
 }
-.menu__full figure > .addPosition {
-  object-position: 0 -180px;
-}
-.menu__full figure span {
+.container__menu__full figure span {
   position: absolute;
   display: flex;
   top: 6%;
@@ -207,60 +239,101 @@ h3 {
   color: blue;
   border-radius: 3px;
 }
-.menu__full figure figcaption {
+.container__menu__full figure figcaption {
   background-color: white;
   margin: 7px 12px;
   width: 80%;
 }
-.menu .menu__full {
-  position: relative;
-}
-.menu .secondary {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  right: 2%;
-  bottom: 2%;
-}
-.menu__simple {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+.container__menu__simple {
   width: 100%;
   margin: 15px 0;
   height: 70px;
+  border: 2px dashed red;
 }
-.menu__simple:hover .menu__simple__transform {
-  width: 82%;
-  margin-left: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  opacity: 0.5;
+.container__menu__simple__card {
+  border: 2px dashed black;
+  margin: 10px 0;
+  display: flex;
+  position: relative;
 }
-.menu__simple:hover svg {
-  transform: translateX(-20px) rotate(360deg);
-  transition: transform 400ms;
-  left: 45px;
-}
-.menu__simple:hover .menu__simple__static {
-  cursor: pointer;
-}
-.menu__simple__static {
-  width: 18%;
+.container__menu__simple__card__static {
+  width: 100%;
   justify-content: flex-end;
   position: absolute;
-  height: 70px;
   display: flex;
   margin: 0 !important;
   right: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.menu__simple__static svg {
+.container__menu__simple__card__static svg {
   padding: 5px;
   width: 22px;
 }
+.container__menu__simple__card__transform {
+  background-color: white;
+  margin: 0 !important;
+  padding: 10px 20px 10px 10px;
+  z-index: 1;
+}
+.container__menu__simple__card__transform__subText,
+.container__menu__simple__card__transform h3 {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  border: 2px dashed pink;
+}
+.container__menu__simple__card__transform__subText--bold,
+.container__menu__simple__card__transform h3--bold {
+  font-weight: 700;
+}
+.container__menu__simple__card__transform__subText p,
+.container__menu__simple__card__transform h3 p {
+  margin: 0;
+}
 
+.container__menu__full {
+  position: relative;
+}
+
+.secondary {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 2%;
+  bottom: 2%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container__menu__simple {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    border: 2px dashed green;
+    justify-content: space-between;
+  }
+  .container__menu__simple__card {
+    border: 2px dashed red;
+    flex-basis: 32%;
+    margin: 0;
+  }
+  .container__menu__simple__card__transform {
+    width: 100%;
+    border: 2px dashed blue;
+    display: flex;
+    flex-direction: column;
+  }
+  .container__menu__simple__card__transform__subText,
+.container__menu__simple__card__transform h3 {
+    display: flex;
+    margin: 2px 0;
+    justify-content: space-between;
+  }
+  .container__menu__simple__card__static {
+    width: 100%;
+    height: 110px;
+  }
+}
 .mainRepeat {
   display: flex;
   flex-direction: column;
@@ -280,18 +353,16 @@ h3 {
   order: 2;
   width: 100%;
 }
-
-.menu {
+.container__menu {
   background-color: silver;
-  padding: 25px 15px;
+  padding: 25px 20px;
 }
-
-.title {
+.container__title {
   display: flex;
   justify-content: space-between;
   border: 2px dashed blue;
 }
-.title button {
+.container__title button {
   margin: 0;
 }
 
@@ -376,6 +447,9 @@ h3 {
   text-align: left;
   padding: 0 5px;
 }
+.header__howItWorks p {
+  margin-left: 0;
+}
 .header__howItWorks__steps {
   background-color: #ebe9e9;
   display: flex;
@@ -389,9 +463,15 @@ h3 {
 }
 .header__howItWorks__steps:hover {
   background-color: #f6e4fd;
+  transform: scale(1.01);
+  transition: 300ms ease-in-out;
 }
 .header__howItWorks__steps:hover svg {
   fill: #8559bb;
+}
+.header__howItWorks__steps:hover p {
+  transition: 100ms ease-in-out;
+  font-size: 1.07rem;
 }
 
 .reduce {
@@ -413,20 +493,17 @@ h3 {
   justify-content: center;
 }
 
-card-full, .menu__full {
+card-full, .container__menu__full {
   border-radius: 15px;
   margin: 15px auto;
   text-transform: capitalize;
-  height: 270px;
+  height: 250px;
 }
-card-full img, .menu__full img {
-  width: 100%;
-  height: 73%;
+card-full img, .container__menu__full img {
   border-radius: 15px 15px 0 0;
-  border: 2px dashed red;
 }
 
-card-simple, .menu__simple__transform {
+card-simple, .container__menu__simple__card__transform {
   border-radius: 15px;
   margin: 15px auto;
 }
@@ -435,19 +512,19 @@ card-steps, .header__howItWorks__steps {
   border-radius: 15px;
   margin: 15px auto;
   height: 70px;
-  margin: 15px 0 0 20px;
+  margin: 15px 10px 0 20px;
   padding-left: 10px;
 }
 
-border-radius, .menu__simple__static svg, .circle {
+border-radius, .container__menu__simple__card__static svg, .circle {
   border-radius: 15px;
 }
 
-border-radius-15, .menu__full figure {
+border-radius-15, .container__menu__full figure {
   border-radius: 15px;
 }
 
-border-right-radius-15, .tertiary, .menu__simple__static {
+border-right-radius-15, .tertiary, .container__menu__simple__card__static {
   border-radius: 0 15px 15px 0;
 }
 
@@ -481,7 +558,7 @@ border-top-radius-25, .container {
   background-color: #353535;
 }
 
-.menu__simple__static {
+.container__menu__simple__card__static {
   background-color: #99E2D0;
 }
 
