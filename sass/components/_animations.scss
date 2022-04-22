@@ -12,13 +12,11 @@
             margin-left: 0;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
-            border: 2px dashed blue;
-        }
+                  }
 
         &__static {
             height: 70px;
-            border: 2px dashed black;
-        }
+                   }
 
         &:hover &__static {
             cursor: pointer;

@@ -98,11 +98,9 @@ h3 {
   margin-left: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border: 2px dashed blue;
 }
 .container__menu__simple__card__static {
   height: 70px;
-  border: 2px dashed black;
 }
 .container__menu__simple__card:hover .container__menu__simple__card__static {
   cursor: pointer;
@@ -248,7 +246,7 @@ h3 {
   width: 100%;
   margin: 15px 0;
   height: 70px;
-  border: 2px dashed red;
+  border: 3px dashed green;
 }
 .container__menu__simple__card {
   border: 2px dashed black;
@@ -279,17 +277,18 @@ h3 {
 .container__menu__simple__card__transform__subText,
 .container__menu__simple__card__transform h3 {
   display: flex;
-  margin: 0;
+  margin: 0 0;
   justify-content: space-between;
   border: 2px dashed pink;
 }
 .container__menu__simple__card__transform__subText--bold,
 .container__menu__simple__card__transform h3--bold {
+  margin-right: 0;
   font-weight: 700;
 }
 .container__menu__simple__card__transform__subText p,
 .container__menu__simple__card__transform h3 p {
-  margin: 0;
+  margin-left: 0;
 }
 
 .container__menu__full {
@@ -306,32 +305,28 @@ h3 {
 
 @media only screen and (min-width: 1024px) {
   .container__menu__simple {
+    height: auto;
     display: flex;
     flex-direction: row;
     margin: 0;
-    border: 2px dashed green;
     justify-content: space-between;
   }
   .container__menu__simple__card {
-    border: 2px dashed red;
     flex-basis: 32%;
     margin: 0;
   }
+  .container__menu__simple__card__static {
+    width: 100%;
+    height: 110px;
+  }
   .container__menu__simple__card__transform {
     width: 100%;
-    border: 2px dashed blue;
     display: flex;
     flex-direction: column;
   }
   .container__menu__simple__card__transform__subText,
 .container__menu__simple__card__transform h3 {
-    display: flex;
     margin: 2px 0;
-    justify-content: space-between;
-  }
-  .container__menu__simple__card__static {
-    width: 100%;
-    height: 110px;
   }
 }
 .mainRepeat {
