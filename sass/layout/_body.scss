@@ -18,10 +18,13 @@
     width: 100%;
     @extend border-top-radius-25;
 
-
     &__menu {
         background-color: silver;
-        padding: 25px 20px;
+        padding: 20px;
+
+        &__simple {
+            height: 100%;
+        }
     }
 
     &__title {
@@ -32,5 +35,32 @@
         & button {
             margin: 0;
         }
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding: 20px;
+
+        &__menu {
+            &__simple {
+                &__card {
+                    margin: 20px 30px;
+
+                    &__transform {
+                        &__subText {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .container__menu__simple__card {
+        margin: 20px 10px;
     }
 }

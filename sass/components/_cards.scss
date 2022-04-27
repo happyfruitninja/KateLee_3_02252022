@@ -88,22 +88,28 @@
           padding: 10px 20px 10px 10px;
           z-index: 1;
 
-          &__subText,
-          h3 {
-            display: flex;
-            margin: 0 0;
-            justify-content: space-between;
-            border: 2px dashed pink;
+          &__text {
+            border: 2px dashed greengit;
 
-            &--bold {
-              margin-right: 0;
-              font-weight: 700;
-            }
+            &__subText,
+            h3 {
+              display: flex;
+              margin: 0 0;
+              justify-content: space-between;
+              border: 2px dashed pink;
 
-            & p {
-              margin-left: 0;
+              &--bold {
+                margin-right: 0;
+                font-weight: 700;
+              }
+
+              & p {
+                margin-left: 0;
+              }
             }
           }
+
+
         }
       }
     }
@@ -112,45 +118,61 @@
 
 .container__menu__full {
   position: relative;
+
+  .secondary {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 2%;
+    bottom: 2%;
+  }
 }
 
-.secondary {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  right: 2%;
-  bottom: 2%;
-}
+@media only screen and (min-width: 768px) {
+  .container__menu {
+    padding: 10px 100px;
 
-@media only screen and (min-width: 1024px) {
-  .container {
+    &__simple__card {
+      &__transform {
+        padding: 10px;
 
-    &__menu {
-      &__simple {
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        margin: 0;
-        justify-content: space-between;
+        &__subText {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 
-        &__card {
-          flex-basis: 32%;
+  @media only screen and (min-width: 1024px) {
+    .container {
+      &__menu {
+        &__simple {
+          height: auto;
+          display: flex;
+          flex-direction: row;
           margin: 0;
+          justify-content: space-between;
 
-          &__static {
-            width: 100%;
-            height: 110px;
-          }
+          &__card {
+            flex-basis: 32%;
+            margin: 0;
 
-          &__transform {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
+            &__static {
+              width: 100%;
+              height: 120px;
+            }
 
-            &__subText,
-            h3 {
-              margin: 2px 0; 
+            &__transform {
+              width: 100%;
+              height: 120px;
+              display: flex;
+              flex-direction: column;
 
+              &__subText,
+              h3 {
+                margin: 2px 0;
+
+              }
             }
           }
         }
@@ -158,5 +180,3 @@
     }
   }
 }
-
-@media only screen and (min-width: 768px) {}

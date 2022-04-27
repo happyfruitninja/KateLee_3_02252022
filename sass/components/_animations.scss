@@ -12,11 +12,11 @@
             margin-left: 0;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
-                  }
+        }
 
         &__static {
             height: 70px;
-                   }
+        }
 
         &:hover &__static {
             cursor: pointer;
@@ -34,14 +34,12 @@
 @media only screen and (min-width: 1024px) {
     .container__menu__simple {
         &__card {
-            height: 110px;
 
             &:hover svg {
                 top: 40%;
             }
 
             &__transform {
-                height: 110px;
 
                 &__subText,
                 h3 {
@@ -58,9 +56,10 @@
                     font-size: 1rem;
                 }
             }
-           
+
+
+        }
+
 
     }
-
-
-}}
+}
