@@ -1,6 +1,7 @@
 .container {
   &__menu {
     border: 2px dashed darkcyan;
+    padding: 20px;
 
     & h3 {
       border: 2px dashed hotpink;
@@ -65,14 +66,12 @@
 
         &__static {
           width: 100%;
-          @extend border-right-radius-15;
+          @extend border-radius-15;
           justify-content: flex-end;
           position: absolute;
           display: flex;
           margin: 0 !important;
           right: 0;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
 
           & svg {
             @extend border-radius;
@@ -89,7 +88,8 @@
           z-index: 1;
 
           &__text {
-            border: 2px dashed greengit;
+            border: 2px dashed green;
+            margin: 0;
 
             &__subText,
             h3 {
@@ -108,8 +108,6 @@
               }
             }
           }
-
-
         }
       }
     }
@@ -124,14 +122,13 @@
     width: 50px;
     height: 50px;
     right: 2%;
-    bottom: 2%;
+    bottom: 16px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .container__menu {
-    padding: 10px 100px;
-
+   
     &__simple__card {
       &__transform {
         padding: 10px;
@@ -144,37 +141,49 @@
   }
 
   @media only screen and (min-width: 1024px) {
-    .container {
-      &__menu {
-        &__simple {
-          height: auto;
-          display: flex;
-          flex-direction: row;
+    .container__menu {
+      padding: 10px 20px;
+
+      &__simple {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        justify-content: space-between;
+
+        &__card {
+          flex-basis: 32%;
           margin: 0;
-          justify-content: space-between;
 
-          &__card {
-            flex-basis: 32%;
-            margin: 0;
+          &__static {
+            width: 100%;
+            height: 130px;
+          }
 
-            &__static {
-              width: 100%;
-              height: 120px;
-            }
+          &__transform {
+            width: 100%;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
 
-            &__transform {
-              width: 100%;
-              height: 120px;
+
+            &__text {
               display: flex;
               flex-direction: column;
+              height: 100%;
 
-              &__subText,
               h3 {
                 margin: 2px 0;
+              }
 
+              &__subText {
+                margin: 5px 5px 0 0;
+
+               
               }
             }
           }
+
         }
       }
     }

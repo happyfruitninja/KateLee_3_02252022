@@ -195,6 +195,7 @@ h3 {
 
 .container__menu {
   border: 2px dashed darkcyan;
+  padding: 20px;
 }
 .container__menu h3 {
   border: 2px dashed hotpink;
@@ -255,8 +256,6 @@ h3 {
   display: flex;
   margin: 0 !important;
   right: 0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
 }
 .container__menu__simple__card__static svg {
   padding: 5px;
@@ -269,7 +268,8 @@ h3 {
   z-index: 1;
 }
 .container__menu__simple__card__transform__text {
-  border: 2px dashed greengit;
+  border: 2px dashed green;
+  margin: 0;
 }
 .container__menu__simple__card__transform__text__subText,
 .container__menu__simple__card__transform__text h3 {
@@ -296,13 +296,10 @@ h3 {
   width: 50px;
   height: 50px;
   right: 2%;
-  bottom: 2%;
+  bottom: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-  .container__menu {
-    padding: 10px 100px;
-  }
   .container__menu__simple__card__transform {
     padding: 10px;
   }
@@ -311,6 +308,9 @@ h3 {
   }
 }
 @media only screen and (min-width: 768px) and (min-width: 1024px) {
+  .container__menu {
+    padding: 10px 20px;
+  }
   .container__menu__simple {
     height: auto;
     display: flex;
@@ -324,17 +324,24 @@ h3 {
   }
   .container__menu__simple__card__static {
     width: 100%;
-    height: 120px;
+    height: 130px;
   }
   .container__menu__simple__card__transform {
     width: 100%;
-    height: 120px;
+    height: 130px;
     display: flex;
     flex-direction: column;
   }
-  .container__menu__simple__card__transform__subText,
-.container__menu__simple__card__transform h3 {
+  .container__menu__simple__card__transform__text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .container__menu__simple__card__transform__text h3 {
     margin: 2px 0;
+  }
+  .container__menu__simple__card__transform__text__subText {
+    margin: 5px 5px 0 0;
   }
 }
 .mainRepeat {
@@ -358,7 +365,6 @@ h3 {
 }
 .container__menu {
   background-color: silver;
-  padding: 20px;
 }
 .container__menu__simple {
   height: 100%;
@@ -375,6 +381,9 @@ h3 {
 @media only screen and (min-width: 768px) {
   .container {
     padding: 20px;
+  }
+  .container__menu {
+    padding: 10px 60px;
   }
   .container__menu__simple__card {
     margin: 20px 30px;
@@ -427,6 +436,11 @@ h3 {
   filter: invert(100%);
 }
 
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 20px 20px 20px 60px;
+  }
+}
 .header {
   text-align: center;
 }
@@ -457,7 +471,7 @@ h3 {
 }
 .header__explore h2,
 .header__explore p {
-  width: 300px;
+  max-width: 300px;
   margin: 30px auto;
   border: 2px dashed red;
 }
@@ -515,6 +529,15 @@ h3 {
   justify-content: center;
 }
 
+@media only screen and (min-width: 768px) {
+  .header__explore h2,
+.header__explore p {
+    max-width: 100%;
+  }
+  .header__howItWorks {
+    padding: 20px 60px;
+  }
+}
 card-full, .container__menu__full {
   border-radius: 15px;
   margin: 15px auto;
@@ -542,11 +565,11 @@ border-radius, .container__menu__simple__card__static svg, .circle {
   border-radius: 15px;
 }
 
-border-radius-15, .container__menu__full figure {
+border-radius-15, .tertiary, .container__menu__full figure, .container__menu__simple__card__static {
   border-radius: 15px;
 }
 
-border-right-radius-15, .tertiary, .container__menu__simple__card__static {
+border-right-radius-15 {
   border-radius: 0 15px 15px 0;
 }
 

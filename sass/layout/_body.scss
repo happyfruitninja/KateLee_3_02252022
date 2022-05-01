@@ -20,7 +20,7 @@
 
     &__menu {
         background-color: silver;
-        padding: 20px;
+       
 
         &__simple {
             height: 100%;
@@ -44,6 +44,8 @@
         padding: 20px;
 
         &__menu {
+            padding: 10px 60px;
+
             &__simple {
                 &__card {
                     margin: 20px 30px;
