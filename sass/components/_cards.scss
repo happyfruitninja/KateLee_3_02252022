@@ -3,9 +3,7 @@
     border: 2px dashed darkcyan;
     padding: 20px;
 
-    & h3 {
-      border: 2px dashed hotpink;
-    }
+    & h3 {}
 
     &__full {
       @extend card-full;
@@ -20,7 +18,6 @@
         height: 100%;
         position: relative;
         @extend border-radius-15;
-        border: 2px dashed red;
 
         & img {
           width: 100%;
@@ -56,16 +53,15 @@
       width: 100%;
       margin: 15px 0;
       height: 70px;
-      border: 3px dashed green;
 
       &__card {
-        border: 2px dashed black;
-        margin: 10px 0;
+        margin: 15px 0;
         display: flex;
         position: relative;
 
         &__static {
           width: 100%;
+          height: 70px;
           @extend border-radius-15;
           justify-content: flex-end;
           position: absolute;
@@ -84,19 +80,16 @@
           background-color: white;
           @extend card-simple;
           margin: 0 !important;
-          padding: 10px 20px 10px 10px;
+          padding: 10px;
           z-index: 1;
 
           &__text {
-            border: 2px dashed green;
             margin: 0;
 
-            &__subText,
-            h3 {
+            &__subText {
               display: flex;
-              margin: 0 0;
+              margin: 0;
               justify-content: space-between;
-              border: 2px dashed pink;
 
               &--bold {
                 margin-right: 0;
@@ -128,7 +121,7 @@
 
 @media only screen and (min-width: 768px) {
   .container__menu {
-   
+
     &__simple__card {
       &__transform {
         padding: 10px;
@@ -153,37 +146,49 @@
 
         &__card {
           flex-basis: 32%;
-          margin: 0;
+          margin: 0 auto;
 
           &__static {
-            width: 100%;
-            height: 130px;
+            height: 140px;
           }
 
           &__transform {
-            width: 100%;
-            height: 130px;
-            display: flex;
-            flex-direction: column;
-
+            height: 140px;
+            text-align: center;
 
             &__text {
+              height: 100%;
               display: flex;
               flex-direction: column;
-              height: 100%;
+              justify-content: space-between;
+             
 
               h3 {
-                margin: 2px 0;
+                margin: 2px auto;
+                border-bottom: 3px solid #99e2d0;
+                padding: 0 10px 5px;
+           
+              }
+
+              p {
+                margin: 0 5px;
+
               }
 
               &__subText {
-                margin: 5px 5px 0 0;
+                flex-direction: column;
+                height: 68%;
 
-               
+                &--bold {
+                  margin: 0;
+                }
+
+                & p:nth-child(2) {
+                  margin-bottom: 0;
+                }
               }
             }
           }
-
         }
       }
     }

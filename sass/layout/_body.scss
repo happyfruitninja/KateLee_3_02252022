@@ -44,7 +44,7 @@
         padding: 20px;
 
         &__menu {
-            padding: 10px 60px;
+            padding: 10px ;
 
             &__simple {
                 &__card {
@@ -63,6 +63,6 @@
 
 @media only screen and (min-width:1024px) {
     .container__menu__simple__card {
-        margin: 20px 10px;
+        margin: 10px;
     }
 }

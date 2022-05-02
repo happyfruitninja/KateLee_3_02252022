@@ -1,17 +1,28 @@
+body {
+    font-family: roboto, san-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    min-width: 380px;
+    width: 100%;
+    background-color: sandybrown;
+
+}
+
 .container__title {
-    & h1{
+    & h1 {
         font-family: shrikhand, serif;
         font-style: italic;
         letter-spacing: 1px;
         margin: 0px 15px;
         text-transform: capitalize;
     }
-   }
+}
 
 h3 {
     text-transform: capitalize;
     margin: 3px 0;
-    }
+}
 
 
 .uppercase {
@@ -19,15 +30,15 @@ h3 {
     font-weight: 300;
     padding: 0 5px;
     font-size: 1.07rem;
-    position:relative;
+    position: relative;
     margin-bottom: 10px;
 
     &:after {
         content: "";
-        width: 45px;
-        height: 2px;
-        background-color: cyan;
-       left: 5px;
+        width: 50px;
+        height: 3px;
+        background-color: #99e2d0;
+        left: 5px;
         bottom: -6px;
         position: absolute;
     }
@@ -35,5 +46,35 @@ h3 {
 
 .lowercase {
     text-transform: lowercase;
-   
-  }
+}
+
+@media only screen and (min-width: 768px){
+    * {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .uppercase {
+            font-size: 1.3rem;
+        }
+
+        p{
+            font-size: 1.13rem;
+        }
+}
+
+@media only screen and (min-width: 1024px) {
+    * {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .uppercase {
+            font-size: 1.3rem;
+        }
+
+        p{
+            font-size: 1.13rem;
+        }
+    }
+}}

@@ -43,7 +43,7 @@
     }
 
     &__solid {
-        right: 100000000px;
+        right: 10000px;
 
     }
 
@@ -63,19 +63,19 @@
 
 //menu-item like button
 .tertiary {
-    width: 100%;
     border: none;
     @extend border-radius-15;
     position: relative;
-    
-
-
+    width: 100%;
+    display:flex;
+   justify-content: center;
+    align-items: center;
+   
+   
     & svg {
         position: absolute;
-        right:1000px;
-        top: 35%;
-    left:10000px;
-    }
+       
+             }
 
     &:active svg {
         transform: translate(1px, 1px);
