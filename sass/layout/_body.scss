@@ -13,7 +13,7 @@
 .container {
     background-color: wheat;
     padding: 40px 0 60px;
-    margin-top: -40px;
+    margin-top: 30px;
     order: 2;
     width: 100%;
     @extend border-top-radius-25;
@@ -21,7 +21,6 @@
     &__menu {
         background-color: silver;
        
-
         &__simple {
             height: 100%;
         }
@@ -42,7 +41,7 @@
 @media only screen and (min-width: 768px) {
     .container {
         padding: 20px;
-
+       
         &__menu {
             padding: 10px ;
 
