@@ -2,7 +2,6 @@
     &__card {
         overflow: hidden;
 
-
         &__transform {
             width: 100%;
             height: 70px;
@@ -39,49 +38,40 @@
     }
 }
 
-
-
-
 .loadingCard {
-     &--1 {
+    &--1 {
         @extend loadingCard;
-        animation-duration:500ms;
-      
+        animation-duration: 600ms;
+
     }
 
     &--2 {
         @extend loadingCard;
-        animation-duration: 1000ms;
-       
+        animation-duration: 900ms;
+
     }
 
     &--3 {
         @extend loadingCard;
-        animation-duration: 1500ms;
-        
+        animation-duration: 1300ms;
+
     }
 
 }
 
 .loadingGroup {
     &--1 {
-        @extend loadingCard;
-        animation-duration:500ms;
-        animation-timing-function:cubic-bezier(0, 1, 0, 1);
+        @extend loadingGroup;
+        animation-timing-function: cubic-bezier(0, 0.69, 0, 1);
     }
 
     &--2 {
-        @extend loadingCard;
-        animation-duration: 1000ms;
-        
-        animation-timing-function:linear;
+        @extend loadingGroup;
+        animation-timing-function: ease-in-out;
     }
 
     &--3 {
-        @extend loadingCard;
-        animation-duration: 1500ms; 
-        animation-timing-function:cubic-bezier(1, 0, 1, 0);
-       
+        @extend loadingGroup;
+        animation-timing-function: cubic-bezier(.5, -0.06, .53, .29);
     }
-
 }

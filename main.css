@@ -148,26 +148,23 @@ h3 {
 }
 
 .loadingCard--1 {
-  animation-duration: 500ms;
+  animation-duration: 600ms;
 }
 .loadingCard--2 {
-  animation-duration: 1000ms;
+  animation-duration: 900ms;
 }
 .loadingCard--3 {
-  animation-duration: 1500ms;
+  animation-duration: 1300ms;
 }
 
 .loadingGroup--1 {
-  animation-duration: 500ms;
-  animation-timing-function: cubic-bezier(0, 1, 0, 1);
+  animation-timing-function: cubic-bezier(0, 0.69, 0, 1);
 }
 .loadingGroup--2 {
-  animation-duration: 1000ms;
-  animation-timing-function: linear;
+  animation-timing-function: ease-in-out;
 }
 .loadingGroup--3 {
-  animation-duration: 1500ms;
-  animation-timing-function: cubic-bezier(1, 0, 1, 0);
+  animation-timing-function: cubic-bezier(0.5, -0.06, 0.53, 0.29);
 }
 
 .btn {
@@ -630,7 +627,7 @@ border-top-radius-25, .container {
   border-radius: 25px 25px 0 0;
 }
 
-loadingCard, .loadingCard--1, .loadingCard--2, .loadingCard--3, .loadingGroup--1, .loadingGroup--2, .loadingGroup--3 {
+loadingCard, .loadingCard--1, .loadingCard--2, .loadingCard--3 {
   animation-name: loading;
   animation-timing-function: ease-in-out;
 }
@@ -643,8 +640,10 @@ loadingCard, .loadingCard--1, .loadingCard--2, .loadingCard--3, .loadingGroup--1
     opacity: 1;
   }
 }
-loadingCard loadingGroup, .loadingCard--1 loadingGroup, .loadingCard--2 loadingGroup, .loadingCard--3 loadingGroup, .loadingGroup--1 loadingGroup, .loadingGroup--2 loadingGroup, .loadingGroup--3 loadingGroup {
+
+loadingGroup, .loadingGroup--1, .loadingGroup--2, .loadingGroup--3 {
   animation-name: loading;
+  animation-duration: 1000ms;
 }
 @keyframes loading {
   0% {

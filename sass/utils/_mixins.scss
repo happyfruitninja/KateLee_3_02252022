@@ -48,7 +48,7 @@ border-top-radius-25 {
 
 @mixin loadingAnim {
     animation-name: loading;
- 
+
 
     @keyframes loading {
 
@@ -59,20 +59,17 @@ border-top-radius-25 {
         100% {
             visibility: visible;
             opacity: 1;
-           
+
         }
     }
 }
 
-
-
 loadingCard {
     @include loadingAnim;
-   animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
 
 loadingGroup {
     @include loadingAnim;
-   
-   
-}
+    animation-duration: 1000ms; 
 }
