@@ -1,10 +1,10 @@
 .container__menu__simple {
     &__card {
-        overflow:hidden;
+        overflow: hidden;
+
         &__transform {
             width: 100%;
             height: 70px;
-            transition: width 300ms linear;
         }
 
         &:hover &__transform {
@@ -36,4 +36,18 @@
             }
         }
     }
+}
+
+
+.loadingCard-1 {
+    
+ @extend loadingCard-1;
+}
+
+.loadingCard-2 {
+ @extend loadingCard-2;
+}
+
+.loadingCard-3 {
+    @extend loadingCard-3;
 }

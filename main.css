@@ -121,7 +121,6 @@ h3 {
 .container__menu__simple__card__transform {
   width: 100%;
   height: 70px;
-  transition: width 300ms linear;
 }
 .container__menu__simple__card:hover .container__menu__simple__card__transform {
   width: 82%;
@@ -378,7 +377,7 @@ h3 {
 
 .container {
   background-color: wheat;
-  padding: 40px 0 60px;
+  padding: 40px 20px 60px;
   margin-top: 30px;
   order: 2;
   width: 100%;
@@ -606,6 +605,50 @@ border-right-radius-15 {
 
 border-top-radius-25, .container {
   border-radius: 25px 25px 0 0;
+}
+
+loadingCard-1, .loadingCard-1 {
+  animation: 2000ms loadingCard ease-in;
+}
+@keyframes loadingCard {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+loadingCard-2, .loadingCard-2 {
+  animation: 2000ms loadingCard ease-in;
+  animation-delay: 500ms;
+}
+@keyframes loadingCard {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+loadingCard-3, .loadingCard-3 {
+  animation: 2000ms loadingCard ease-in;
+  animation-delay: 1000ms;
+}
+@keyframes loadingCard {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .primary {

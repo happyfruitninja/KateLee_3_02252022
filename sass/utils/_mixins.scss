@@ -13,9 +13,9 @@ card-full {
     height: 250px;
 
     & img {
-       
+
         @include cornerRadius(15px 15px 0 0);
-        
+
     }
 }
 
@@ -44,4 +44,32 @@ border-right-radius-15 {
 
 border-top-radius-25 {
     @include cornerRadius(25px 25px 0 0);
+}
+
+@mixin loadingCard {    
+    animation: 2000ms loadingCard ease-in;
+
+    @keyframes loadingCard {
+        0% {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        100% {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+loadingCard-1 {
+    @include loadingCard;
+}
+loadingCard-2 {
+    @include loadingCard;
+    animation-delay: 500ms;
+}
+loadingCard-3 {
+    @include loadingCard;
+    animation-delay:1000ms;
 }
