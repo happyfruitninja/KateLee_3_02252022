@@ -147,6 +147,29 @@ h3 {
   transition: transform 800ms ease;
 }
 
+.loadingCard--1 {
+  animation-duration: 500ms;
+}
+.loadingCard--2 {
+  animation-duration: 1000ms;
+}
+.loadingCard--3 {
+  animation-duration: 1500ms;
+}
+
+.loadingGroup--1 {
+  animation-duration: 500ms;
+  animation-timing-function: cubic-bezier(0, 1, 0, 1);
+}
+.loadingGroup--2 {
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+}
+.loadingGroup--3 {
+  animation-duration: 1500ms;
+  animation-timing-function: cubic-bezier(1, 0, 1, 0);
+}
+
 .btn {
   cursor: pointer;
 }
@@ -457,7 +480,7 @@ h3 {
 
 @media only screen and (min-width: 768px) {
   .footer {
-    padding: 20px 20px 20px 60px;
+    padding: 20px 20px 20px 40px;
   }
 }
 .header {
@@ -607,12 +630,12 @@ border-top-radius-25, .container {
   border-radius: 25px 25px 0 0;
 }
 
-loadingCard-1, .loadingCard-1 {
-  animation: 2000ms loadingCard ease-in;
+loadingCard, .loadingCard--1, .loadingCard--2, .loadingCard--3, .loadingGroup--1, .loadingGroup--2, .loadingGroup--3 {
+  animation-name: loading;
+  animation-timing-function: ease-in-out;
 }
-@keyframes loadingCard {
+@keyframes loading {
   0% {
-    visibility: hidden;
     opacity: 0;
   }
   100% {
@@ -620,29 +643,11 @@ loadingCard-1, .loadingCard-1 {
     opacity: 1;
   }
 }
-
-loadingCard-2, .loadingCard-2 {
-  animation: 2000ms loadingCard ease-in;
-  animation-delay: 500ms;
+loadingCard loadingGroup, .loadingCard--1 loadingGroup, .loadingCard--2 loadingGroup, .loadingCard--3 loadingGroup, .loadingGroup--1 loadingGroup, .loadingGroup--2 loadingGroup, .loadingGroup--3 loadingGroup {
+  animation-name: loading;
 }
-@keyframes loadingCard {
+@keyframes loading {
   0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-loadingCard-3, .loadingCard-3 {
-  animation: 2000ms loadingCard ease-in;
-  animation-delay: 1000ms;
-}
-@keyframes loadingCard {
-  0% {
-    visibility: hidden;
     opacity: 0;
   }
   100% {
