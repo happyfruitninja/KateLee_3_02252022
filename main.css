@@ -94,25 +94,14 @@ h3 {
 }
 
 @media only screen and (min-width: 768px) {
-  * h1 {
+  body h1 {
     font-size: 2.5rem;
   }
-  * .uppercase {
+  body .uppercase, body h3 {
     font-size: 1.3rem;
   }
-  * p {
-    font-size: 1.13rem;
-  }
-}
-@media only screen and (min-width: 768px) and (min-width: 1024px) {
-  * h1 {
-    font-size: 2.5rem;
-  }
-  * .uppercase {
-    font-size: 1.3rem;
-  }
-  * p {
-    font-size: 1.13rem;
+  body p {
+    font-size: 1.15rem;
   }
 }
 .container__menu__simple__card {
@@ -588,6 +577,67 @@ h3 {
     padding: 5px;
   }
 }
+body {
+  background-color: white;
+}
+
+i {
+  font-size: 50px;
+}
+
+.loading {
+  border: 2px dashed blue;
+}
+.loading__l {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: pink;
+}
+.loading__o {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: orange;
+}
+.loading__a {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: lightblue;
+}
+.loading__d {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: lightcoral;
+}
+.loading__i {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: darkorange;
+}
+.loading__n {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: gold;
+}
+.loading__g {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: cornflowerblue;
+}
+
 card-full, .container__menu__full {
   border-radius: 15px;
   margin: 15px auto;
