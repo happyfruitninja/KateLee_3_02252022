@@ -1,3 +1,4 @@
+//card//
 .container__menu__simple {
     &__card {
         overflow: hidden;
@@ -74,4 +75,154 @@
         @extend loadingGroup;
         animation-timing-function: cubic-bezier(.5, -0.06, .53, .29);
     }
+}
+
+//preloader//
+.loading {
+    &>* {}
+
+    &__l {
+        animation: dot-scale 2800ms 100ms cubic-bezier(1, 0, .77, .99);
+
+        & i:first-child {
+            animation: letter-scale 2800ms 70ms linear infinite;
+        }
+
+        & i:last-child {
+            animation: icon-scale 2800ms 70ms linear infinite;
+        }
+    }
+
+    &__o {
+        animation: dot-scale 2800ms 150ms cubic-bezier(1, 0, .77, .99);
+
+        & i:first-child {
+            animation: letter-scale 2800ms 100ms linear infinite;
+        }
+
+        & i:last-child {
+            animation: icon-scale 2800ms 100ms linear infinite;
+        }
+    }
+
+    &__a {
+        animation: dot-scale 2800ms 200ms cubic-bezier(1, 0, .77, .99);
+
+        & i:first-child {
+            animation: letter-scale 2800ms 150ms linear infinite;
+        }
+
+        & i:last-child {
+            animation: icon-scale 2800ms 150ms linear infinite;
+        }
+    }
+
+    &__d {
+        animation: dot-scale 2800ms 250ms cubic-bezier(1, 0, .77, .99);
+
+        & i:first-child {
+            animation: letter-scale 2800ms 200ms linear infinite;
+        }
+
+        & i:last-child {
+            animation: icon-scale 2800ms 200ms linear infinite;
+        }
+    }
+
+    &__i {
+        animation: dot-scale 2800ms 340ms cubic-bezier(1, 0, .77, .99);
+
+        & i:first-child {
+            animation: letter-scale 2800ms 290ms linear infinite;
+        }
+
+        & i:last-child {
+            animation: icon-scale 2800ms 290ms linear infinite;
+        }
+    }
+
+    &__n {
+        animation: dot-scale 2800ms 370ms cubic-bezier(1, 0, .77, .99);
+
+        & i:first-child {
+            animation: letter-scale 2800ms 320ms linear infinite ;
+        }
+
+        & i:last-child {
+            animation: icon-scale 2800ms 320ms linear infinite;
+        }
+    }
+
+    &__g {
+        animation: dot-scale 2800ms 400ms cubic-bezier(1, 0, .77, .99);
+
+        & i:first-child {
+            animation: letter-scale 2800ms 350ms linear infinite ;
+        }
+
+        & i:last-child {
+            animation: icon-scale 2800ms 350ms linear infinite ;
+        }
+    }
+}
+
+@keyframes dot-scale {
+
+    0%,
+    30% {
+        transform: scale(1.1);
+    }
+
+
+    37% {
+        transform: scale(1.35);
+    }
+
+    40%,
+    55% {
+        transform: scale(1.45);
+    }
+
+    60% {
+        transform: scale(1.35);
+    }
+
+    65%,
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+@keyframes letter-scale {
+
+    0% {
+        opacity: 0;
+    }
+
+40%, 80%{
+    opacity: 1;
+}
+
+    100% {
+        opacity: 0;
+    }
+
+
+}
+
+@keyframes icon-scale {
+
+    0% {
+        opacity: 1;
+    }
+
+    35%, 80%{
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+
 }

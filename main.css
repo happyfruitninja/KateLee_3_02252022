@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  background-color: wheat;
+}
+
 main {
   max-width: 1250px;
   margin: 0 auto;
@@ -33,19 +37,14 @@ img {
   margin: 0 10px -3px 0;
 }
 
-@media only screen and (min-width: 380px) and (max-width: 480px) {
-  body {
-    background-color: blue;
-  }
-}
 @media only screen and (min-width: 768px) {
   body {
-    background-color: orange;
+    background-color: lightseagreen;
   }
 }
 @media only screen and (min-width: 1024px) {
   body {
-    background-color: pink;
+    background-color: lightgray;
   }
 }
 body {
@@ -55,7 +54,6 @@ body {
   margin: 0;
   min-width: 380px;
   width: 100%;
-  background-color: sandybrown;
 }
 
 .container__title h1 {
@@ -97,12 +95,8 @@ h3 {
   body h1 {
     font-size: 2.5rem;
   }
-<<<<<<< HEAD
   body .uppercase,
 body h3 {
-=======
-  body .uppercase, body h3 {
->>>>>>> a500d313c84409fb60cf4fce4e65833c144228b3
     font-size: 1.3rem;
   }
   body p {
@@ -161,6 +155,109 @@ body h3 {
   animation-timing-function: cubic-bezier(0.5, -0.06, 0.53, 0.29);
 }
 
+.loading__l {
+  animation: dot-scale 2800ms 100ms cubic-bezier(1, 0, 0.77, 0.99);
+}
+.loading__l i:first-child {
+  animation: letter-scale 2800ms 70ms linear infinite;
+}
+.loading__l i:last-child {
+  animation: icon-scale 2800ms 70ms linear infinite;
+}
+.loading__o {
+  animation: dot-scale 2800ms 150ms cubic-bezier(1, 0, 0.77, 0.99);
+}
+.loading__o i:first-child {
+  animation: letter-scale 2800ms 100ms linear infinite;
+}
+.loading__o i:last-child {
+  animation: icon-scale 2800ms 100ms linear infinite;
+}
+.loading__a {
+  animation: dot-scale 2800ms 200ms cubic-bezier(1, 0, 0.77, 0.99);
+}
+.loading__a i:first-child {
+  animation: letter-scale 2800ms 150ms linear infinite;
+}
+.loading__a i:last-child {
+  animation: icon-scale 2800ms 150ms linear infinite;
+}
+.loading__d {
+  animation: dot-scale 2800ms 250ms cubic-bezier(1, 0, 0.77, 0.99);
+}
+.loading__d i:first-child {
+  animation: letter-scale 2800ms 200ms linear infinite;
+}
+.loading__d i:last-child {
+  animation: icon-scale 2800ms 200ms linear infinite;
+}
+.loading__i {
+  animation: dot-scale 2800ms 340ms cubic-bezier(1, 0, 0.77, 0.99);
+}
+.loading__i i:first-child {
+  animation: letter-scale 2800ms 290ms linear infinite;
+}
+.loading__i i:last-child {
+  animation: icon-scale 2800ms 290ms linear infinite;
+}
+.loading__n {
+  animation: dot-scale 2800ms 370ms cubic-bezier(1, 0, 0.77, 0.99);
+}
+.loading__n i:first-child {
+  animation: letter-scale 2800ms 320ms linear infinite;
+}
+.loading__n i:last-child {
+  animation: icon-scale 2800ms 320ms linear infinite;
+}
+.loading__g {
+  animation: dot-scale 2800ms 400ms cubic-bezier(1, 0, 0.77, 0.99);
+}
+.loading__g i:first-child {
+  animation: letter-scale 2800ms 350ms linear infinite;
+}
+.loading__g i:last-child {
+  animation: icon-scale 2800ms 350ms linear infinite;
+}
+
+@keyframes dot-scale {
+  0%, 30% {
+    transform: scale(1.1);
+  }
+  37% {
+    transform: scale(1.35);
+  }
+  40%, 55% {
+    transform: scale(1.45);
+  }
+  60% {
+    transform: scale(1.35);
+  }
+  65%, 100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes letter-scale {
+  0% {
+    opacity: 0;
+  }
+  40%, 80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes icon-scale {
+  0% {
+    opacity: 1;
+  }
+  35%, 80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .btn {
   cursor: pointer;
 }
@@ -448,8 +545,6 @@ body h3 {
   margin-left: 20px;
 }
 
-/*
-    */
 .footer {
   padding: 25px 15px;
   letter-spacing: 0.5px;
@@ -582,161 +677,70 @@ body h3 {
     padding: 5px;
   }
 }
-body {
-  background-color: white;
-}
-
 i {
-<<<<<<< HEAD
-  font-size: 30px;
-  border: 2px dashed red;
-  margin: 10px;
   position: relative;
+  font-size: 20px;
+  margin: 0px;
+  position: absolute;
 }
 i:first-child {
-  position: absolute;
+  color: white;
 }
 i:last-child {
-  position: absolute;
-=======
-  font-size: 50px;
->>>>>>> a500d313c84409fb60cf4fce4e65833c144228b3
+  opacity: 0.5;
+}
+
+body {
+  opacity: 0.5;
 }
 
 .loading {
-  border: 2px dashed blue;
-<<<<<<< HEAD
   display: flex;
+  width: 80vw;
+  height: 100vh;
+  align-items: center;
+}
+.loading > * {
+  margin: 15px auto;
 }
 .loading__l {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  margin: 20px auto;
-  display: flex;
-  background-color: pink;
-}
-.loading__l :first-child {
-  color: green;
-  top: 110px;
-}
-.loading__l :last-child {
-  color: orangered;
+  background-color: green;
 }
 .loading__o {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  margin: 20px auto;
-  display: flex;
-  background-color: orange;
+  background-color: green;
 }
 .loading__a {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  margin: 20px auto;
-  display: flex;
-  background-color: #c2e6ad;
+  background-color: green;
 }
 .loading__d {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  margin: 20px auto;
-  display: flex;
-  background-color: lightcoral;
+  background-color: green;
 }
 .loading__i {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  margin: 20px auto;
-  display: flex;
-  background-color: darkorange;
+  background-color: green;
 }
 .loading__n {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  margin: 20px auto;
-  display: flex;
-  background-color: gold;
+  background-color: green;
 }
 .loading__g {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  margin: 20px auto;
-  display: flex;
-  background-color: cornflowerblue;
+  background-color: green;
 }
 
-.loading {
-  animation: drop 0ms ease-out infinite alternate;
-}
-
-@keyframes drop {
-  0% {
-    transform: translateY(-100px);
+@media only screen and (min-width: 768px) {
+  .loading {
+    width: 55vw;
   }
-  100% {
-    transform: translateY(50vh);
+  .loading > * {
+    margin: 10px auto;
   }
 }
-=======
+@media only screen and (min-width: 1024px) {
+  .loading {
+    width: 50vw;
+  }
+  .loading > * {
+    margin: 5px auto;
+  }
 }
-.loading__l {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin: 20px auto;
-  background-color: pink;
-}
-.loading__o {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin: 20px auto;
-  background-color: orange;
-}
-.loading__a {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin: 20px auto;
-  background-color: lightblue;
-}
-.loading__d {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin: 20px auto;
-  background-color: lightcoral;
-}
-.loading__i {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin: 20px auto;
-  background-color: darkorange;
-}
-.loading__n {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin: 20px auto;
-  background-color: gold;
-}
-.loading__g {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin: 20px auto;
-  background-color: cornflowerblue;
-}
-
->>>>>>> a500d313c84409fb60cf4fce4e65833c144228b3
 card-full, .container__menu__full {
   border-radius: 15px;
   margin: 15px auto;
@@ -802,6 +806,17 @@ loadingGroup, .loadingGroup--1, .loadingGroup--2, .loadingGroup--3 {
     visibility: visible;
     opacity: 1;
   }
+}
+
+dot-group, .loading > * {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation-iteration-count: infinite;
 }
 
 .primary {

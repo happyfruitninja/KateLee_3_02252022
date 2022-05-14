@@ -1,129 +1,84 @@
-body {
-    background-color: white;
-<<<<<<< HEAD
-}
-
 i {
-    font-size: 30px;
-    border: 2px dashed red;
-    margin: 10px;
     position: relative;
+    font-size: 20px;
+    margin: 0px;
+    position: absolute;
 
     &:first-child {
-        position: absolute;
+        color: white;
     }
 
     &:last-child {
-        position: absolute;
+        opacity: 0.5;
     }
-
 }
 
-@mixin dot {
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    margin: 20px auto;
-    display: flex;
+body{
+    opacity: 0.5;
 }
 
 .loading {
-    border: 2px dashed blue;
     display: flex;
+    width: 80vw;
+    height: 100vh;
+    align-items: center;
 
-    &__l {
-        @include dot;
-        background-color: pink;
-        
-
-       
-              
-        & :first-child {
-            color: green;
-            top: 110px;
-
-        }
-
-        & :last-child {
-            color: orangered;
-
-        }
-=======
+    &>* {
+        @extend dot-group;  
+        margin:15px auto ;
     }
 
-i{
-      font-size: 50px;
-}
-
-@mixin dot {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    margin: 20px auto;
-}
-
-.loading {
-
-       border: 2px dashed blue;
-   
     &__l {
-        @include dot;
-        background-color: pink;
->>>>>>> a500d313c84409fb60cf4fce4e65833c144228b3
+        background-color: green;
+
     }
 
     &__o {
-        @include dot;
-        background-color: orange;
+        background-color: green;
     }
 
     &__a {
-        @include dot;
-<<<<<<< HEAD
-        background-color: rgb(194, 230, 173);
-=======
-        background-color: lightblue;
->>>>>>> a500d313c84409fb60cf4fce4e65833c144228b3
+        background-color: green;
     }
 
     &__d {
-        @include dot;
-        background-color: lightcoral;
+        background-color: green;
     }
 
     &__i {
-        @include dot;
-        background-color: darkorange;
+        background-color: green;
     }
 
     &__n {
-        @include dot;
-        background-color: gold;
+        background-color:green;
+
     }
 
     &__g {
-        @include dot;
-        background-color: cornflowerblue;
+        background-color: green;
     }
-<<<<<<< HEAD
 }
 
-//animation//
 
-.loading {
-    animation: drop 000ms ease-out infinite alternate;
+@media only screen and (min-width: 768px) {
+
+    .loading {
+        width: 55vw;
+       &>*{
+        margin:10px auto ;
+       }
+    }
+
 }
 
-@keyframes drop {
-    0% {
-        transform: translateY(-100px);
 
+@media only screen and (min-width: 1024px) {
+
+    .loading {
+        width: 50vw;
+       &>*{
+        margin:5px auto ;
+       }
     }
 
-    100% {
-        transform: translateY(50vh);
-
-    }
-=======
->>>>>>> a500d313c84409fb60cf4fce4e65833c144228b3
 }
