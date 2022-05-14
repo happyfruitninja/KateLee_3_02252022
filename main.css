@@ -97,8 +97,12 @@ h3 {
   body h1 {
     font-size: 2.5rem;
   }
+<<<<<<< HEAD
   body .uppercase,
 body h3 {
+=======
+  body .uppercase, body h3 {
+>>>>>>> a500d313c84409fb60cf4fce4e65833c144228b3
     font-size: 1.3rem;
   }
   body p {
@@ -583,6 +587,7 @@ body {
 }
 
 i {
+<<<<<<< HEAD
   font-size: 30px;
   border: 2px dashed red;
   margin: 10px;
@@ -593,10 +598,14 @@ i:first-child {
 }
 i:last-child {
   position: absolute;
+=======
+  font-size: 50px;
+>>>>>>> a500d313c84409fb60cf4fce4e65833c144228b3
 }
 
 .loading {
   border: 2px dashed blue;
+<<<<<<< HEAD
   display: flex;
 }
 .loading__l {
@@ -675,6 +684,59 @@ i:last-child {
     transform: translateY(50vh);
   }
 }
+=======
+}
+.loading__l {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: pink;
+}
+.loading__o {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: orange;
+}
+.loading__a {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: lightblue;
+}
+.loading__d {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: lightcoral;
+}
+.loading__i {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: darkorange;
+}
+.loading__n {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: gold;
+}
+.loading__g {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 20px auto;
+  background-color: cornflowerblue;
+}
+
+>>>>>>> a500d313c84409fb60cf4fce4e65833c144228b3
 card-full, .container__menu__full {
   border-radius: 15px;
   margin: 15px auto;
