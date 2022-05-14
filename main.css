@@ -94,25 +94,15 @@ h3 {
 }
 
 @media only screen and (min-width: 768px) {
-  * h1 {
+  body h1 {
     font-size: 2.5rem;
   }
-  * .uppercase {
+  body .uppercase,
+body h3 {
     font-size: 1.3rem;
   }
-  * p {
-    font-size: 1.13rem;
-  }
-}
-@media only screen and (min-width: 768px) and (min-width: 1024px) {
-  * h1 {
-    font-size: 2.5rem;
-  }
-  * .uppercase {
-    font-size: 1.3rem;
-  }
-  * p {
-    font-size: 1.13rem;
+  body p {
+    font-size: 1.15rem;
   }
 }
 .container__menu__simple__card {
@@ -586,6 +576,103 @@ h3 {
     flex-basis: 42%;
     max-width: 600px;
     padding: 5px;
+  }
+}
+body {
+  background-color: white;
+}
+
+i {
+  font-size: 30px;
+  border: 2px dashed red;
+  margin: 10px;
+  position: relative;
+}
+i:first-child {
+  position: absolute;
+}
+i:last-child {
+  position: absolute;
+}
+
+.loading {
+  border: 2px dashed blue;
+  display: flex;
+}
+.loading__l {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin: 20px auto;
+  display: flex;
+  background-color: pink;
+}
+.loading__l :first-child {
+  color: green;
+  top: 110px;
+}
+.loading__l :last-child {
+  color: orangered;
+}
+.loading__o {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin: 20px auto;
+  display: flex;
+  background-color: orange;
+}
+.loading__a {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin: 20px auto;
+  display: flex;
+  background-color: #c2e6ad;
+}
+.loading__d {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin: 20px auto;
+  display: flex;
+  background-color: lightcoral;
+}
+.loading__i {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin: 20px auto;
+  display: flex;
+  background-color: darkorange;
+}
+.loading__n {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin: 20px auto;
+  display: flex;
+  background-color: gold;
+}
+.loading__g {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin: 20px auto;
+  display: flex;
+  background-color: cornflowerblue;
+}
+
+.loading {
+  animation: drop 0ms ease-out infinite alternate;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(50vh);
   }
 }
 card-full, .container__menu__full {
