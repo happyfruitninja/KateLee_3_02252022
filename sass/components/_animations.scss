@@ -79,17 +79,18 @@
 
 //preloader//
 .loading {
-    &>* {}
+    animation: preloader 5000ms ease-in-out  300 forwards;
 
     &__l {
         animation: dot-scale 2800ms 100ms cubic-bezier(1, 0, .77, .99);
 
         & i:first-child {
-            animation: letter-scale 2800ms 70ms linear infinite;
+            animation: letter-opacity 2800ms 70ms linear infinite both;
         }
+        animation: name duration timing-function delay iteration-count direction fill-mode;
 
         & i:last-child {
-            animation: icon-scale 2800ms 70ms linear infinite;
+            animation: icon-opacity 2800ms 70ms linear infinite both ;
         }
     }
 
@@ -97,11 +98,11 @@
         animation: dot-scale 2800ms 150ms cubic-bezier(1, 0, .77, .99);
 
         & i:first-child {
-            animation: letter-scale 2800ms 100ms linear infinite;
+            animation: letter-opacity 2800ms 100ms linear infinite;
         }
 
         & i:last-child {
-            animation: icon-scale 2800ms 100ms linear infinite;
+            animation: icon-opacity 2800ms 100ms linear;
         }
     }
 
@@ -109,11 +110,11 @@
         animation: dot-scale 2800ms 200ms cubic-bezier(1, 0, .77, .99);
 
         & i:first-child {
-            animation: letter-scale 2800ms 150ms linear infinite;
+            animation: letter-opacity 2800ms 150ms linear;
         }
 
         & i:last-child {
-            animation: icon-scale 2800ms 150ms linear infinite;
+            animation: icon-opacity 2800ms 150ms linear;
         }
     }
 
@@ -121,11 +122,11 @@
         animation: dot-scale 2800ms 250ms cubic-bezier(1, 0, .77, .99);
 
         & i:first-child {
-            animation: letter-scale 2800ms 200ms linear infinite;
+            animation: letter-opacity 2800ms 200ms linear;
         }
 
         & i:last-child {
-            animation: icon-scale 2800ms 200ms linear infinite;
+            animation: icon-opacity 2800ms 200ms linear;
         }
     }
 
@@ -133,23 +134,23 @@
         animation: dot-scale 2800ms 340ms cubic-bezier(1, 0, .77, .99);
 
         & i:first-child {
-            animation: letter-scale 2800ms 290ms linear infinite;
+            animation: letter-opacity 2800ms 290ms linear;
         }
 
         & i:last-child {
-            animation: icon-scale 2800ms 290ms linear infinite;
+            animation: icon-opacity 2800ms 290ms linear ;
         }
     }
 
     &__n {
-        animation: dot-scale 2800ms 370ms cubic-bezier(1, 0, .77, .99);
+        animation: dot-scale 2800ms 370ms cubic-bezier(1, 0, .77, .99) ;
 
         & i:first-child {
-            animation: letter-scale 2800ms 320ms linear infinite ;
+            animation: letter-opacity 2800ms 320ms linear ;
         }
 
         & i:last-child {
-            animation: icon-scale 2800ms 320ms linear infinite;
+            animation: icon-opacity 2800ms 320ms linear backwards;
         }
     }
 
@@ -157,12 +158,27 @@
         animation: dot-scale 2800ms 400ms cubic-bezier(1, 0, .77, .99);
 
         & i:first-child {
-            animation: letter-scale 2800ms 350ms linear infinite ;
+            animation: letter-opacity 2800ms 350ms linear;
         }
 
         & i:last-child {
-            animation: icon-scale 2800ms 350ms linear infinite ;
+            animation: icon-opacity 2800ms 350ms linear;
         }
+    }
+}
+
+@keyframes preloader {
+
+    0% {
+       opacity:0;
+    }
+
+    20%, 80% {
+        opacity:1;
+    }
+
+        100% {
+        opacity:0;
     }
 }
 
@@ -194,15 +210,16 @@
 }
 
 
-@keyframes letter-scale {
+@keyframes letter-opacity {
 
     0% {
         opacity: 0;
     }
 
-40%, 80%{
-    opacity: 1;
-}
+    20%,
+    60% {
+        opacity: 1;
+    }
 
     100% {
         opacity: 0;
@@ -211,16 +228,17 @@
 
 }
 
-@keyframes icon-scale {
+@keyframes icon-opacity {
 
     0% {
         opacity: 1;
     }
 
-    35%, 80%{
+    35%,
+    80% {
         opacity: 0;
     }
-    
+
     100% {
         opacity: 1;
     }

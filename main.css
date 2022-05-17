@@ -155,70 +155,85 @@ body h3 {
   animation-timing-function: cubic-bezier(0.5, -0.06, 0.53, 0.29);
 }
 
+.loading {
+  animation: preloader 5000ms ease-in-out 300 forwards;
+}
 .loading__l {
   animation: dot-scale 2800ms 100ms cubic-bezier(1, 0, 0.77, 0.99);
+  animation: name duration timing-function delay iteration-count direction fill-mode;
 }
 .loading__l i:first-child {
-  animation: letter-scale 2800ms 70ms linear infinite;
+  animation: letter-opacity 2800ms 70ms linear infinite both;
 }
 .loading__l i:last-child {
-  animation: icon-scale 2800ms 70ms linear infinite;
+  animation: icon-opacity 2800ms 70ms linear infinite both;
 }
 .loading__o {
   animation: dot-scale 2800ms 150ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .loading__o i:first-child {
-  animation: letter-scale 2800ms 100ms linear infinite;
+  animation: letter-opacity 2800ms 100ms linear infinite;
 }
 .loading__o i:last-child {
-  animation: icon-scale 2800ms 100ms linear infinite;
+  animation: icon-opacity 2800ms 100ms linear;
 }
 .loading__a {
   animation: dot-scale 2800ms 200ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .loading__a i:first-child {
-  animation: letter-scale 2800ms 150ms linear infinite;
+  animation: letter-opacity 2800ms 150ms linear;
 }
 .loading__a i:last-child {
-  animation: icon-scale 2800ms 150ms linear infinite;
+  animation: icon-opacity 2800ms 150ms linear;
 }
 .loading__d {
   animation: dot-scale 2800ms 250ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .loading__d i:first-child {
-  animation: letter-scale 2800ms 200ms linear infinite;
+  animation: letter-opacity 2800ms 200ms linear;
 }
 .loading__d i:last-child {
-  animation: icon-scale 2800ms 200ms linear infinite;
+  animation: icon-opacity 2800ms 200ms linear;
 }
 .loading__i {
   animation: dot-scale 2800ms 340ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .loading__i i:first-child {
-  animation: letter-scale 2800ms 290ms linear infinite;
+  animation: letter-opacity 2800ms 290ms linear;
 }
 .loading__i i:last-child {
-  animation: icon-scale 2800ms 290ms linear infinite;
+  animation: icon-opacity 2800ms 290ms linear;
 }
 .loading__n {
   animation: dot-scale 2800ms 370ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .loading__n i:first-child {
-  animation: letter-scale 2800ms 320ms linear infinite;
+  animation: letter-opacity 2800ms 320ms linear;
 }
 .loading__n i:last-child {
-  animation: icon-scale 2800ms 320ms linear infinite;
+  animation: icon-opacity 2800ms 320ms linear backwards;
 }
 .loading__g {
   animation: dot-scale 2800ms 400ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .loading__g i:first-child {
-  animation: letter-scale 2800ms 350ms linear infinite;
+  animation: letter-opacity 2800ms 350ms linear;
 }
 .loading__g i:last-child {
-  animation: icon-scale 2800ms 350ms linear infinite;
+  animation: icon-opacity 2800ms 350ms linear;
 }
 
+@keyframes preloader {
+  0% {
+    opacity: 0;
+  }
+  20%, 80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes dot-scale {
   0%, 30% {
     transform: scale(1.1);
@@ -236,18 +251,18 @@ body h3 {
     transform: scale(1.1);
   }
 }
-@keyframes letter-scale {
+@keyframes letter-opacity {
   0% {
     opacity: 0;
   }
-  40%, 80% {
+  20%, 60% {
     opacity: 1;
   }
   100% {
     opacity: 0;
   }
 }
-@keyframes icon-scale {
+@keyframes icon-opacity {
   0% {
     opacity: 1;
   }
@@ -687,10 +702,6 @@ i:first-child {
   color: white;
 }
 i:last-child {
-  opacity: 0.5;
-}
-
-body {
   opacity: 0.5;
 }
 
