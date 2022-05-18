@@ -78,107 +78,111 @@
 }
 
 //preloader//
-.loading {
-    animation: preloader 5000ms ease-in-out  300 forwards;
+.preloader {
+    animation: preloader 4000ms ease infinite both;
 
-    &__l {
-        animation: dot-scale 2800ms 100ms cubic-bezier(1, 0, .77, .99);
+    &__loading {
+        animation: preloader 3500ms ease-in-out forwards;
+        background: white;
 
-        & i:first-child {
-            animation: letter-opacity 2800ms 70ms linear infinite both;
-        }
-        animation: name duration timing-function delay iteration-count direction fill-mode;
+        &__l {
+            animation: dot-scale 2500ms 100ms cubic-bezier(1, 0, .77, .99);
 
-        & i:last-child {
-            animation: icon-opacity 2800ms 70ms linear infinite both ;
-        }
-    }
+            & i:first-child {
+                animation: letter-opacity 2500ms 70ms linear infinite both;
+            }
 
-    &__o {
-        animation: dot-scale 2800ms 150ms cubic-bezier(1, 0, .77, .99);
-
-        & i:first-child {
-            animation: letter-opacity 2800ms 100ms linear infinite;
+            & i:last-child {
+                animation: icon-opacity 2500ms 70ms linear infinite both;
+            }
         }
 
-        & i:last-child {
-            animation: icon-opacity 2800ms 100ms linear;
-        }
-    }
+        &__o {
+            animation: dot-scale 2500ms 150ms cubic-bezier(1, 0, .77, .99);
 
-    &__a {
-        animation: dot-scale 2800ms 200ms cubic-bezier(1, 0, .77, .99);
+            & i:first-child {
+                animation: letter-opacity 2500ms 100ms linear infinite both;
+            }
 
-        & i:first-child {
-            animation: letter-opacity 2800ms 150ms linear;
-        }
-
-        & i:last-child {
-            animation: icon-opacity 2800ms 150ms linear;
-        }
-    }
-
-    &__d {
-        animation: dot-scale 2800ms 250ms cubic-bezier(1, 0, .77, .99);
-
-        & i:first-child {
-            animation: letter-opacity 2800ms 200ms linear;
+            & i:last-child {
+                animation: icon-opacity 2500ms 100ms linear infinite both;
+            }
         }
 
-        & i:last-child {
-            animation: icon-opacity 2800ms 200ms linear;
-        }
-    }
+        &__a {
+            animation: dot-scale 2500ms 200ms cubic-bezier(1, 0, .77, .99);
 
-    &__i {
-        animation: dot-scale 2800ms 340ms cubic-bezier(1, 0, .77, .99);
+            & i:first-child {
+                animation: letter-opacity 2500ms 150ms linear infinite both;
+            }
 
-        & i:first-child {
-            animation: letter-opacity 2800ms 290ms linear;
-        }
-
-        & i:last-child {
-            animation: icon-opacity 2800ms 290ms linear ;
-        }
-    }
-
-    &__n {
-        animation: dot-scale 2800ms 370ms cubic-bezier(1, 0, .77, .99) ;
-
-        & i:first-child {
-            animation: letter-opacity 2800ms 320ms linear ;
+            & i:last-child {
+                animation: icon-opacity 2500ms 150ms linear infinite both;
+            }
         }
 
-        & i:last-child {
-            animation: icon-opacity 2800ms 320ms linear backwards;
+        &__d {
+            animation: dot-scale 2500ms 250ms cubic-bezier(1, 0, .77, .99);
+
+            & i:first-child {
+                animation: letter-opacity 2500ms 200ms linear infinite both;
+            }
+
+            & i:last-child {
+                animation: icon-opacity 2500ms 200ms linear infinite both;
+            }
         }
-    }
 
-    &__g {
-        animation: dot-scale 2800ms 400ms cubic-bezier(1, 0, .77, .99);
+        &__i {
+            animation: dot-scale 2500ms 340ms cubic-bezier(1, 0, .77, .99);
 
-        & i:first-child {
-            animation: letter-opacity 2800ms 350ms linear;
+            & i:first-child {
+                animation: letter-opacity 2500ms 290ms linear infinite both;
+            }
+
+            & i:last-child {
+                animation: icon-opacity 2500ms 290ms linear infinite both;
+            }
         }
 
-        & i:last-child {
-            animation: icon-opacity 2800ms 350ms linear;
+        &__n {
+            animation: dot-scale 2500ms 370ms cubic-bezier(1, 0, .77, .99);
+
+            & i:first-child {
+                animation: letter-opacity 2500ms 320ms linear infinite both;
+            }
+
+            & i:last-child {
+                animation: icon-opacity 2500ms 320ms linear infinite both;
+            }
+        }
+
+        &__g {
+            animation: dot-scale 2500ms 400ms cubic-bezier(1, 0, .77, .99);
+
+            & i:first-child {
+                animation: letter-opacity 2800ms 350ms linear infinite both;
+            }
+
+            & i:last-child {
+                animation: icon-opacity 2800ms 350ms linear infinite both;
+            }
         }
     }
 }
 
 @keyframes preloader {
-
     0% {
-       opacity:0;
+        opacity: 0;
     }
 
-    20%, 80% {
-        opacity:1;
+    20%,
+    80% {
+        opacity: 1;
     }
 
-        100% {
-        opacity:0;
+    100% {
+        opacity: 0;
     }
 }
 
@@ -188,7 +192,6 @@
     30% {
         transform: scale(1.1);
     }
-
 
     37% {
         transform: scale(1.35);
@@ -209,14 +212,12 @@
     }
 }
 
-
 @keyframes letter-opacity {
-
     0% {
         opacity: 0;
     }
 
-    20%,
+    35%,
     60% {
         opacity: 1;
     }
@@ -224,12 +225,9 @@
     100% {
         opacity: 0;
     }
-
-
 }
 
 @keyframes icon-opacity {
-
     0% {
         opacity: 1;
     }

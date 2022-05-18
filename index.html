@@ -9,28 +9,61 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"
     rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1e39221b6e.js" crossorigin="anonymous"></script>
   <title>Home</title>
 </head>
 
 <body>
-  <header class="header">
-    <img class="header__logo" src="./images/logo/ohmyfood.png">
-    <div class="header__search">
-      <form>
-        <img class="icon" src="./images/icons/map-marker-alt-solid.svg">
-        <input type="text" name="name" placeholder="Paris, Belleville">
-      </form>
-    </div>
-    <div class="header__explore">
-      <h2>Book the menu you like</h2>
-      <p>Discover top-of-the-art restaurants we picked for you</p>
-      <a href="#">
-        <div class="btn primary">Explore our restaurants </div>
-      </a>
-    </div>
-  </header>
 
   <main>
+    <div class="preloader">
+      <div class="loading">
+        <div class="loading__l">
+          <i class="fa-solid fa-l"></i>
+          <i class="fa-solid fa-carrot"></i>
+        </div>
+        <div class="loading__o">
+          <i class="fa-solid fa-o"></i>
+          <i class="fa fa-fish"></i>
+        </div>
+        <div class="loading__a">
+          <i class="fa-solid fa-a"></i>
+          <i class="fa-solid fa-lemon"></i>
+        </div>
+        <div class="loading__d">
+          <i class="fa-solid fa-d"></i>
+          <i class="fa-solid fa-shrimp"></i>
+        </div>
+        <div class="loading__i">
+          <i class="fa-solid fa-i"></i>
+          <i class="fa-solid fa-pepper-hot"></i>
+        </div>
+        <div class="loading__n">
+          <i class="fa-solid fa-n"></i>
+          <i class="fa-solid fa-carrot"></i>
+        </div>
+        <div class="loading__g">
+          <i class="fa-solid fa-g"></i>
+          <i class="fa-solid fa-martini-glass-citrus"></i>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <img class="header__logo" src="./images/logo/ohmyfood.png">
+      <div class="header__search">
+        <form>
+          <img class="icon" src="./images/icons/map-marker-alt-solid.svg">
+          <input type="text" name="name" placeholder="Paris, Belleville">
+        </form>
+      </div>
+      <div class="header__explore">
+        <h2>Book the menu you like</h2>
+        <p>Discover top-of-the-art restaurants we picked for you</p>
+        <a href="#">
+          <div class="btn primary">Explore our restaurants </div>
+        </a>
+      </div>
+   
     <div class="header__howItWorks">
       <h2>How it works</h2>
       <div class="header__howItWorks__steps">
@@ -58,6 +91,7 @@
         <p>Go enjoy it at the restaurant</p>
       </div>
     </div>
+  </div>
     <div class="container">
       <h3>Restaurants</h3>
       <div class="container__menu">
