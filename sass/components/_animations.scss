@@ -55,9 +55,7 @@
     &--3 {
         @extend loadingCard;
         animation-duration: 1300ms;
-
     }
-
 }
 
 .loadingGroup {
@@ -79,21 +77,21 @@
 
 //preloader//
 .preloader {
-    animation: preloader 4000ms ease infinite both;
+    animation: loader 4000ms ease;
 
     &__loading {
-        animation: preloader 3500ms ease-in-out forwards;
-        background: white;
 
         &__l {
             animation: dot-scale 2500ms 100ms cubic-bezier(1, 0, .77, .99);
 
             & i:first-child {
-                animation: letter-opacity 2500ms 70ms linear infinite both;
+                animation-name: letter-opacity; animation-delay: 70ms; 
+                @extend preloader-anim;
             }
 
             & i:last-child {
-                animation: icon-opacity 2500ms 70ms linear infinite both;
+                animation-name: icon-opacity ;animation-delay: 70ms; 
+                @extend preloader-anim;
             }
         }
 
@@ -101,11 +99,12 @@
             animation: dot-scale 2500ms 150ms cubic-bezier(1, 0, .77, .99);
 
             & i:first-child {
-                animation: letter-opacity 2500ms 100ms linear infinite both;
+                animation-name: letter-opacity; animation-delay: 100ms; @extend preloader-anim;
             }
 
             & i:last-child {
-                animation: icon-opacity 2500ms 100ms linear infinite both;
+                animation-name: icon-opacity; animation-delay:100ms; 
+                @extend preloader-anim;
             }
         }
 
@@ -113,11 +112,12 @@
             animation: dot-scale 2500ms 200ms cubic-bezier(1, 0, .77, .99);
 
             & i:first-child {
-                animation: letter-opacity 2500ms 150ms linear infinite both;
+                animation-name: letter-opacity; animation-delay: 150ms; @extend preloader-anim;
             }
 
             & i:last-child {
-                animation: icon-opacity 2500ms 150ms linear infinite both;
+                animation-name: icon-opacity; animation-delay:150ms;
+                 @extend preloader-anim;
             }
         }
 
@@ -125,11 +125,11 @@
             animation: dot-scale 2500ms 250ms cubic-bezier(1, 0, .77, .99);
 
             & i:first-child {
-                animation: letter-opacity 2500ms 200ms linear infinite both;
+                animation-name: letter-opacity; animation-delay:200ms; @extend preloader-anim;
             }
 
             & i:last-child {
-                animation: icon-opacity 2500ms 200ms linear infinite both;
+                animation-name: icon-opacity; animation-delay:200ms; @extend preloader-anim;
             }
         }
 
@@ -137,11 +137,14 @@
             animation: dot-scale 2500ms 340ms cubic-bezier(1, 0, .77, .99);
 
             & i:first-child {
-                animation: letter-opacity 2500ms 290ms linear infinite both;
+                animation-name: letter-opacity ; animation-delay: 290ms;
+                @extend preloader-anim;
             }
 
             & i:last-child {
-                animation: icon-opacity 2500ms 290ms linear infinite both;
+                animation-name: icon-opacity;
+                animation-delay: 290ms;
+                @extend preloader-anim;
             }
         }
 
@@ -149,11 +152,15 @@
             animation: dot-scale 2500ms 370ms cubic-bezier(1, 0, .77, .99);
 
             & i:first-child {
-                animation: letter-opacity 2500ms 320ms linear infinite both;
+                animation-name: letter-opacity;
+                animation-delay: 250ms;
+                @extend preloader-anim;
             }
 
             & i:last-child {
-                animation: icon-opacity 2500ms 320ms linear infinite both;
+                animation-name: icon-opacity;
+                animation-delay: 250ms;
+                @extend preloader-anim;
             }
         }
 
@@ -161,17 +168,21 @@
             animation: dot-scale 2500ms 400ms cubic-bezier(1, 0, .77, .99);
 
             & i:first-child {
-                animation: letter-opacity 2800ms 350ms linear infinite both;
+                animation: letter-opacity;
+                animation-delay: 350ms;
+                @extend preloader-anim;
             }
 
             & i:last-child {
-                animation: icon-opacity 2800ms 350ms linear infinite both;
+                animation: letter-opacity;
+                animation-delay: 350ms;
+                @extend preloader-anim;
             }
         }
     }
 }
 
-@keyframes preloader {
+@keyframes loader {
     0% {
         opacity: 0;
     }

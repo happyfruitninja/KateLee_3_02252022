@@ -156,77 +156,87 @@ body h3 {
 }
 
 .preloader {
-  animation: preloader 4000ms ease infinite both;
-}
-.preloader__loading {
-  animation: preloader 3500ms ease-in-out forwards;
-  background: white;
+  animation: loader 4000ms ease;
 }
 .preloader__loading__l {
   animation: dot-scale 2500ms 100ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .preloader__loading__l i:first-child {
-  animation: letter-opacity 2500ms 70ms linear infinite both;
+  animation-name: letter-opacity;
+  animation-delay: 70ms;
 }
 .preloader__loading__l i:last-child {
-  animation: icon-opacity 2500ms 70ms linear infinite both;
+  animation-name: icon-opacity;
+  animation-delay: 70ms;
 }
 .preloader__loading__o {
   animation: dot-scale 2500ms 150ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .preloader__loading__o i:first-child {
-  animation: letter-opacity 2500ms 100ms linear infinite both;
+  animation-name: letter-opacity;
+  animation-delay: 100ms;
 }
 .preloader__loading__o i:last-child {
-  animation: icon-opacity 2500ms 100ms linear infinite both;
+  animation-name: icon-opacity;
+  animation-delay: 100ms;
 }
 .preloader__loading__a {
   animation: dot-scale 2500ms 200ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .preloader__loading__a i:first-child {
-  animation: letter-opacity 2500ms 150ms linear infinite both;
+  animation-name: letter-opacity;
+  animation-delay: 150ms;
 }
 .preloader__loading__a i:last-child {
-  animation: icon-opacity 2500ms 150ms linear infinite both;
+  animation-name: icon-opacity;
+  animation-delay: 150ms;
 }
 .preloader__loading__d {
   animation: dot-scale 2500ms 250ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .preloader__loading__d i:first-child {
-  animation: letter-opacity 2500ms 200ms linear infinite both;
+  animation-name: letter-opacity;
+  animation-delay: 200ms;
 }
 .preloader__loading__d i:last-child {
-  animation: icon-opacity 2500ms 200ms linear infinite both;
+  animation-name: icon-opacity;
+  animation-delay: 200ms;
 }
 .preloader__loading__i {
   animation: dot-scale 2500ms 340ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .preloader__loading__i i:first-child {
-  animation: letter-opacity 2500ms 290ms linear infinite both;
+  animation-name: letter-opacity;
+  animation-delay: 290ms;
 }
 .preloader__loading__i i:last-child {
-  animation: icon-opacity 2500ms 290ms linear infinite both;
+  animation-name: icon-opacity;
+  animation-delay: 290ms;
 }
 .preloader__loading__n {
   animation: dot-scale 2500ms 370ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .preloader__loading__n i:first-child {
-  animation: letter-opacity 2500ms 320ms linear infinite both;
+  animation-name: letter-opacity;
+  animation-delay: 250ms;
 }
 .preloader__loading__n i:last-child {
-  animation: icon-opacity 2500ms 320ms linear infinite both;
+  animation-name: icon-opacity;
+  animation-delay: 250ms;
 }
 .preloader__loading__g {
   animation: dot-scale 2500ms 400ms cubic-bezier(1, 0, 0.77, 0.99);
 }
 .preloader__loading__g i:first-child {
-  animation: letter-opacity 2800ms 350ms linear infinite both;
+  animation: letter-opacity;
+  animation-delay: 350ms;
 }
 .preloader__loading__g i:last-child {
-  animation: icon-opacity 2800ms 350ms linear infinite both;
+  animation: letter-opacity;
+  animation-delay: 350ms;
 }
 
-@keyframes preloader {
+@keyframes loader {
   0% {
     opacity: 0;
   }
@@ -700,29 +710,24 @@ i {
   font-size: 20px;
   margin: 0px;
   position: absolute;
-}
-i:first-child {
-  color: white;
-}
-i:last-child {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .preloader {
-  opacity: 0.5;
-  background: orange;
+  background: rgba(255, 255, 255, 0.9);
   position: absolute;
   width: 100vw;
   height: 100vh;
   display: flex;
+  z-index: 1;
 }
 .preloader .loading {
   display: flex;
   margin: auto;
   width: 80vw;
-  background: linear-gradient(170deg, blue, green);
   border: 2px dashed red;
   z-index: 1;
+  overflow: hidden;
 }
 .preloader .loading > * {
   margin: 15px auto;
@@ -822,6 +827,13 @@ dot-group, .preloader .loading > * {
   animation-iteration-count: infinite;
 }
 
+preloader-anim, .preloader__loading__l i:first-child, .preloader__loading__l i:last-child, .preloader__loading__o i:first-child, .preloader__loading__o i:last-child, .preloader__loading__a i:first-child, .preloader__loading__a i:last-child, .preloader__loading__d i:first-child, .preloader__loading__d i:last-child, .preloader__loading__i i:first-child, .preloader__loading__i i:last-child, .preloader__loading__n i:first-child, .preloader__loading__n i:last-child, .preloader__loading__g i:first-child, .preloader__loading__g i:last-child {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: both;
+  animation-duration: 2500ms;
+}
+
 .primary {
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
 }
@@ -850,6 +862,11 @@ dot-group, .preloader .loading > * {
 
 .container__menu__simple__card__static {
   background-color: #99e2d0;
+}
+
+.loading > * {
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

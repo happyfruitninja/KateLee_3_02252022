@@ -41,3 +41,11 @@ $color-footer: #353535;
 .container__menu__simple__card__static {
   background-color: $color-tertiary;
 }
+
+//preloader
+.loading {
+  &>* {
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    color: white;
+  }
+}

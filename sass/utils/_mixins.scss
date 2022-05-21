@@ -16,7 +16,6 @@ card-full {
     & img {
 
         @include cornerRadius(15px 15px 0 0);
-
     }
 }
 
@@ -76,8 +75,7 @@ loadingGroup {
 
 //preloader//
 
-@mixin dot {
-   
+@mixin dot {   
     width: 50px;
     height: 50px;
     border-radius: 100px;
@@ -85,13 +83,21 @@ loadingGroup {
     justify-content: center;
     align-items: center;
     position: relative;
-    animation-iteration-count: infinite ;
+    animation-iteration-count: infinite;
 }
 
 dot-group {
     @include dot;
    
 }
-
-
+@mixin preloader-animation{
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction: both;
+    animation-duration:2500ms;
+}
+preloader-anim {
+    @include  preloader-animation;
+  
+}
 

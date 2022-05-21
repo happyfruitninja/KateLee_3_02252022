@@ -3,43 +3,34 @@ i {
     font-size: 20px;
     margin: 0px;
     position: absolute;
+    opacity: 0.7;
+ }
 
-    &:first-child {
-        color: white;
-    }
-
-    &:last-child {
-        opacity: 0.5;
-    }
-}
-
-body {}
 
 .preloader {
-    opacity: 0.5;
-    background: orange;
+    background: rgba($color: white, $alpha: 0.9);
     position: absolute;
     width: 100vw;
     height: 100vh;
     display: flex;
-  
+    z-index:1;
+      
     .loading {
         display: flex;
         margin: auto;       
         width: 80vw;        
-        background: linear-gradient(170deg, blue, green);
+        
         border: 2px dashed red;
         z-index: 1;
+        overflow: hidden;
 
         &>* {
             @extend dot-group;
             margin: 15px auto;
-
+           ;
         }
     }
 }
-
-
 
 
 @media only screen and (min-width: 768px) {
@@ -51,7 +42,6 @@ body {}
             margin: 10px auto;
         }
     }
-
 }
 
 
@@ -64,5 +54,4 @@ body {}
             margin: 5px auto;
         }
     }
-
 }
