@@ -1,57 +1,95 @@
-i {
-    position: relative;
-    font-size: 20px;
-    margin: 0px;
-    position: absolute;
-    opacity: 0.7;
- }
 
 
-.preloader {
-    background: rgba($color: white, $alpha: 0.9);
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    z-index:1;
-      
     .loading {
-        display: flex;
-        margin: auto;       
-        width: 80vw;        
-        
-        border: 2px dashed red;
-        z-index: 1;
-        overflow: hidden;
+        position: absolute;
+        left:0;
+        margin: 0px auto;
+        background: rgba($color: white, $alpha: 0.9);
+        display: flex;       
+        justify-content: center;
+    align-items: center;
+        z-index: 10;
+        border: 5px dashed green;
+        width: 100vw;
+        height: 100%;
+        animation: loader 4000ms ease-in-out both;
 
         &>* {
-            @extend dot-group;
-            margin: 15px auto;
-           ;
+            margin: 15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: dot-scale 4000ms ease infinite backwards;
+ 
+        }
+
+        & i {
+            font-size: 20px;
+            margin: 0px;          
+            position:absolute;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 2000ms;
+            animation-fill-mode: backwards;
+        }
+
+        & i:first-child {
+            top:9px;
+            animation-name: letter-opacity;
+        }
+
+        & i:last-child {
+               animation-name: icon-opacity;
+            
+        }
+
+        &__l {
+            animation-delay: 100ms;
+            animation-duration: 1900ms;
+        }
+
+        &__o {
+            animation-delay: 170ms;
+            animation-duration: 1830ms;
+        }
+
+        &__a {
+            animation-delay: 200ms;
+            animation-duration: 1800ms;
+        }
+
+        &__d {
+            animation-delay: 250ms;
+            animation-duration: 1750ms;
+        }
+
+        &__i {
+            animation-delay: 350ms;
+            animation-duration: 1650ms;
+        }
+
+        &__n {
+            animation-delay: 370ms;
+            animation-duration: 1630ms;
+        }
+
+        &__g {
+            animation-delay: 390ms;
+            animation-duration: 1610ms;
         }
     }
-}
+
 
 
 @media only screen and (min-width: 768px) {
 
-    .loading {
-        width: 55vw;
-
-        &>* {
-            margin: 10px auto;
-        }
-    }
 }
-
 
 @media only screen and (min-width: 1024px) {
 
-    .loading {
-        width: 50vw;
-
-        &>* {
-            margin: 5px auto;
-        }
-    }
+ 
 }

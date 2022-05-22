@@ -29,7 +29,7 @@
     }
 
     &__explore {
-        background-color: wheat;
+        
         padding: 10px 0;
 
         & h2,
@@ -42,8 +42,8 @@
 
     &__howItWorks {
         padding: 20px 15px;
-        border: 2px dashed red;
-
+        background-color: white;
+max-width:1500px;
         & h2 {
             text-align: left;
             padding: 0 5px;
@@ -104,6 +104,8 @@
     display: flex;
     justify-content: center;
 }
+
+
 
 @media only screen and (min-width:768px) {
     .header {

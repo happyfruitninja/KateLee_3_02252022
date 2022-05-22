@@ -1,15 +1,11 @@
 * {
   box-sizing: border-box;
-  margin: 0 auto;
   padding: 0;
+  margin: 0 auto;
 }
 
 body {
-  background-color: wheat;
-}
-
-main {
-  max-width: 1250px;
+  background-color: #f3f3f3;
   margin: 0 auto;
 }
 
@@ -37,21 +33,10 @@ img {
   margin: 0 10px -3px 0;
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    background-color: lightseagreen;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  body {
-    background-color: lightgray;
-  }
-}
 body {
   font-family: roboto, san-serif;
   font-size: 16px;
   font-weight: 300;
-  margin: 0;
   min-width: 380px;
   width: 100%;
 }
@@ -155,87 +140,6 @@ body h3 {
   animation-timing-function: cubic-bezier(0.5, -0.06, 0.53, 0.29);
 }
 
-.preloader {
-  animation: loader 4000ms ease;
-}
-.preloader__loading__l {
-  animation: dot-scale 2500ms 100ms cubic-bezier(1, 0, 0.77, 0.99);
-}
-.preloader__loading__l i:first-child {
-  animation-name: letter-opacity;
-  animation-delay: 70ms;
-}
-.preloader__loading__l i:last-child {
-  animation-name: icon-opacity;
-  animation-delay: 70ms;
-}
-.preloader__loading__o {
-  animation: dot-scale 2500ms 150ms cubic-bezier(1, 0, 0.77, 0.99);
-}
-.preloader__loading__o i:first-child {
-  animation-name: letter-opacity;
-  animation-delay: 100ms;
-}
-.preloader__loading__o i:last-child {
-  animation-name: icon-opacity;
-  animation-delay: 100ms;
-}
-.preloader__loading__a {
-  animation: dot-scale 2500ms 200ms cubic-bezier(1, 0, 0.77, 0.99);
-}
-.preloader__loading__a i:first-child {
-  animation-name: letter-opacity;
-  animation-delay: 150ms;
-}
-.preloader__loading__a i:last-child {
-  animation-name: icon-opacity;
-  animation-delay: 150ms;
-}
-.preloader__loading__d {
-  animation: dot-scale 2500ms 250ms cubic-bezier(1, 0, 0.77, 0.99);
-}
-.preloader__loading__d i:first-child {
-  animation-name: letter-opacity;
-  animation-delay: 200ms;
-}
-.preloader__loading__d i:last-child {
-  animation-name: icon-opacity;
-  animation-delay: 200ms;
-}
-.preloader__loading__i {
-  animation: dot-scale 2500ms 340ms cubic-bezier(1, 0, 0.77, 0.99);
-}
-.preloader__loading__i i:first-child {
-  animation-name: letter-opacity;
-  animation-delay: 290ms;
-}
-.preloader__loading__i i:last-child {
-  animation-name: icon-opacity;
-  animation-delay: 290ms;
-}
-.preloader__loading__n {
-  animation: dot-scale 2500ms 370ms cubic-bezier(1, 0, 0.77, 0.99);
-}
-.preloader__loading__n i:first-child {
-  animation-name: letter-opacity;
-  animation-delay: 250ms;
-}
-.preloader__loading__n i:last-child {
-  animation-name: icon-opacity;
-  animation-delay: 250ms;
-}
-.preloader__loading__g {
-  animation: dot-scale 2500ms 400ms cubic-bezier(1, 0, 0.77, 0.99);
-}
-.preloader__loading__g i:first-child {
-  animation: letter-opacity;
-  animation-delay: 350ms;
-}
-.preloader__loading__g i:last-child {
-  animation: letter-opacity;
-  animation-delay: 350ms;
-}
-
 @keyframes loader {
   0% {
     opacity: 0;
@@ -245,6 +149,7 @@ body h3 {
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes dot-scale {
@@ -252,38 +157,26 @@ body h3 {
     transform: scale(1.1);
   }
   37% {
-    transform: scale(1.35);
-  }
-  40%, 55% {
     transform: scale(1.45);
   }
-  60% {
-    transform: scale(1.35);
-  }
-  65%, 100% {
-    transform: scale(1.1);
+  40%, 100% {
+    transform: scale(1.5);
   }
 }
 @keyframes letter-opacity {
   0% {
     opacity: 0;
   }
-  35%, 60% {
+  50%, 100% {
     opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes icon-opacity {
   0% {
     opacity: 1;
   }
-  35%, 80% {
+  50%, 100% {
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 .btn {
@@ -520,6 +413,7 @@ body h3 {
   margin-top: 30px;
   order: 2;
   width: 100%;
+  max-width: 1500px;
 }
 .container__menu {
   background-color: silver;
@@ -557,7 +451,6 @@ body h3 {
 }
 .header {
   border: 3px dashed darkgrey;
-  background-color: pink;
 }
 .header__nav {
   display: flex;
@@ -622,7 +515,6 @@ body h3 {
   color: #505050;
 }
 .header__explore {
-  background-color: wheat;
   padding: 10px 0;
 }
 .header__explore h2,
@@ -633,7 +525,8 @@ body h3 {
 }
 .header__howItWorks {
   padding: 20px 15px;
-  border: 2px dashed red;
+  background-color: white;
+  max-width: 1500px;
 }
 .header__howItWorks h2 {
   text-align: left;
@@ -705,50 +598,76 @@ body h3 {
     padding: 5px;
   }
 }
-i {
+.loading {
+  position: absolute;
+  left: 0;
+  margin: 0px auto;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border: 5px dashed green;
+  width: 100vw;
+  height: 100%;
+  animation: loader 4000ms ease-in-out both;
+}
+.loading > * {
+  margin: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  animation: dot-scale 4000ms ease infinite backwards;
+}
+.loading i {
   font-size: 20px;
   margin: 0px;
   position: absolute;
-  opacity: 0.7;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 2000ms;
+  animation-fill-mode: backwards;
+}
+.loading i:first-child {
+  top: 9px;
+  animation-name: letter-opacity;
+}
+.loading i:last-child {
+  animation-name: icon-opacity;
+}
+.loading__l {
+  animation-delay: 100ms;
+  animation-duration: 1900ms;
+}
+.loading__o {
+  animation-delay: 170ms;
+  animation-duration: 1830ms;
+}
+.loading__a {
+  animation-delay: 200ms;
+  animation-duration: 1800ms;
+}
+.loading__d {
+  animation-delay: 250ms;
+  animation-duration: 1750ms;
+}
+.loading__i {
+  animation-delay: 350ms;
+  animation-duration: 1650ms;
+}
+.loading__n {
+  animation-delay: 370ms;
+  animation-duration: 1630ms;
+}
+.loading__g {
+  animation-delay: 390ms;
+  animation-duration: 1610ms;
 }
 
-.preloader {
-  background: rgba(255, 255, 255, 0.9);
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  z-index: 1;
-}
-.preloader .loading {
-  display: flex;
-  margin: auto;
-  width: 80vw;
-  border: 2px dashed red;
-  z-index: 1;
-  overflow: hidden;
-}
-.preloader .loading > * {
-  margin: 15px auto;
-}
-
-@media only screen and (min-width: 768px) {
-  .loading {
-    width: 55vw;
-  }
-  .loading > * {
-    margin: 10px auto;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .loading {
-    width: 50vw;
-  }
-  .loading > * {
-    margin: 5px auto;
-  }
-}
 card-full, .container__menu__full {
   border-radius: 15px;
   margin: 15px auto;
@@ -814,24 +733,6 @@ loadingGroup, .loadingGroup--1, .loadingGroup--2, .loadingGroup--3 {
     visibility: visible;
     opacity: 1;
   }
-}
-
-dot-group, .preloader .loading > * {
-  width: 50px;
-  height: 50px;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  animation-iteration-count: infinite;
-}
-
-preloader-anim, .preloader__loading__l i:first-child, .preloader__loading__l i:last-child, .preloader__loading__o i:first-child, .preloader__loading__o i:last-child, .preloader__loading__a i:first-child, .preloader__loading__a i:last-child, .preloader__loading__d i:first-child, .preloader__loading__d i:last-child, .preloader__loading__i i:first-child, .preloader__loading__i i:last-child, .preloader__loading__n i:first-child, .preloader__loading__n i:last-child, .preloader__loading__g i:first-child, .preloader__loading__g i:last-child {
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: both;
-  animation-duration: 2500ms;
 }
 
 .primary {
