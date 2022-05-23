@@ -40,9 +40,10 @@
 }
 
 .loadingCard {
+   
     &--1 {
         @extend loadingCard;
-        animation-duration: 600ms;
+        animation-duration: 500ms;
 
     }
 
@@ -58,7 +59,9 @@
     }
 }
 
-.loadingGroup {
+
+
+.loadingGroup {      
     &--1 {
         @extend loadingGroup;
         animation-timing-function: cubic-bezier(0, 0.69, 0, 1);

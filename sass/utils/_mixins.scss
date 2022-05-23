@@ -26,7 +26,7 @@ card-simple {
 card-steps {
     @include card;
     height: 70px;
-    margin: 15px 10px 0 20px;
+    margin: 25px 10px 0 20px;
     padding-left: 10px;
 }
 
@@ -46,10 +46,10 @@ border-top-radius-25 {
     @include cornerRadius(25px 25px 0 0);
 }
 
-@mixin loadingAnim {
-    animation-name: loading;
+@mixin loadingCardAnim {
+    animation-name: loadingCard;
 
-    @keyframes loading {
+    @keyframes loadingCard {
         0% {
             opacity: 0;
         }
@@ -57,18 +57,18 @@ border-top-radius-25 {
         100% {
             visibility: visible;
             opacity: 1;
-
         }
     }
 }
 
 loadingCard {
-    @include loadingAnim;
+    @include loadingCardAnim;
     animation-timing-function: ease-in-out;
-}
+   }
 
 loadingGroup {
-    @include loadingAnim;
+    @include loadingCardAnim;  
     animation-duration: 1000ms;
+    animation-delay:100ms;
 }
 

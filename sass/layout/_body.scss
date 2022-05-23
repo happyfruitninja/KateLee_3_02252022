@@ -11,7 +11,6 @@
 }
 
 .container {
-    background-color: wheat;
     padding: 40px 20px 60px;
     margin-top: 30px;
     order: 2;
@@ -19,9 +18,7 @@
     max-width: 1500px;
     @extend border-top-radius-25;
 
-    &__menu {
-        background-color: silver;
-       
+    &__menu {       
         &__simple {
             height: 100%;
         }
