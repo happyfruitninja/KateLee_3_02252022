@@ -41,14 +41,16 @@ $color-footer: #353535;
   background-color: $color-footer;
 }
 
-.container__menu{
+.container{
+background-color: $color-lightGrey;
+&__menu{
   background-color: $color-lightGrey;
   &__simple__card{
   filter: drop-shadow(5px 5px 5px darken($color-lightGrey, 15%));
   &__static {
   background-color: $color-tertiary;
 }
-}}
+}}}
 
 //preloader
 .loading {
