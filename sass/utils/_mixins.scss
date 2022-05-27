@@ -46,29 +46,4 @@ border-top-radius-25 {
     @include cornerRadius(25px 25px 0 0);
 }
 
-@mixin loadingCardAnim {
-    animation-name: loadingCard;
-
-    @keyframes loadingCard {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-}
-
-loadingCard {
-    @include loadingCardAnim;
-    animation-timing-function: ease-in-out;
-   }
-
-loadingGroup {
-    @include loadingCardAnim;  
-    animation-duration: 1000ms;
-    animation-delay:100ms;
-}
 
