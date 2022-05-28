@@ -1,0 +1,40 @@
+.banner {
+    border: 3px dashed blue;
+}
+
+@media only screen and (min-width:1024px) {
+    .banner {
+        border: 3px dashed red;
+        position: relative;
+        height: 150px;
+
+        &__group {
+
+            &__image {
+                position: absolute;
+                background-color: green;
+                height: 150px;
+                width: 150px;
+                left: 40px;
+            }
+
+            &__text {
+                position: absolute;
+                background-color: grey;
+                height: 50px;
+                width: 150px;
+                left: 60px;
+                top: 60px;
+            }
+
+            &__heading {
+                position: absolute;
+                background-color: lightblue;
+                height: 50px;
+                width: 150px;
+                left: 20px;
+                top: 20px;
+            }
+        }
+    }
+}
