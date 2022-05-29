@@ -1,0 +1,50 @@
+.banner {
+   display: none;
+   max-width: 1500px;
+}
+
+@media only screen and (min-width:1024px) {
+    .banner {
+        display:inline;
+        position: relative;
+        background-color: silver;
+        height: 500px;
+
+        &__group {
+            border: 2px dashed blue;
+            margin: 15px;
+            height: 100%;
+
+            & figure {
+                border: 2px dashed red;
+                border-radius: 15px;
+                height: 100%;
+                overflow: hidden;
+               
+
+                & img {
+                    position: absolute;
+                    width:10px;
+                    object-fit: cover;
+                    margin: 0;
+                  right: 0;
+                }
+
+                & h1 {
+                    position: absolute;
+                    background-color: orange;
+                    left: 60px;
+                    top: 60px;
+
+                }
+
+                & p {
+                    position: absolute;
+                    background-color: lightblue;
+                    left: 20px;
+                    top: 20px;
+                }
+            }
+        }
+    }
+}

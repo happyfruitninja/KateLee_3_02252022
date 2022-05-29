@@ -1,3 +1,10 @@
+main {
+    display: flex;
+    flex-direction: row;
+    border: 2px dashed cyan;
+    margin: 15px;
+}
+
 .mainRepeat {
     display: flex;
     flex-direction: column;
@@ -18,7 +25,7 @@
     max-width: 1500px;
     @extend border-top-radius-25;
 
-    &__menu {       
+    &__menu {
         &__simple {
             height: 100%;
         }
@@ -35,13 +42,12 @@
     }
 }
 
-
 @media only screen and (min-width: 768px) {
     .container {
         padding: 20px;
-       
+
         &__menu {
-            padding: 10px ;
+            padding: 10px;
 
             &__simple {
                 &__card {
@@ -59,6 +65,11 @@
 }
 
 @media only screen and (min-width:1024px) {
+    .index {
+
+        width: 500px;
+    }
+
     .container__menu__simple__card {
         margin: 10px;
     }

@@ -119,8 +119,8 @@
 }
 
 @media only screen and (min-width: 768px) {
+  
   .container__menu {
-
     &__simple__card {
       &__transform {
         padding: 10px;
@@ -133,7 +133,8 @@
   }
 
   @media only screen and (min-width: 1024px) {
-    .container__menu {
+   .container {
+    &__menu {
       padding: 10px 20px;
 
       &__simple {
@@ -191,5 +192,7 @@
         }
       }
     }
+   }
+   
   }
 }
