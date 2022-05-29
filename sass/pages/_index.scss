@@ -105,8 +105,6 @@
     justify-content: center;
 }
 
-
-
 @media only screen and (min-width:768px) {
     .header {
         &__explore {
@@ -124,17 +122,13 @@
 
     .container {
                 &__menu {
-            display: flex;
             border: 2px dashed red;
-            flex-wrap: wrap;
-            
-
+         
             &__full {
                 flex-basis: 42%;
                 max-width: 600px;
                 padding: 5px;
             }
         }
-
     }
 }
