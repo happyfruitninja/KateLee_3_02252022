@@ -1,12 +1,9 @@
-main {
+main{
     display: flex;
-    flex-direction: row;
-    border: 2px dashed cyan;
-    margin: 15px;
+    border: 4px dashed orange;
 }
 
 .mainRepeat {
-    display: flex;
     flex-direction: column;
 }
 
@@ -65,12 +62,7 @@ main {
 }
 
 @media only screen and (min-width:1024px) {
-    .index {
-
-        width: 500px;
-    }
-
-    .container__menu__simple__card {
+     .container__menu__simple__card {
         margin: 10px;
     }
 }

@@ -47,7 +47,7 @@
       }
     }
 
-    &__simple {     
+    &__simple {
       width: 100%;
       margin: 15px 0;
       height: 70px;
@@ -119,7 +119,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  
+
   .container__menu {
     &__simple__card {
       &__transform {
@@ -133,66 +133,65 @@
   }
 
   @media only screen and (min-width: 1024px) {
-   .container {
-    &__menu {
-      padding: 10px 20px;
+    .container {
+      &__menu {
+        padding: 10px 20px;
 
-      &__simple {
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        margin: 0;
-        justify-content: space-between;
+        &__simple {
+          height: auto;
+          display: flex;
+          flex-direction: row;
+          margin: 0;
+          justify-content: space-between;
 
-        &__card {
-          flex-basis: 32%;
-          margin: 0 auto;
+          &__card {
+            flex-basis: 32%;
+            margin: 0 auto;
 
-          &__static {
-            height: 140px;
-          }
+            &__static {
+              height: 140px;
+            }
 
-          &__transform {
-            height: 140px;
-            text-align: center;
+            &__transform {
+              height: 140px;
+              text-align: center;
 
-            &__text {
-              height: 100%;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-             
-
-              h3 {
-                margin: 2px auto;
-                border-bottom: 3px solid #99e2d0;
-                padding: 0 10px 5px;
-           
-              }
-
-              p {
-                margin: 0 5px;
-
-              }
-
-              &__subText {
+              &__text {
+                height: 100%;
+                display: flex;
                 flex-direction: column;
-                height: 68%;
+                justify-content: space-between;
 
-                &--bold {
-                  margin: 0;
+                h3 {
+                  margin: 2px auto;
+                  border-bottom: 3px solid #99e2d0;
+                  padding: 0 10px 5px;
                 }
 
-                & p:nth-child(2) {
-                  margin-bottom: 0;
+                p {
+                  margin: 0 5px;
+                }
+
+                &__subText {
+                  flex-direction: column;
+                  height: 68%;
+
+                  &--bold {
+                    margin: 0;
+                  }
+
+                  & p:nth-child(2) {
+                    margin-bottom: 0;
+                  }
                 }
               }
             }
           }
         }
-      }
+        &__full{
+        
+          background-color:orange;
+        }
     }
-   }
-   
   }
-}
+}}
