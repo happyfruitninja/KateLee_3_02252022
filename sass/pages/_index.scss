@@ -43,7 +43,7 @@
         padding: 40px 15px;
         background-color: white;
         max-width: 1500px;
-        
+
         & h2 {
             text-align: left;
             padding: 0 5px;
@@ -120,33 +120,37 @@
     }
 
     .containerIndex {
-             &__menu {
+        &__menu {
             border: 2px dashed red;
 
             &__full {
-                               max-width: 600px;
+                max-width: 600px;
                 padding: 5px;
             }
         }
     }
 }
 
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:1024px) {
 
     .mainIndex {
-       justify-content: space-around;
-       width:100%;
-           margin: 0 auto;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1500px;
+        border: 5px dashed red;
+        margin: 0 auto;
     }
-    .banner{
-        flex-basis: 50%;
-      margin:15px;
-        padding: 20px;
-        border: 2px dashed blue;
-    }
-    .containerIndex{
-        flex-basis: 50%;
-       
-     }
 
-}
+    .banner {
+        flex-basis: 58%;
+        margin-top: 30px ;
+        border: 2px dashed blue;
+
+           }
+    }
+
+   .containerIndex {
+        flex-basis: 38%;
+margin: 30px 0 0;
+    }
+

@@ -195,55 +195,42 @@ body h3 {
   .banner {
     display: flex;
     background-color: silver;
-    padding: 15px;
-    border-radius: 25px 25px 0 0;
   }
   .banner__group {
     border: 2px dashed blue;
-    margin: 1px;
+    margin: 15px;
     height: 100%;
     width: 100%;
   }
   .banner__group figure {
     border: 2px dashed red;
     border-radius: 15px;
+    height: 80%;
     background-color: #000002;
+    background-color: orange;
     position: relative;
-    height: 70%;
-    display: flex;
   }
   .banner__group figure img {
     object-fit: contain;
     width: 100%;
+    height: 80%;
   }
   .banner__group figure figcaption {
     color: white;
     position: absolute;
     bottom: 10px;
-    margin: 5px 15px;
   }
-  .banner__group__text {
-    margin: 15px 0;
-    padding: 5px 15px;
-    border: 2px dashed blue;
-    background-color: white;
-    border-radius: 25px;
+  .banner__group figure .banner__group figure h1 {
+    font-size: 4rem;
+    background-color: orange;
+    left: 60px;
+    top: 60px;
   }
-  .banner__group__text h1 {
-    font-family: shrikhand, serif;
-    font-style: italic;
-    letter-spacing: 1px;
-    margin: 0px 15px;
-    text-transform: capitalize;
-    font-size: 4.5rem;
-  }
-  .banner__group__text p {
+  .banner__group figure p {
     font-size: 2rem;
-    margin: 10px 0;
-  }
-
-  .bannerGroup--1 {
-    border: 5px dashed black;
+    background-color: lightblue;
+    left: 20px;
+    top: 20px;
   }
 }
 .btn {
@@ -667,24 +654,22 @@ main {
 }
 @media only screen and (min-width: 1024px) {
   .mainIndex {
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
-    max-width: 1500px;
-    border: 5px dashed red;
     margin: 0 auto;
   }
 
   .banner {
-    flex-basis: 58%;
-    margin-top: 30px;
+    flex-basis: 50%;
+    margin: 15px;
+    padding: 20px;
     border: 2px dashed blue;
   }
-}
-.containerIndex {
-  flex-basis: 38%;
-  margin: 30px 0 0;
-}
 
+  .containerIndex {
+    flex-basis: 50%;
+  }
+}
 .loading {
   position: absolute;
   left: 0;
@@ -841,4 +826,4 @@ border-top-radius-25, .container {
   color: white;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.cs.map */
