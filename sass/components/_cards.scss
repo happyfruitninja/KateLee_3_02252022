@@ -2,10 +2,14 @@
   &__menu {
     border: 2px dashed darkcyan;
     padding: 20px;
+     & :nth-last-child{
+    background-color: cyan;
+      margin-bottom:0;
+    }
 
     &__full {
       @extend card-full;
-      border: 2px dashed cyan;
+      
       width: 100%;
       min-width: 350px;
 
@@ -189,8 +193,6 @@
           }
         }
         &__full{
-        
-          background-color:orange;
         }
     }
   }

@@ -1,7 +1,6 @@
 main{
     display: flex;
-    border: 4px dashed orange;
-}
+   }
 
 .mainRepeat {
     flex-direction: column;
@@ -41,9 +40,7 @@ main{
 
 @media only screen and (min-width: 768px) {
     .container {
-        padding: 20px;
-
-        &__menu {
+                &__menu {
             padding: 10px;
 
             &__simple {

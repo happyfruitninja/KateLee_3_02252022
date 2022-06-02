@@ -191,25 +191,30 @@ body h3 {
   display: none;
 }
 
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 1rem;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .banner {
-    display: flex;
+    display: inline-block;
     background-color: silver;
     padding: 15px;
     border-radius: 25px 25px 0 0;
   }
   .banner__group {
-    border: 2px dashed blue;
     margin: 1px;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .banner__group figure {
-    border: 2px dashed red;
-    border-radius: 15px;
+    border-radius: 25px;
     background-color: #000002;
     position: relative;
-    height: 70%;
+    height: 65%;
     display: flex;
   }
   .banner__group figure img {
@@ -223,27 +228,23 @@ body h3 {
     margin: 5px 15px;
   }
   .banner__group__text {
-    margin: 15px 0;
+    margin-top: 15px;
     padding: 5px 15px;
-    border: 2px dashed blue;
     background-color: white;
     border-radius: 25px;
+    height: 35%;
   }
   .banner__group__text h1 {
     font-family: shrikhand, serif;
     font-style: italic;
     letter-spacing: 1px;
-    margin: 0px 15px;
+    margin: 0px;
     text-transform: capitalize;
     font-size: 4.5rem;
   }
   .banner__group__text p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 10px 0;
-  }
-
-  .bannerGroup--1 {
-    border: 5px dashed black;
   }
 }
 .btn {
@@ -315,8 +316,11 @@ body h3 {
   border: 2px dashed darkcyan;
   padding: 20px;
 }
+.container__menu :nth-last-child {
+  background-color: cyan;
+  margin-bottom: 0;
+}
 .container__menu__full {
-  border: 2px dashed cyan;
   width: 100%;
   min-width: 350px;
 }
@@ -462,13 +466,9 @@ body h3 {
   .container__menu__simple__card__transform__text__subText p:nth-child(2) {
     margin-bottom: 0;
   }
-  .container__menu__full {
-    background-color: orange;
-  }
 }
 main {
   display: flex;
-  border: 4px dashed orange;
 }
 
 .mainRepeat {
@@ -502,9 +502,6 @@ main {
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    padding: 20px;
-  }
   .container__menu {
     padding: 10px;
   }
@@ -648,6 +645,10 @@ main {
   justify-content: center;
 }
 
+.containerMenuIndex {
+  padding: 0 10px;
+}
+
 @media only screen and (min-width: 768px) {
   .header__explore h2,
 .header__explore p {
@@ -657,9 +658,6 @@ main {
     padding: 40px 60px;
   }
 
-  .containerIndex__menu {
-    border: 2px dashed red;
-  }
   .containerIndex__menu__full {
     max-width: 600px;
     padding: 5px;
@@ -670,7 +668,6 @@ main {
     justify-content: space-between;
     width: 100%;
     max-width: 1500px;
-    border: 5px dashed red;
     margin: 0 auto;
   }
 
@@ -682,7 +679,8 @@ main {
 }
 .containerIndex {
   flex-basis: 38%;
-  margin: 30px 0 0;
+  margin: 30px auto 0;
+  padding: 0 20px;
 }
 
 .loading {

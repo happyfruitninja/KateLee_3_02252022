@@ -1,72 +1,70 @@
 .banner {
     display: none;
+
 }
 
-@media only screen and (min-width:1024px) {
-    .banner {
-        display: flex;
-        background-color: silver;
-       padding: 15px;
-       border-radius: 25px 25px 0 0; 
+@media only screen and (min-width:768px) {
+    p {
+        font-size: 1rem;
+    }}
 
-        &__group {
-            border: 2px dashed blue;
-            margin: 1px;
-            height: 100%;
-            width: 100%;
+    @media only screen and (min-width:1024px) {
+        .banner {
+            display: inline-block;
+            background-color: silver;
+            padding: 15px;
+            border-radius: 25px 25px 0 0;
 
-            & figure {
-                border: 2px dashed red;
-                border-radius: 15px;
-                background-color: #000002;
-                position: relative;
-                height: 70%;
-                display: flex;
+            &__group {
+                margin: 1px;
+                height: 100%;
+                width: 100%;
+                display:flex;
+                flex-direction: column;
 
-                & img {
-                    object-fit: contain;
-                    width: 100%;
+                & figure {
+                    border-radius: 25px;
+                    background-color: #000002;
+                    position: relative;
+                    height: 65%;
+                    display: flex;
 
+                    & img {
+                        object-fit: contain;
+                        width: 100%;
+                    }
+
+                    & figcaption {
+                        color: white;
+                        position: absolute;
+                        bottom: 10px;
+                        margin: 5px 15px;
+                    }
                 }
 
-                & figcaption {
-                    color: white;
-                    position: absolute;
-                    bottom: 10px;
-                    margin: 5px 15px;
+                &__text {
+                    margin-top: 15px;
+                    padding: 5px 15px;
+                    background-color: white;
+                    border-radius: 25px;
+                    height: 35%;
+
+                    & h1 {
+                        font-family: shrikhand, serif;
+                        font-style: italic;
+                        letter-spacing: 1px;
+                        margin: 0px;
+                        text-transform: capitalize;
+                        font-size: 4.5rem;
+                    }
+
+                    & p {
+                        font-size: 1.8rem;
+                        margin: 10px 0;
+                    }
                 }
             }
-
-            &__text {
-                margin: 15px 0;
-                padding: 5px 15px;
-                border: 2px dashed blue;
-                background-color:white;
-                border-radius:25px;
-
-                & h1 {
-                    font-family: shrikhand, serif;
-                    font-style: italic;
-                    letter-spacing: 1px;
-                    margin: 0px 15px;
-                    text-transform: capitalize;
-                    font-size: 4.5rem;
-                }
-
-                & p {
-                    font-size: 2rem;
-                    margin: 10px 0;
-                }
-
-
-            }
-
-
         }
-    }
 
-    .bannerGroup--1 {
-        border: 5px dashed black;
-
+        .bannerGroup--1 {}
     }
-}
