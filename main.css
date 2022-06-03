@@ -214,7 +214,7 @@ body h3 {
     border-radius: 25px;
     background-color: #000002;
     position: relative;
-    height: 65%;
+    height: 100%;
     display: flex;
   }
   .banner__group figure img {
@@ -238,13 +238,14 @@ body h3 {
     font-family: shrikhand, serif;
     font-style: italic;
     letter-spacing: 1px;
-    margin: 0px;
+    margin: 10px 0;
     text-transform: capitalize;
-    font-size: 4.5rem;
+    font-size: 2.5rem;
   }
   .banner__group__text p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     margin: 10px 0;
+    line-height: 1.3;
   }
 }
 .btn {
@@ -645,6 +646,10 @@ main {
   justify-content: center;
 }
 
+.containerIndex {
+  flex-basis: 85%;
+}
+
 .containerMenuIndex {
   padding: 0 10px;
 }
@@ -672,17 +677,16 @@ main {
   }
 
   .banner {
-    flex-basis: 58%;
+    flex-basis: 100%;
     margin-top: 30px;
     border: 2px dashed blue;
   }
-}
-.containerIndex {
-  flex-basis: 38%;
-  margin: 30px auto 0;
-  padding: 0 20px;
-}
 
+  .containerIndex {
+    margin: 30px auto 0;
+    padding: 0 20px;
+  }
+}
 .loading {
   position: absolute;
   left: 0;

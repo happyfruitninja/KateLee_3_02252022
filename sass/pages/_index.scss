@@ -104,7 +104,11 @@
     justify-content: center;
 }
 
-.containerMenuIndex{
+.containerIndex {
+    flex-basis: 85%;
+}
+
+.containerMenuIndex {
     padding: 0 10px;
 }
 
@@ -124,15 +128,16 @@
     }
 
     .containerIndex {
+        
         &__menu {
             &__full {
                 max-width: 600px;
                 padding: 5px;
+                 
             }
         }
     }
 }
-
 
 @media only screen and (min-width:1024px) {
 
@@ -140,21 +145,18 @@
         justify-content: space-between;
         width: 100%;
         max-width: 1500px;
-               margin: 0 auto;
-                          
+        margin: 0 auto;
     }
 
     .banner {
-        flex-basis: 58%;
-        margin-top: 30px ;
+        flex-basis: 100%;
+        margin-top: 30px;
         border: 2px dashed blue;
-
-           }
     }
 
-   .containerIndex {
-        flex-basis: 38%;
-margin: 30px auto 0;
-padding:0 20px;
-    }
 
+.containerIndex {
+  
+    margin: 30px auto 0;
+    padding: 0 20px;
+}}
