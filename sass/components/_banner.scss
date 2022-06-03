@@ -1,72 +1,96 @@
 .banner {
     display: none;
-
 }
 
 @media only screen and (min-width:768px) {
     p {
         font-size: 1rem;
-    }}
+    }
+}
 
-    @media only screen and (min-width:1024px) {
-        .banner {
-            display: inline-block;
-            background-color: silver;
-            padding: 15px;
-            border-radius: 25px 25px 0 0;
+@media only screen and (min-width:1024px) {
+    .banner {
+        display: flex;
+        background-color: silver;
+        padding: 15px;
+        border-radius: 25px 25px 0 0;
 
-            &__group {
-                margin: 1px;
-                height: 100%;
-                width: 100%;
-                display:flex;
-                flex-direction: column;
+        &__group {
+            margin: 1px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
 
-                & figure {
+            & figure {
+                position: relative;
+                height: 65%;
+                display: flex;
+
+
+                & img {
                     border-radius: 25px;
-                    background-color: #000002;
-                    background-color: pink;
-                    position: relative;
-                    height: 65%;
-                    display: flex;
-                    padding: 10px;
-
-                    & img {
-                        object-fit: contain;
-                        width: 100%;
-                    }
-
-                    & figcaption {
-                        color: white;
-                        position: absolute;
-                        bottom: 10px;
-                        margin: 5px 15px;
-                    }
+                    width: 100%;
                 }
 
-                &__text {
-                    margin-top: 15px;
-                    padding: 5px 15px;
-                    background-color: white;
-                    border-radius: 25px;
-                    height: 35%;
+                & figcaption {
+                    color: white;
+                    position: absolute;
 
-                    & h1 {
-                        font-family: shrikhand, serif;
-                        font-style: italic;
-                        letter-spacing: 1px;
-                        margin: 0px;
-                        text-transform: capitalize;
-                        font-size: 4.5rem;
-                    }
+                    margin: 5px 15px;
+                }
+            }
 
-                    & p {
-                        font-size: 1.8rem;
-                        margin: 10px 0;
-                    }
+            &__text {
+                margin-top: 15px;
+                padding: 5px 15px;
+                background-color: white;
+                border-radius: 25px;
+                height: 35%;
+
+                & h1 {
+                    font-family: shrikhand, serif;
+                    font-style: italic;
+                    letter-spacing: 1px;
+                    margin: 0px;
+                    text-transform: capitalize;
+                    font-size: 4.5rem;
+                }
+
+                & p {
+                    font-size: 1.8rem;
+                    margin: 10px 0;
                 }
             }
         }
-
-        .bannerGroup--1 {}
     }
+
+    .bannerGroup--1 {
+        padding: 10px;
+        background-color: #000002;
+        background-color: pink;
+        display: none;
+
+        & figure {
+           & img {
+                object-fit: contain;
+            }
+
+            & figcaption {
+                bottom: 10px;
+
+            }
+        }
+
+    }
+
+    .bannerGroup--2 {
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .bannerGroup--3 {
+        display: none;
+    }
+}

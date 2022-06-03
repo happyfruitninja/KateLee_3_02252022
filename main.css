@@ -198,7 +198,7 @@ body h3 {
 }
 @media only screen and (min-width: 1024px) {
   .banner {
-    display: inline-block;
+    display: flex;
     background-color: silver;
     padding: 15px;
     border-radius: 25px 25px 0 0;
@@ -211,22 +211,17 @@ body h3 {
     flex-direction: column;
   }
   .banner__group figure {
-    border-radius: 25px;
-    background-color: #000002;
-    background-color: pink;
     position: relative;
     height: 65%;
     display: flex;
-    padding: 10px;
   }
   .banner__group figure img {
-    object-fit: contain;
+    border-radius: 25px;
     width: 100%;
   }
   .banner__group figure figcaption {
     color: white;
     position: absolute;
-    bottom: 10px;
     margin: 5px 15px;
   }
   .banner__group__text {
@@ -247,6 +242,27 @@ body h3 {
   .banner__group__text p {
     font-size: 1.8rem;
     margin: 10px 0;
+  }
+
+  .bannerGroup--1 {
+    padding: 10px;
+    background-color: #000002;
+    background-color: pink;
+    display: none;
+  }
+  .bannerGroup--1 figure img {
+    object-fit: contain;
+  }
+  .bannerGroup--1 figure figcaption {
+    bottom: 10px;
+  }
+
+  .bannerGroup--2 img {
+    object-fit: cover;
+  }
+
+  .bannerGroup--3 {
+    display: none;
   }
 }
 .btn {
@@ -672,6 +688,7 @@ main {
     max-width: 1500px;
     margin: 0 auto;
     background-color: pink;
+    max-height: 200px;
   }
 
   .banner {
