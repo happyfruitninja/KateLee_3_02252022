@@ -25,9 +25,11 @@
                 & figure {
                     border-radius: 25px;
                     background-color: #000002;
+                    background-color: pink;
                     position: relative;
                     height: 65%;
                     display: flex;
+                    padding: 10px;
 
                     & img {
                         object-fit: contain;
