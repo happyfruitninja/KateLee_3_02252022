@@ -35,49 +35,52 @@
         p {
             max-width: 300px;
             margin: 30px auto;
-            border: 2px dashed red;
         }
     }
 
     &__howItWorks {
         padding: 40px 15px;
         background-color: white;
-        max-width: 1500px;
 
         & h2 {
             text-align: left;
             padding: 0 5px;
+            max-width: 1500px;
         }
 
         & p {
             margin-left: 0;
         }
 
-        &__steps {
-            @extend card-steps;
+        &__group {
+            max-width: 1500px;
 
-            display: flex;
-            align-items: center;
-            position: relative;
-            font-weight: 700;
+            &__steps {
+                @extend card-steps;
+               background-color:#F3F3F3;
+                display: flex;
+                align-items: center;
+                position: relative;
+                font-weight: 700;
 
-            svg {
-                margin: 0 20px;
-                fill: rgb(104, 104, 104);
-            }
-
-            &:hover {
-                background-color: rgb(246, 228, 253);
-                transform: scale(1.01);
-                transition: 300ms ease-in-out;
-
-                & svg {
-                    fill: #8559bb;
+                svg {
+                    margin: 0 20px;
+                    fill: rgb(104, 104, 104);
                 }
 
-                & p {
-                    transition: 100ms ease-in-out;
-                    font-size: 1.07rem;
+                &:hover {
+                    background-color: rgb(246, 228, 253);
+                    transform: scale(1.01);
+                    transition: 300ms ease-in-out;
+
+                    & svg {
+                        fill: #8559bb;
+                    }
+
+                    & p {
+                        transition: 100ms ease-in-out;
+                        font-size: 1.07rem;
+                    }
                 }
             }
         }
@@ -104,7 +107,7 @@
     justify-content: center;
 }
 
-.containerMenuIndex{
+.containerMenuIndex {
     padding: 0 10px;
 }
 
@@ -124,7 +127,9 @@
     }
 
     .containerIndex {
+        
         &__menu {
+          
             &__full {
                 max-width: 600px;
                 padding: 5px;
@@ -139,24 +144,23 @@
     .mainIndex {
         justify-content: space-between;
         width: 100%;
-        max-width: 1500px;
-               margin: 0 auto;
-               background-color: pink;
-               max-height: 200px;         
-    }
+        max-width: 1550px;
+        max-height: 1150px;
+        margin: 0 auto;
+        padding: 0 20px;
+        background-color: #ebe9e9;
+          }
 
     .banner {
-        flex-basis: 58%;
-        margin-top: 30px ;
-        border: 2px dashed blue;
-
-           }
-    }
-
-   .containerIndex {
-        flex-basis: 38%;
-margin: 30px auto 0;
-padding:0 20px;
+        flex-basis: 53%;
+        margin-top: 30px;
 
     }
 
+    .containerIndex {
+        flex-basis: 43%;
+        margin: 30px auto 0;
+        padding: 0 20px;
+        background-color: white!important;
+    }
+}

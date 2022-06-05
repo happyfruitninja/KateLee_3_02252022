@@ -11,22 +11,20 @@
 @media only screen and (min-width:1024px) {
     .banner {
         display: flex;
-        background-color: silver;
-        padding: 15px;
+        background-color: white;
         border-radius: 25px 25px 0 0;
 
         &__group {
-            margin: 1px;
-            height: 100%;
-            width: 100%;
+            padding: 20px;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
 
             & figure {
                 position: relative;
-                height: 65%;
-                display: flex;
-
+                height: 64%;
+                border-radius: 25px;
+                width: 100%;
 
                 & img {
                     border-radius: 25px;
@@ -34,19 +32,17 @@
                 }
 
                 & figcaption {
-                    color: white;
                     position: absolute;
-
                     margin: 5px 15px;
+                    font-size: 1.1rem;
                 }
             }
 
             &__text {
-                margin-top: 15px;
                 padding: 5px 15px;
                 background-color: white;
                 border-radius: 25px;
-                height: 35%;
+                height: 34%;
 
                 & h1 {
                     font-family: shrikhand, serif;
@@ -58,39 +54,74 @@
                 }
 
                 & p {
-                    font-size: 1.8rem;
+                    font-size: 1.15rem;
                     margin: 10px 0;
                 }
             }
         }
     }
 
-    .bannerGroup--1 {
-        padding: 10px;
-        background-color: #000002;
-        background-color: pink;
-        display: none;
+    @media only screen and (min-width:1324px) {
+        .banner {
+            &__group {
 
-        & figure {
-           & img {
-                object-fit: contain;
+                & figure {
+                    & figcaption {
+                        font-size: 1.25rem;
+                    }
+                }
+
+                &__text {
+                    & p {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }}
+
+        .bannerGroup--1 {
+            display: none;
+
+            & figure {
+                background-color: black;
+                background-color: olive;
+
+                & img {
+                   object-fit: contain;
+                    height: 100%;
+                }
+
+                & figcaption {
+                    bottom: 10px;
+                    color: white;
+                }
+            }
+        }
+
+        .bannerGroup--2 {
+            display: none;
+
+            & figure {
+               & img {
+                    object-fit:cover;
+                    height: 100%;
+                }
+
+                & figcaption {
+                    bottom: 10px;
+                }
+            }
+        }
+
+        .bannerGroup--3 {
+            display: none;
+            & img {
+                object-fit:cover;
+                height: 100%;
             }
 
             & figcaption {
                 bottom: 10px;
-
             }
         }
-
     }
-
-    .bannerGroup--2 {
-        img {
-            object-fit: cover;
-        }
-    }
-
-    .bannerGroup--3 {
-        display: none;
-    }
-}

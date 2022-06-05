@@ -199,37 +199,35 @@ body h3 {
 @media only screen and (min-width: 1024px) {
   .banner {
     display: flex;
-    background-color: silver;
-    padding: 15px;
+    background-color: white;
     border-radius: 25px 25px 0 0;
   }
   .banner__group {
-    margin: 1px;
-    height: 100%;
-    width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
   .banner__group figure {
     position: relative;
-    height: 65%;
-    display: flex;
+    height: 64%;
+    border-radius: 25px;
+    width: 100%;
   }
   .banner__group figure img {
     border-radius: 25px;
     width: 100%;
   }
   .banner__group figure figcaption {
-    color: white;
     position: absolute;
     margin: 5px 15px;
+    font-size: 1.1rem;
   }
   .banner__group__text {
-    margin-top: 15px;
     padding: 5px 15px;
     background-color: white;
     border-radius: 25px;
-    height: 35%;
+    height: 34%;
   }
   .banner__group__text h1 {
     font-family: shrikhand, serif;
@@ -240,29 +238,57 @@ body h3 {
     font-size: 4.5rem;
   }
   .banner__group__text p {
-    font-size: 1.8rem;
+    font-size: 1.15rem;
     margin: 10px 0;
   }
-
+}
+@media only screen and (min-width: 1024px) and (min-width: 1324px) {
+  .banner__group figure figcaption {
+    font-size: 1.25rem;
+  }
+  .banner__group__text p {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
   .bannerGroup--1 {
-    padding: 10px;
-    background-color: #000002;
-    background-color: pink;
     display: none;
+  }
+  .bannerGroup--1 figure {
+    background-color: black;
+    background-color: olive;
   }
   .bannerGroup--1 figure img {
     object-fit: contain;
+    height: 100%;
   }
   .bannerGroup--1 figure figcaption {
     bottom: 10px;
+    color: white;
   }
-
-  .bannerGroup--2 img {
+}
+@media only screen and (min-width: 1024px) {
+  .bannerGroup--2 {
+    display: none;
+  }
+  .bannerGroup--2 figure img {
     object-fit: cover;
+    height: 100%;
   }
-
+  .bannerGroup--2 figure figcaption {
+    bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
   .bannerGroup--3 {
     display: none;
+  }
+  .bannerGroup--3 img {
+    object-fit: cover;
+    height: 100%;
+  }
+  .bannerGroup--3 figcaption {
+    bottom: 10px;
   }
 }
 .btn {
@@ -607,39 +633,42 @@ main {
 .header__explore p {
   max-width: 300px;
   margin: 30px auto;
-  border: 2px dashed red;
 }
 .header__howItWorks {
   padding: 40px 15px;
   background-color: white;
-  max-width: 1500px;
 }
 .header__howItWorks h2 {
   text-align: left;
   padding: 0 5px;
+  max-width: 1500px;
 }
 .header__howItWorks p {
   margin-left: 0;
 }
-.header__howItWorks__steps {
+.header__howItWorks__group {
+  max-width: 1500px;
+}
+.header__howItWorks__group__steps {
+  background-color: #F3F3F3;
   display: flex;
   align-items: center;
   position: relative;
   font-weight: 700;
 }
-.header__howItWorks__steps svg {
+.header__howItWorks__group__steps svg {
   margin: 0 20px;
   fill: #686868;
 }
-.header__howItWorks__steps:hover {
+.header__howItWorks__group__steps:hover {
   background-color: #f6e4fd;
   transform: scale(1.01);
   transition: 300ms ease-in-out;
 }
-.header__howItWorks__steps:hover svg {
+.header__howItWorks__group__steps:hover svg {
   fill: #8559bb;
 }
-.header__howItWorks__steps:hover p {
+.header__howItWorks__group__steps:hover p {
   transition: 100ms ease-in-out;
   font-size: 1.07rem;
 }
@@ -685,24 +714,25 @@ main {
   .mainIndex {
     justify-content: space-between;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1550px;
+    max-height: 1150px;
     margin: 0 auto;
-    background-color: pink;
-    max-height: 200px;
+    padding: 0 20px;
+    background-color: #ebe9e9;
   }
 
   .banner {
-    flex-basis: 58%;
+    flex-basis: 53%;
     margin-top: 30px;
-    border: 2px dashed blue;
+  }
+
+  .containerIndex {
+    flex-basis: 43%;
+    margin: 30px auto 0;
+    padding: 0 20px;
+    background-color: white !important;
   }
 }
-.containerIndex {
-  flex-basis: 38%;
-  margin: 30px auto 0;
-  padding: 0 20px;
-}
-
 .loading {
   position: absolute;
   left: 0;
@@ -788,7 +818,7 @@ card-simple, .container__menu__simple__card__transform {
   margin: 15px auto;
 }
 
-card-steps, .header__howItWorks__steps {
+card-steps, .header__howItWorks__group__steps {
   border-radius: 15px;
   margin: 15px auto;
   height: 70px;
