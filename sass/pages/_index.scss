@@ -104,7 +104,7 @@
     justify-content: center;
 }
 
-.containerMenuIndex{
+.containerMenuIndex {
     padding: 0 10px;
 }
 
@@ -140,23 +140,21 @@
         justify-content: space-between;
         width: 100%;
         max-width: 1500px;
-               margin: 0 auto;
-               background-color: pink;
-               max-height: 200px;         
+        margin: 0 auto;
+        background-color: pink;
+        max-height: 1139px;
     }
 
     .banner {
         flex-basis: 58%;
-        margin-top: 30px ;
+        margin-top: 30px;
         border: 2px dashed blue;
-
-           }
     }
+}
 
-   .containerIndex {
-        flex-basis: 38%;
-margin: 30px auto 0;
-padding:0 20px;
+.containerIndex {
+    flex-basis: 38%;
+    margin: 30px auto 0;
+    padding: 0 20px;
 
-    }
-
+}

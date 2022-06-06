@@ -12,8 +12,8 @@
     .banner {
         display: flex;
         background-color: silver;
-        padding: 15px;
-        border-radius: 25px 25px 0 0;
+        padding: 10px;
+        border-radius: 25px;
 
         &__group {
             margin: 1px;
@@ -24,9 +24,10 @@
 
             & figure {
                 position: relative;
-                height: 65%;
+                height: 62%;
                 display: flex;
-
+                border-radius: 25px;
+                background-color: silver;
 
                 & img {
                     border-radius: 25px;
@@ -34,63 +35,79 @@
                 }
 
                 & figcaption {
-                    color: white;
                     position: absolute;
-
                     margin: 5px 15px;
+                    bottom: 10px;
                 }
             }
+        
 
-            &__text {
-                margin-top: 15px;
-                padding: 5px 15px;
-                background-color: white;
-                border-radius: 25px;
-                height: 35%;
+        &__text {
+            margin-top: 15px;
+            padding: 5px 15px;
+            background-color: white;
+            border-radius: 25px;
+            height: 35%;
 
-                & h1 {
-                    font-family: shrikhand, serif;
-                    font-style: italic;
-                    letter-spacing: 1px;
-                    margin: 0px;
-                    text-transform: capitalize;
-                    font-size: 4.5rem;
-                }
+            & h1 {
+                font-family: shrikhand, serif;
+                font-style: italic;
+                letter-spacing: 1px;
+                margin: 0px;
+                text-transform: capitalize;
+                font-size: 3.5rem;
+            }
 
-                & p {
-                    font-size: 1.8rem;
-                    margin: 10px 0;
-                }
+            & p {
+                font-size: 1.4rem;
+                margin: 10px 0;
             }
         }
     }
+}}
+
+@media only screen and (min-width: 1300px) {
+    .banner__group {
+        &__text {
+            & h1 {
+                font-size: 4.5rem;
+            }
+
+            & p {
+                font-size: 1.8rem;
+            }
+        }
+    }}
 
     .bannerGroup--1 {
         padding: 10px;
-        background-color: #000002;
-        background-color: pink;
         display: none;
 
         & figure {
-           & img {
+            background-color: black;
+
+            & img {
                 object-fit: contain;
             }
 
             & figcaption {
-                bottom: 10px;
-
+                color: white;
             }
         }
-
     }
 
     .bannerGroup--2 {
-        img {
-            object-fit: cover;
+        display: none;
+
+        & figure {
+            & img {
+                object-fit: cover;
+            }
+
+            & figcaption {}
         }
     }
 
     .bannerGroup--3 {
         display: none;
     }
-}
