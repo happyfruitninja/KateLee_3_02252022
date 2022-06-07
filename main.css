@@ -204,11 +204,10 @@ body h3 {
     border-radius: 25px;
   }
   .banner__group {
-    margin: 1px;
-    height: 100%;
-    width: 100%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
   .banner__group figure {
     position: relative;
@@ -620,39 +619,42 @@ main {
 .header__explore p {
   max-width: 300px;
   margin: 30px auto;
-  border: 2px dashed red;
 }
 .header__howItWorks {
   padding: 40px 15px;
   background-color: white;
-  max-width: 1500px;
 }
 .header__howItWorks h2 {
   text-align: left;
   padding: 0 5px;
+  max-width: 1500px;
 }
 .header__howItWorks p {
   margin-left: 0;
 }
-.header__howItWorks__steps {
+.header__howItWorks__group {
+  max-width: 1500px;
+}
+.header__howItWorks__group__steps {
+  background-color: #F3F3F3;
   display: flex;
   align-items: center;
   position: relative;
   font-weight: 700;
 }
-.header__howItWorks__steps svg {
+.header__howItWorks__group__steps svg {
   margin: 0 20px;
   fill: #686868;
 }
-.header__howItWorks__steps:hover {
+.header__howItWorks__group__steps:hover {
   background-color: #f6e4fd;
   transform: scale(1.01);
   transition: 300ms ease-in-out;
 }
-.header__howItWorks__steps:hover svg {
+.header__howItWorks__group__steps:hover svg {
   fill: #8559bb;
 }
-.header__howItWorks__steps:hover p {
+.header__howItWorks__group__steps:hover p {
   transition: 100ms ease-in-out;
   font-size: 1.07rem;
 }
@@ -801,7 +803,7 @@ card-simple, .container__menu__simple__card__transform {
   margin: 15px auto;
 }
 
-card-steps, .header__howItWorks__steps {
+card-steps, .header__howItWorks__group__steps {
   border-radius: 15px;
   margin: 15px auto;
   height: 70px;
