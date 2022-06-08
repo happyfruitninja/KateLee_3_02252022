@@ -188,14 +188,39 @@ body h3 {
   }
 }
 .banner {
-  display: none;
+  animation: banner 5s ease-in infinite both;
+}
+.bannerGroup--1 {
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
 }
 
-@media only screen and (min-width: 768px) {
-  p {
-    font-size: 1rem;
+.bannerGroup--2 {
+  animation-delay: 10s;
+}
+
+.bannerGroup--3 {
+  animation-delay: 15s;
+}
+
+@keyframes banner {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
+.banner p {
+  font-size: 1rem;
+}
+
 @media only screen and (min-width: 1024px) {
   .banner {
     display: flex;
@@ -208,6 +233,8 @@ body h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 100%;
+    border: 2px dashed red;
   }
   .banner__group figure {
     position: relative;
@@ -255,7 +282,6 @@ body h3 {
 }
 .bannerGroup--1 {
   padding: 10px;
-  display: none;
 }
 .bannerGroup--1 figure {
   background-color: black;
@@ -267,16 +293,9 @@ body h3 {
   color: white;
 }
 
-.bannerGroup--2 {
-  display: none;
-}
 .bannerGroup--2 figure img {
   object-fit: cover;
 }
-.bannerGroup--3 {
-  display: none;
-}
-
 .btn {
   cursor: pointer;
 }
@@ -704,6 +723,7 @@ main {
     margin: 0 auto;
     background-color: pink;
     max-height: 1139px;
+    overflow: hidden;
   }
 
   .banner {

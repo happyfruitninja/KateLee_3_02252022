@@ -1,6 +1,5 @@
-//card//
+//cards//
 .container__menu__simple {
-
     &__card {
         &__transform {
             width: 100%;
@@ -39,8 +38,6 @@
 }
 
 .loadingCard {
- 
-
     &--1 {
         animation: loadingCard 500ms ease-out forwards;
         border-radius: 15px;
@@ -83,9 +80,7 @@
     }
 }
 
-//preloader//
-
-
+//preloader animation//
 @keyframes loader {
     0% {
         opacity: 0;
@@ -138,10 +133,46 @@
         opacity: 1;
     }
 
-
     50%,
     100% {
         opacity: 0;
     }
 
+}
+
+//banner slides animation
+
+.banner{
+    animation: banner 5s ease-in infinite both;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    &__group {
+        
+    }
+}
+ .bannerGroup--1 {
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+ .bannerGroup--2 {
+    animation-delay: 10s;
+}
+
+.bannerGroup--3 {
+    animation-delay: 15s;
+}
+
+@keyframes banner {
+0%{
+    transform: translateX(0);
+}
+    10% {
+        transform: translateX(0);
+    }
+    90%{
+        transform: translateX(-100%);
+    }
+100% {
+    transform: translateX(-100%);
+}
 }

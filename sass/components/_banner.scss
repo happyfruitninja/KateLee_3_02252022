@@ -1,12 +1,9 @@
-.banner {
-    display: none;
-}
-
-@media only screen and (min-width:768px) {
+.banner {  
     p {
         font-size: 1rem;
     }
 }
+
 
 @media only screen and (min-width:1024px) {
     .banner {
@@ -14,12 +11,15 @@
         background-color: silver;
         padding: 10px;
         border-radius: 25px;
-
+    
         &__group {
             padding: 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+         min-width:100%;
+         border: 2px dashed red;
+      
 
             & figure {
                 position: relative;
@@ -80,8 +80,7 @@
 
     .bannerGroup--1 {
         padding: 10px;
-        display: none;
-
+    
         & figure {
             background-color: black;
 
@@ -96,8 +95,7 @@
     }
 
     .bannerGroup--2 {
-        display: none;
-
+   
         & figure {
             & img {
                 object-fit: cover;
@@ -108,5 +106,5 @@
     }
 
     .bannerGroup--3 {
-        display: none;
-    }
+        
+          }
