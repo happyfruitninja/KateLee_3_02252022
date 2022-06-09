@@ -187,33 +187,21 @@ body h3 {
     opacity: 0;
   }
 }
-.banner {
-  animation: banner 5s ease-in infinite both;
-}
-.bannerGroup--1 {
-  animation-delay: 5s;
-  animation-fill-mode: forwards;
-}
-
 .bannerGroup--2 {
-  animation-delay: 10s;
+  animation: banner 5s ease-out infinite backwards;
+  animation-delay: 5s;
 }
 
 .bannerGroup--3 {
-  animation-delay: 15s;
+  animation: banner 5s ease-out infinite backwards;
+  animation-delay: 10s;
 }
 
 @keyframes banner {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
-  10% {
-    transform: translateX(0);
-  }
-  90% {
-    transform: translateX(-100%);
-  }
-  100% {
+  20%, 100% {
     transform: translateX(-100%);
   }
 }
@@ -234,7 +222,7 @@ body h3 {
     flex-direction: column;
     justify-content: space-between;
     min-width: 100%;
-    border: 2px dashed red;
+    border: 2px dashed yellow;
   }
   .banner__group figure {
     position: relative;
@@ -279,9 +267,6 @@ body h3 {
   .banner__group__text p {
     font-size: 1.8rem;
   }
-}
-.bannerGroup--1 {
-  padding: 10px;
 }
 .bannerGroup--1 figure {
   background-color: black;

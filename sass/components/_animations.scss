@@ -142,37 +142,34 @@
 
 //banner slides animation
 
-.banner{
-    animation: banner 5s ease-in infinite both;
+.banner {
+
     // animation: name duration timing-function delay iteration-count direction fill-mode;
-    &__group {
-        
-    }
-}
- .bannerGroup--1 {
-    animation-delay: 5s;
-    animation-fill-mode: forwards;
+    &__group {}
 }
 
- .bannerGroup--2 {
-    animation-delay: 10s;
+.bannerGroup--1 {}
+
+.bannerGroup--2 {
+
+    animation: banner 5s ease-out infinite backwards;
+    animation-delay: 5s;
 }
 
 .bannerGroup--3 {
-    animation-delay: 15s;
+    animation: banner 5s ease-out infinite backwards;
+    animation-delay: 10s;
 }
 
 @keyframes banner {
-0%{
-    transform: translateX(0);
-}
-    10% {
-        transform: translateX(0);
+    0% {
+        transform: translateX(0%);
     }
-    90%{
+
+    20%,
+    100% {
         transform: translateX(-100%);
     }
-100% {
-    transform: translateX(-100%);
-}
+
+
 }

@@ -1,9 +1,8 @@
-.banner {  
+.banner {
     p {
         font-size: 1rem;
     }
 }
-
 
 @media only screen and (min-width:1024px) {
     .banner {
@@ -11,15 +10,15 @@
         background-color: silver;
         padding: 10px;
         border-radius: 25px;
-    
+        // overflow:hidden;
+
         &__group {
             padding: 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-         min-width:100%;
-         border: 2px dashed red;
-      
+            min-width: 100%;
+            border: 2px dashed yellow;
 
             & figure {
                 position: relative;
@@ -39,31 +38,32 @@
                     bottom: 10px;
                 }
             }
-        
 
-        &__text {
-            margin-top: 15px;
-            padding: 5px 15px;
-            background-color: white;
-            border-radius: 25px;
-            height: 35%;
 
-            & h1 {
-                font-family: shrikhand, serif;
-                font-style: italic;
-                letter-spacing: 1px;
-                margin: 0px;
-                text-transform: capitalize;
-                font-size: 3.5rem;
-            }
+            &__text {
+                margin-top: 15px;
+                padding: 5px 15px;
+                background-color: white;
+                border-radius: 25px;
+                height: 35%;
 
-            & p {
-                font-size: 1.4rem;
-                margin: 10px 0;
+                & h1 {
+                    font-family: shrikhand, serif;
+                    font-style: italic;
+                    letter-spacing: 1px;
+                    margin: 0px;
+                    text-transform: capitalize;
+                    font-size: 3.5rem;
+                }
+
+                & p {
+                    font-size: 1.4rem;
+                    margin: 10px 0;
+                }
             }
         }
     }
-}}
+}
 
 @media only screen and (min-width: 1300px) {
     .banner__group {
@@ -76,35 +76,35 @@
                 font-size: 1.8rem;
             }
         }
-    }}
+    }
+}
 
-    .bannerGroup--1 {
-        padding: 10px;
-    
-        & figure {
-            background-color: black;
+.bannerGroup--1 {
+    & figure {
+        background-color: black;
 
-            & img {
-                object-fit: contain;
-            }
+        & img {
+            object-fit: contain;
+        }
 
-            & figcaption {
-                color: white;
-            }
+        & figcaption {
+            color: white;
         }
     }
+}
 
-    .bannerGroup--2 {
-   
-        & figure {
-            & img {
-                object-fit: cover;
-            }
-
-            & figcaption {}
+.bannerGroup--2 {
+    & figure {
+        & img {
+            object-fit: cover;
         }
-    }
 
-    .bannerGroup--3 {
-        
-          }
+        & figcaption {}
+    }
+}
+
+.bannerGroup--3 {}
+
+
+//notion of stacking
+// position:absolute and relative  between each slides and slides grouping + order or z-index
