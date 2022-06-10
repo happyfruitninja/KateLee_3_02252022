@@ -11,14 +11,18 @@
         padding: 10px;
         border-radius: 25px;
         // overflow:hidden;
+        position:relative;
 
         &__group {
+            top:0;
+            left:0;
             padding: 10px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             min-width: 100%;
-            border: 2px dashed yellow;
+            border: 3px dashed yellow;
+            height: 100%;
 
             & figure {
                 position: relative;
@@ -38,7 +42,6 @@
                     bottom: 10px;
                 }
             }
-
 
             &__text {
                 margin-top: 15px;
@@ -65,21 +68,9 @@
     }
 }
 
-@media only screen and (min-width: 1300px) {
-    .banner__group {
-        &__text {
-            & h1 {
-                font-size: 4.5rem;
-            }
-
-            & p {
-                font-size: 1.8rem;
-            }
-        }
-    }
-}
-
 .bannerGroup--1 {
+    position:absolute;
+    z-index:3;
     & figure {
         background-color: black;
 
@@ -94,6 +85,8 @@
 }
 
 .bannerGroup--2 {
+    position:absolute;
+    z-index:2;
     & figure {
         & img {
             object-fit: cover;
@@ -103,8 +96,22 @@
     }
 }
 
-.bannerGroup--3 {}
+.bannerGroup--3 {
+    z-index:1;
+    position:absolute;
+}
 
 
-//notion of stacking
-// position:absolute and relative  between each slides and slides grouping + order or z-index
+@media only screen and (min-width: 1300px) {
+    .banner__group {
+        &__text {
+            & h1 {
+                font-size: 4.5rem;
+            }
+
+            & p {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

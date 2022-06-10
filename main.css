@@ -187,21 +187,33 @@ body h3 {
     opacity: 0;
   }
 }
+.bannerGroup--1 {
+  animation: bannerIntro 5s ease-out forwards;
+}
+
 .bannerGroup--2 {
-  animation: banner 5s ease-out infinite backwards;
-  animation-delay: 5s;
+  animation: bannerSlide 5s ease-out infinite forwards;
+  animation-delay: 15s;
 }
 
 .bannerGroup--3 {
-  animation: banner 5s ease-out infinite backwards;
-  animation-delay: 10s;
+  animation: bannerSlide 5s ease-out infinite forwards;
+  animation-delay: 20s;
 }
 
-@keyframes banner {
+@keyframes bannerIntro {
+  0%, 90% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes bannerSlide {
   0% {
     transform: translateX(0%);
   }
-  20%, 100% {
+  15%, 100% {
     transform: translateX(-100%);
   }
 }
@@ -215,14 +227,18 @@ body h3 {
     background-color: silver;
     padding: 10px;
     border-radius: 25px;
+    position: relative;
   }
   .banner__group {
+    top: 0;
+    left: 0;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-width: 100%;
-    border: 2px dashed yellow;
+    border: 3px dashed yellow;
+    height: 100%;
   }
   .banner__group figure {
     position: relative;
@@ -260,13 +276,9 @@ body h3 {
     margin: 10px 0;
   }
 }
-@media only screen and (min-width: 1300px) {
-  .banner__group__text h1 {
-    font-size: 4.5rem;
-  }
-  .banner__group__text p {
-    font-size: 1.8rem;
-  }
+.bannerGroup--1 {
+  position: absolute;
+  z-index: 3;
 }
 .bannerGroup--1 figure {
   background-color: black;
@@ -278,8 +290,25 @@ body h3 {
   color: white;
 }
 
+.bannerGroup--2 {
+  position: absolute;
+  z-index: 2;
+}
 .bannerGroup--2 figure img {
   object-fit: cover;
+}
+.bannerGroup--3 {
+  z-index: 1;
+  position: absolute;
+}
+
+@media only screen and (min-width: 1300px) {
+  .banner__group__text h1 {
+    font-size: 4.5rem;
+  }
+  .banner__group__text p {
+    font-size: 1.8rem;
+  }
 }
 .btn {
   cursor: pointer;
@@ -702,7 +731,7 @@ main {
 }
 @media only screen and (min-width: 1024px) {
   .mainIndex {
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
@@ -712,17 +741,17 @@ main {
   }
 
   .banner {
-    flex-basis: 58%;
+    flex-basis: 48%;
     margin-top: 30px;
     border: 2px dashed blue;
   }
-}
-.containerIndex {
-  flex-basis: 38%;
-  margin: 30px auto 0;
-  padding: 0 20px;
-}
 
+  .containerIndex {
+    flex-basis: 48%;
+    margin: 30px auto 0;
+    padding: 0 20px;
+  }
+}
 .loading {
   position: absolute;
   left: 0;

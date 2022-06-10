@@ -57,7 +57,7 @@
 
             &__steps {
                 @extend card-steps;
-               background-color:#F3F3F3;
+                background-color: #F3F3F3;
                 display: flex;
                 align-items: center;
                 position: relative;
@@ -127,9 +127,9 @@
     }
 
     .containerIndex {
-        
+
         &__menu {
-          
+
             &__full {
                 max-width: 600px;
                 padding: 5px;
@@ -138,29 +138,28 @@
     }
 }
 
-
 @media only screen and (min-width:1024px) {
 
     .mainIndex {
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         max-width: 1500px;
         margin: 0 auto;
         background-color: pink;
         max-height: 1139px;
-        overflow:hidden;
+        overflow: hidden;
     }
 
     .banner {
-        flex-basis: 58%;
+        flex-basis: 48%;
         margin-top: 30px;
         border: 2px dashed blue;
     }
-}
 
-.containerIndex {
-    flex-basis: 38%;
-    margin: 30px auto 0;
-    padding: 0 20px;
 
+    .containerIndex {
+        flex-basis: 48%;
+        margin: 30px auto 0;
+        padding: 0 20px;
+    }
 }
