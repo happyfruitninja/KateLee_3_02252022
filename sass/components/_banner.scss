@@ -7,32 +7,34 @@
 @media only screen and (min-width:1024px) {
     .banner {
         display: flex;
-        background-color: silver;
+        background-color: #ebe9e9;
         padding: 10px;
-        border-radius: 25px;
-        // overflow:hidden;
-        position:relative;
+        border-radius: 25px 0 0 25px;
+    //  overflow: hidden;
+        position: relative;
+        flex-direction: column;
 
         &__group {
-            top:0;
-            left:0;
-            padding: 10px;
+            top: 0;
+            left: 0;
+            position:absolute;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
             min-width: 100%;
-            border: 3px dashed yellow;
             height: 100%;
-
+            transform: translateX(100%);
+            
             & figure {
                 position: relative;
-                height: 62%;
+                height: 65%;
                 display: flex;
-                border-radius: 25px;
+                border-radius: 25px 25px 0 0;
                 background-color: silver;
 
                 & img {
-                    border-radius: 25px;
+                    border-radius: 25px 25px 0 0;
                     width: 100%;
                 }
 
@@ -44,17 +46,17 @@
             }
 
             &__text {
-                margin-top: 15px;
+                margin: 0 0 0 0;
                 padding: 5px 15px;
                 background-color: white;
-                border-radius: 25px;
+                border-radius: 0 0 25px 25px;
                 height: 35%;
 
                 & h1 {
                     font-family: shrikhand, serif;
                     font-style: italic;
                     letter-spacing: 1px;
-                    margin: 0px;
+                    margin: 10px 0;
                     text-transform: capitalize;
                     font-size: 3.5rem;
                 }
@@ -68,9 +70,10 @@
     }
 }
 
-.bannerGroup--1 {
-    position:absolute;
-    z-index:3;
+.banner__group.bannerGroup--1 {
+    z-index: 1;
+    border: 5px dashed red;
+   
     & figure {
         background-color: black;
 
@@ -84,33 +87,30 @@
     }
 }
 
-.bannerGroup--2 {
-    position:absolute;
-    z-index:2;
+.banner__group.bannerGroup--2 {
+    z-index: 2;
+   
+
     & figure {
         & img {
             object-fit: cover;
         }
-
-        & figcaption {}
     }
 }
-
-.bannerGroup--3 {
-    z-index:1;
-    position:absolute;
-}
-
+.banner__group.bannerGroup--3 {  
+   
+    z-index: 3;
+    }
 
 @media only screen and (min-width: 1300px) {
     .banner__group {
         &__text {
             & h1 {
-                font-size: 4.5rem;
+                font-size: 3.8rem;
             }
 
             & p {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
             }
         }
     }

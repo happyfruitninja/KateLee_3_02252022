@@ -108,7 +108,7 @@
 }
 
 .containerMenuIndex {
-    padding: 0 10px;
+    padding: 0;
 }
 
 @media only screen and (min-width:768px) {
@@ -127,7 +127,6 @@
     }
 
     .containerIndex {
-
         &__menu {
 
             &__full {
@@ -141,25 +140,25 @@
 @media only screen and (min-width:1024px) {
 
     .mainIndex {
+        display: flex;
         justify-content: space-around;
         width: 100%;
         max-width: 1500px;
-        margin: 0 auto;
-        background-color: pink;
-        max-height: 1139px;
+        max-height: 1146px;
         overflow: hidden;
+      padding:0 10px;
     }
 
     .banner {
-        flex-basis: 48%;
-        margin-top: 30px;
-        border: 2px dashed blue;
+        flex-basis: 49%;
+        margin: 10px auto 20px;
     }
 
 
     .containerIndex {
-        flex-basis: 48%;
-        margin: 30px auto 0;
-        padding: 0 20px;
+        flex-basis: 49%;
+        margin: 10px auto 20px ;
+        padding: 10px 20px;
+        border-radius: 0 25px 25px 0!important;
     }
 }

@@ -143,42 +143,32 @@
 // .banner__group {
 //     animation: bannerIntro 5s ease-out infinite forwards;
 //     // animation: name duration timing-function delay iteration-count direction fill-mode;
- 
+
 // }
 
-.bannerGroup--1 { 
- animation: bannerIntro 5s ease-out forwards;
-  
-    }
+.bannerGroup--1 {
+    animation: bannerSlide 15s ease-out;
+}
 
 .bannerGroup--2 {
-      animation: bannerSlide 5s ease-out infinite forwards;
-    animation-delay: 15s;
+    animation: bannerSlide 15s ease-out 5s;
+
 }
 
 .bannerGroup--3 {
-     animation: bannerSlide 5s ease-out infinite forwards;
-    animation-delay: 20s;
+    animation: bannerSlide 15s ease-out 10s;
 
-}
-
-
-@keyframes bannerIntro {
-    0%,90% {
-        transform: translateX(0%);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
 }
 
 @keyframes bannerSlide {
-    0% {
+    5% {
         transform: translateX(0%);
     }
+  6%,98%{
+    transform: translateX(0%); 
+  }
+   99%,100%{
+        transform: translateX(100%);
+    }
 
-15%,
-100%{
-    transform: translateX(-100%);
-}
 }

@@ -188,33 +188,26 @@ body h3 {
   }
 }
 .bannerGroup--1 {
-  animation: bannerIntro 5s ease-out forwards;
+  animation: bannerSlide 15s ease-out;
 }
 
 .bannerGroup--2 {
-  animation: bannerSlide 5s ease-out infinite forwards;
-  animation-delay: 15s;
+  animation: bannerSlide 15s ease-out 5s;
 }
 
 .bannerGroup--3 {
-  animation: bannerSlide 5s ease-out infinite forwards;
-  animation-delay: 20s;
+  animation: bannerSlide 15s ease-out 10s;
 }
 
-@keyframes bannerIntro {
-  0%, 90% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 @keyframes bannerSlide {
-  0% {
+  5% {
     transform: translateX(0%);
   }
-  15%, 100% {
-    transform: translateX(-100%);
+  6%, 98% {
+    transform: translateX(0%);
+  }
+  99%, 100% {
+    transform: translateX(100%);
   }
 }
 .banner p {
@@ -224,31 +217,33 @@ body h3 {
 @media only screen and (min-width: 1024px) {
   .banner {
     display: flex;
-    background-color: silver;
+    background-color: #ebe9e9;
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 25px 0 0 25px;
     position: relative;
+    flex-direction: column;
   }
   .banner__group {
     top: 0;
     left: 0;
-    padding: 10px;
+    position: absolute;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     min-width: 100%;
-    border: 3px dashed yellow;
     height: 100%;
+    transform: translateX(100%);
   }
   .banner__group figure {
     position: relative;
-    height: 62%;
+    height: 65%;
     display: flex;
-    border-radius: 25px;
+    border-radius: 25px 25px 0 0;
     background-color: silver;
   }
   .banner__group figure img {
-    border-radius: 25px;
+    border-radius: 25px 25px 0 0;
     width: 100%;
   }
   .banner__group figure figcaption {
@@ -257,17 +252,17 @@ body h3 {
     bottom: 10px;
   }
   .banner__group__text {
-    margin-top: 15px;
+    margin: 0 0 0 0;
     padding: 5px 15px;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 0 0 25px 25px;
     height: 35%;
   }
   .banner__group__text h1 {
     font-family: shrikhand, serif;
     font-style: italic;
     letter-spacing: 1px;
-    margin: 0px;
+    margin: 10px 0;
     text-transform: capitalize;
     font-size: 3.5rem;
   }
@@ -276,38 +271,37 @@ body h3 {
     margin: 10px 0;
   }
 }
-.bannerGroup--1 {
-  position: absolute;
-  z-index: 3;
+.banner__group.bannerGroup--1 {
+  z-index: 1;
+  border: 5px dashed red;
 }
-.bannerGroup--1 figure {
+.banner__group.bannerGroup--1 figure {
   background-color: black;
 }
-.bannerGroup--1 figure img {
+.banner__group.bannerGroup--1 figure img {
   object-fit: contain;
 }
-.bannerGroup--1 figure figcaption {
+.banner__group.bannerGroup--1 figure figcaption {
   color: white;
 }
 
-.bannerGroup--2 {
-  position: absolute;
+.banner__group.bannerGroup--2 {
   z-index: 2;
 }
-.bannerGroup--2 figure img {
+.banner__group.bannerGroup--2 figure img {
   object-fit: cover;
 }
-.bannerGroup--3 {
-  z-index: 1;
-  position: absolute;
+
+.banner__group.bannerGroup--3 {
+  z-index: 3;
 }
 
 @media only screen and (min-width: 1300px) {
   .banner__group__text h1 {
-    font-size: 4.5rem;
+    font-size: 3.8rem;
   }
   .banner__group__text p {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 .btn {
@@ -376,7 +370,6 @@ body h3 {
 }
 
 .container__menu {
-  border: 2px dashed darkcyan;
   padding: 20px;
 }
 .container__menu :nth-last-child {
@@ -531,10 +524,11 @@ body h3 {
   }
 }
 main {
-  display: flex;
+  background-color: white;
 }
 
 .mainRepeat {
+  display: flex;
   flex-direction: column;
 }
 
@@ -579,9 +573,6 @@ main {
   .container__menu__simple__card {
     margin: 10px;
   }
-}
-.header {
-  border: 3px dashed darkgrey;
 }
 .header__nav {
   display: flex;
@@ -712,7 +703,7 @@ main {
 }
 
 .containerMenuIndex {
-  padding: 0 10px;
+  padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -731,25 +722,25 @@ main {
 }
 @media only screen and (min-width: 1024px) {
   .mainIndex {
+    display: flex;
     justify-content: space-around;
     width: 100%;
     max-width: 1500px;
-    margin: 0 auto;
-    background-color: pink;
-    max-height: 1139px;
+    max-height: 1146px;
     overflow: hidden;
+    padding: 0 10px;
   }
 
   .banner {
-    flex-basis: 48%;
-    margin-top: 30px;
-    border: 2px dashed blue;
+    flex-basis: 49%;
+    margin: 10px auto 20px;
   }
 
   .containerIndex {
-    flex-basis: 48%;
-    margin: 30px auto 0;
-    padding: 0 20px;
+    flex-basis: 49%;
+    margin: 10px auto 20px;
+    padding: 10px 20px;
+    border-radius: 0 25px 25px 0 !important;
   }
 }
 .loading {
