@@ -188,26 +188,26 @@ body h3 {
   }
 }
 .bannerGroup--1 {
-  animation: bannerSlide 15s ease-out;
+  animation: bannerSlide 15s ease-out infinite;
 }
 
 .bannerGroup--2 {
-  animation: bannerSlide 15s ease-out 5s;
+  animation: bannerSlide 15s ease-out infinite 5s;
 }
 
 .bannerGroup--3 {
-  animation: bannerSlide 15s ease-out 10s;
+  animation: bannerSlide 15s ease-out infinite 10s;
 }
 
 @keyframes bannerSlide {
   5% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   6%, 98% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   99%, 100% {
-    transform: translateX(100%);
+    transform: translateX(200px);
   }
 }
 .banner p {
@@ -220,6 +220,7 @@ body h3 {
     background-color: #ebe9e9;
     padding: 10px;
     border-radius: 25px 0 0 25px;
+    overflow: hidden;
     position: relative;
     flex-direction: column;
   }
