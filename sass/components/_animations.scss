@@ -146,29 +146,46 @@
 
 // }
 
-.bannerGroup--1 {
+
+// $bannerGroup:(
+//     1: 0s,
+//     2: 5s,
+//     3: 10s
+// )
+
+// @mixin bannerGroups($bannerGroup) {
+//     @each $bannerGroup
+// }
+
+.banner__group {
     animation: bannerSlide 15s ease-out infinite;
 }
 
-.bannerGroup--2 {
-    animation: bannerSlide 15s ease-out infinite 5s;
+.bannerGroup--1 {
+ animation-delay:4s;
+}
 
+.bannerGroup--2 {
+    animation-delay:9s;
 }
 
 .bannerGroup--3 {
-    animation: bannerSlide 15s ease-out infinite 10s;
-
+    animation-delay:14s;
+  
 }
 
+
 @keyframes bannerSlide {
-    5% {
+2%, 30% {
         transform: translateX(0);
     }
-  6%,98%{
-    transform: translateX(0); 
-  }
-   99%,100%{
-        transform: translateX(200px);
-    }
 
+32%{
+    transform: translateX(-100%);
+}
+
+
+100%{
+    transform: translateX(-100%);
+   }  
 }
