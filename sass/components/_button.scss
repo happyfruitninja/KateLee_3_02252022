@@ -22,7 +22,6 @@
 
 //heart icon button
 .secondary {
-    border: 2px dashed red;
     border: none;
     display: flex;
     position: relative;
@@ -30,55 +29,57 @@
     height: 50px;
     background-color: transparent;
 
+    &:hover &__mask {
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.51s linear;
+    }
+    &:focus &__mask {
+        transform: scaleY(0);
+    }
+
     & svg {
         width: 25px;
     }
 
     &__line,
-    &__solid {
-        margin: 0;
+    &__solid,
+    &__mask {
         position: absolute;
-        bottom: 15px;
+        bottom: 5px;
     }
 
     &__solid {
-        right: 10000px;
-
+        right: 10px;
     }
 
     &__line {
+        right: 10px; 
+    }
+
+    &__mask {
+        width: 27px;
+        height: 27px;
+        background-color: white;
         right: 10px;
-
-    }
-
-    &:active {
-        transform: translate(2px, 2px);
-    }
-
-    &:focus &__solid {
-        right: 10px;
-    }
+           }
 }
+
 
 //menu-item like button
 .tertiary {
     border: none;
-    @extend border-radius-15;
+    @extend border-right-radius-15;
     position: relative;
     width: 100%;
-    display:flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-   
-   
-    & svg {
-        position: absolute;
-       
-             }
+
 
     &:active svg {
-        transform: translate(1px, 1px);
+        transition: transform 0s ease-in;
+        transform: translate(2px, 2px);
+
     }
-
-
 }

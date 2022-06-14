@@ -17,6 +17,7 @@
 
         &:hover .tertiary {
             transform: translateX(-100%);
+
         }
 
         &:hover svg {
@@ -39,8 +40,6 @@
 }
 
 .loadingCard {
- 
-
     &--1 {
         animation: loadingCard 500ms ease-out forwards;
         border-radius: 15px;

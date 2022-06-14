@@ -269,7 +269,6 @@ body h3 {
 }
 
 .secondary {
-  border: 2px dashed red;
   border: none;
   display: flex;
   position: relative;
@@ -277,24 +276,31 @@ body h3 {
   height: 50px;
   background-color: transparent;
 }
+.secondary:hover .secondary__mask {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.51s linear;
+}
+.secondary:focus .secondary__mask {
+  transform: scaleY(0);
+}
 .secondary svg {
   width: 25px;
 }
-.secondary__line, .secondary__solid {
-  margin: 0;
+.secondary__line, .secondary__solid, .secondary__mask {
   position: absolute;
-  bottom: 15px;
+  bottom: 5px;
 }
 .secondary__solid {
-  right: 10000px;
+  right: 10px;
 }
 .secondary__line {
   right: 10px;
 }
-.secondary:active {
-  transform: translate(2px, 2px);
-}
-.secondary:focus .secondary__solid {
+.secondary__mask {
+  width: 27px;
+  height: 27px;
+  background-color: white;
   right: 10px;
 }
 
@@ -306,11 +312,9 @@ body h3 {
   justify-content: center;
   align-items: center;
 }
-.tertiary svg {
-  position: absolute;
-}
 .tertiary:active svg {
-  transform: translate(1px, 1px);
+  transition: transform 0s ease-in;
+  transform: translate(2px, 2px);
 }
 
 .container__menu {
@@ -784,11 +788,11 @@ border-radius, .container__menu__simple__card__static svg, .circle {
   border-radius: 15px;
 }
 
-border-radius-15, .tertiary, .container__menu__full figure, .container__menu__simple__card__static {
+border-radius-15, .container__menu__full figure, .container__menu__simple__card__static {
   border-radius: 15px;
 }
 
-border-right-radius-15 {
+border-right-radius-15, .tertiary {
   border-radius: 0 15px 15px 0;
 }
 
