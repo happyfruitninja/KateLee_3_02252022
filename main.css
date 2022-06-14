@@ -99,6 +99,11 @@ body h3 {
   border-bottom-right-radius: 0;
   position: relative;
 }
+.container__menu__simple__card:hover .container__menu__simple__card__transform p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .container__menu__simple__card:hover .tertiary {
   transform: translateX(-100%);
 }
