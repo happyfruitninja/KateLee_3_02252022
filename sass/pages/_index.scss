@@ -112,6 +112,13 @@
     padding: 0 10px;
 }
 
+.container__title {
+    .secondary__mask {
+        background-color: #ebe9e9;
+    }
+}
+
+
 @media only screen and (min-width:768px) {
     .header {
         &__explore {
@@ -128,12 +135,11 @@
     }
 
     .containerIndex {
-        
+
         &__menu {
             &__full {
                 max-width: 600px;
                 padding: 5px;
-                 
             }
         }
     }
@@ -155,8 +161,9 @@
     }
 
 
-.containerIndex {
-  
-    margin: 30px auto 0;
-    padding: 0 20px;
-}}
+    .containerIndex {
+
+        margin: 30px auto 0;
+        padding: 0 20px;
+    }
+}
