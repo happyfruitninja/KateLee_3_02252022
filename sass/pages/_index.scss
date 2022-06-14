@@ -17,7 +17,6 @@
                 background-color: transparent;
                 margin: 0;
                 font-size: 1rem;
-                font-weight: 700;
                 text-align: center;
                 width: 150px;
 
@@ -66,18 +65,22 @@
                 fill: rgb(104, 104, 104);
             }
 
-            &:hover {
+            &:hover{
                 background-color: rgb(246, 228, 253);
-                transform: scale(1.01);
+                transform: scale(1.03);
                 transition: 300ms ease-in-out;
 
                 & svg {
                     fill: #8559bb;
+                    transform: scale(1.2);
+                }
+                .circle{
+                    transform: scale(1.1);
                 }
 
                 & p {
                     transition: 100ms ease-in-out;
-                    font-size: 1.07rem;
+                    font-size: 1.3rem;
                 }
             }
         }

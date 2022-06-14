@@ -579,7 +579,6 @@ main {
   background-color: transparent;
   margin: 0;
   font-size: 1rem;
-  font-weight: 700;
   text-align: center;
   width: 150px;
 }
@@ -619,15 +618,19 @@ main {
 }
 .header__howItWorks__steps:hover {
   background-color: #f6e4fd;
-  transform: scale(1.01);
+  transform: scale(1.03);
   transition: 300ms ease-in-out;
 }
 .header__howItWorks__steps:hover svg {
   fill: #8559bb;
+  transform: scale(1.2);
+}
+.header__howItWorks__steps:hover .circle {
+  transform: scale(1.1);
 }
 .header__howItWorks__steps:hover p {
   transition: 100ms ease-in-out;
-  font-size: 1.07rem;
+  font-size: 1.3rem;
 }
 
 .reduce {
