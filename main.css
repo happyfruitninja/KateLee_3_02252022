@@ -191,51 +191,80 @@ body h3 {
     opacity: 0;
   }
 }
-.banner {
-  display: none;
+.banner__group {
+  animation: bannerSlide 15s ease-out infinite;
 }
 
-@media only screen and (min-width: 768px) {
-  p {
-    font-size: 1rem;
+.bannerGroup--1 {
+  animation-delay: 4s;
+}
+
+.bannerGroup--2 {
+  animation-delay: 9s;
+}
+
+.bannerGroup--3 {
+  animation-delay: 14s;
+}
+
+@keyframes bannerSlide {
+  2%, 30% {
+    transform: translateX(0);
+  }
+  32% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
+.banner p {
+  font-size: 1rem;
+}
+
 @media only screen and (min-width: 1024px) {
   .banner {
-    display: inline-block;
-    background-color: silver;
-    padding: 15px;
-    border-radius: 25px 25px 0 0;
-  }
-  .banner__group {
-    margin: 1px;
-    height: 100%;
-    width: 100%;
     display: flex;
+    background-color: #ebe9e9;
+    padding: 10px;
+    border-radius: 25px 0 0 25px;
+    overflow: hidden;
+    position: relative;
     flex-direction: column;
   }
+  .banner__group {
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+  }
   .banner__group figure {
-    border-radius: 25px;
-    background-color: #000002;
     position: relative;
     height: 100%;
     display: flex;
+    border-radius: 25px 25px 0 0;
+    background-color: silver;
   }
   .banner__group figure img {
-    object-fit: contain;
+    border-radius: 25px 25px 0 0;
     width: 100%;
   }
   .banner__group figure figcaption {
-    color: white;
     position: absolute;
-    bottom: 10px;
     margin: 5px 15px;
+    bottom: 10px;
   }
   .banner__group__text {
-    margin-top: 15px;
+    margin: 0 0 0 0;
     padding: 5px 15px;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 0 0 25px 25px;
     height: 35%;
   }
   .banner__group__text h1 {
@@ -248,8 +277,44 @@ body h3 {
   }
   .banner__group__text p {
     font-size: 1.2rem;
+    font-size: 3.5rem;
+  }
+  .banner__group__text p {
+    font-size: 1.4rem;
     margin: 10px 0;
     line-height: 1.3;
+  }
+}
+.bannerGroup--1 {
+  z-index: 3;
+}
+.bannerGroup--1 figure {
+  background-color: black;
+}
+.bannerGroup--1 figure img {
+  object-fit: contain;
+}
+.bannerGroup--1 figure figcaption {
+  color: white;
+}
+
+.bannerGroup--2 {
+  z-index: 2;
+}
+.bannerGroup--2 figure img {
+  object-fit: cover;
+}
+
+.bannerGroup--3 {
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1300px) {
+  .banner__group__text h1 {
+    font-size: 3.8rem;
+  }
+  .banner__group__text p {
+    font-size: 1.7rem;
   }
 }
 .btn {
@@ -472,10 +537,11 @@ body h3 {
   }
 }
 main {
-  display: flex;
+  background-color: white;
 }
 
 .mainRepeat {
+  display: flex;
   flex-direction: column;
 }
 
@@ -592,38 +658,42 @@ main {
 .header__howItWorks {
   padding: 40px 15px;
   background-color: white;
-  max-width: 1500px;
 }
 .header__howItWorks h2 {
   text-align: left;
   padding: 0 5px;
+  max-width: 1500px;
 }
 .header__howItWorks p {
   margin-left: 0;
 }
-.header__howItWorks__steps {
+.header__howItWorks__group {
+  max-width: 1500px;
+}
+.header__howItWorks__group__steps {
+  background-color: #F3F3F3;
   display: flex;
   align-items: center;
   position: relative;
   font-weight: 700;
 }
-.header__howItWorks__steps svg {
+.header__howItWorks__group__steps svg {
   margin: 0 20px;
   fill: #686868;
 }
-.header__howItWorks__steps:hover {
+.header__howItWorks__group__steps:hover {
   background-color: #f6e4fd;
   transform: scale(1.03);
   transition: 300ms ease-in-out;
 }
-.header__howItWorks__steps:hover svg {
+.header__howItWorks__group__steps:hover svg {
   fill: #8559bb;
   transform: scale(1.2);
 }
 .header__howItWorks__steps:hover .circle {
   transform: scale(1.1);
 }
-.header__howItWorks__steps:hover p {
+.header__howItWorks__group__steps:hover p {
   transition: 100ms ease-in-out;
   font-size: 1.3rem;
 }
@@ -648,7 +718,7 @@ main {
 }
 
 .containerMenuIndex {
-  padding: 0 10px;
+  padding: 0;
 }
 
 .container__title .secondary__mask {
@@ -671,20 +741,25 @@ main {
 }
 @media only screen and (min-width: 1024px) {
   .mainIndex {
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
     width: 100%;
     max-width: 1500px;
-    margin: 0 auto;
+    max-height: 1146px;
+    overflow: hidden;
+    padding: 0 10px;
   }
 
   .banner {
-    flex-basis: 100%;
-    margin-top: 30px;
+    flex-basis: 49%;
+    margin: 10px auto 20px;
   }
 
   .containerIndex {
-    margin: 30px auto 0;
-    padding: 0 20px;
+    flex-basis: 49%;
+    margin: 10px auto 20px;
+    padding: 10px 20px;
+    border-radius: 0 25px 25px 0 !important;
   }
 }
 .loading {
@@ -771,7 +846,7 @@ card-simple, .container__menu__simple__card__transform {
   margin: 15px auto;
 }
 
-card-steps, .header__howItWorks__steps {
+card-steps, .header__howItWorks__group__steps {
   border-radius: 15px;
   margin: 15px auto;
   height: 70px;

@@ -1,6 +1,5 @@
-//card//
+//cards//
 .container__menu__simple {
-
     &__card {
         &__transform {
             width: 100%;
@@ -87,9 +86,7 @@
     }
 }
 
-//preloader//
-
-
+//preloader animation//
 @keyframes loader {
     0% {
         opacity: 0;
@@ -121,7 +118,6 @@
     100% {
         transform: scale(1.5);
     }
-
 }
 
 @keyframes letter-opacity {
@@ -133,8 +129,6 @@
     100% {
         opacity: 1;
     }
-
-
 }
 
 @keyframes icon-opacity {
@@ -142,10 +136,41 @@
         opacity: 1;
     }
 
-
     50%,
     100% {
         opacity: 0;
     }
+}
 
+.banner__group {
+    animation: bannerSlide 15s ease-out infinite;
+}
+
+.bannerGroup--1 {
+    animation-delay: 4s;
+}
+
+.bannerGroup--2 {
+    animation-delay: 9s;
+}
+
+.bannerGroup--3 {
+    animation-delay: 14s;
+}
+
+
+@keyframes bannerSlide {
+
+    2%,
+    30% {
+        transform: translateX(0);
+    }
+
+    32% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
