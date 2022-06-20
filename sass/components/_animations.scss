@@ -11,34 +11,36 @@
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
             position: relative;
-
-            & p {
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-            }
         }
 
-        &:hover .tertiary {
-            transform: translateX(-100%);
-
+        &__text__subText,
+        &:hover p:first-child {
+            width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
+    }
 
-        &:hover svg {
-            transform: rotate(-360deg);
-        }
+    &:hover .tertiary {
+        transform: translateX(-100%);
 
-        .tertiary {
-            width: 18%;
-            height: 100%;
-            margin: 0;
-            position: absolute;
-            right: -18%;
-            transition: transform 400ms ease;
+    }
 
-            svg {
-                transition: transform 800ms ease;
-            }
+    &:hover svg {
+        transform: rotate(-360deg);
+    }
+
+    .tertiary {
+        width: 18%;
+        height: 100%;
+        margin: 0;
+        position: absolute;
+        right: -18%;
+        transition: transform 400ms ease;
+
+        svg {
+            transition: transform 800ms ease;
         }
     }
 }

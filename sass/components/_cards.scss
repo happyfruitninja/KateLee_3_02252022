@@ -1,6 +1,6 @@
 .container {
   &__menu {
-    padding: 20px;
+    padding: 10px;
 
     & :nth-last-child {
       background-color: cyan;
@@ -88,15 +88,15 @@
 
             &__subText {
               display: flex;
-              justify-content: space-between;
-
+              justify-content: space-between;     
+              width: 100%;      
+        
+              & p:first-child {
+                margin-left: 0;
+              }
               &--bold {
                 margin: 0 0 0 10px;
                 font-weight: 700;
-              }
-
-              & p:first-child {
-                margin-left: 0;
               }
             }
           }

@@ -1,4 +1,6 @@
 .banner {
+    display: none;
+
     p {
         font-size: 1rem;
     }
@@ -33,103 +35,96 @@
                 border-radius: 25px 25px 0 0;
                 background-color: silver;
 
-                & figure {
-                    border-radius: 25px;
-                    background-color: #000002;
-                    position: relative;
-                    height: 100%;
-                    display: flex;
-
-                    & img {
-                        object-fit: contain;
-                        width: 100%;
-                    }
-
-                    & figcaption {
-                        color: white;
-                        position: absolute;
-                        bottom: 10px;
-                        margin: 5px 15px;
-                    }
-
-                    & img {
-                        border-radius: 25px 25px 0 0;
-                        width: 100%;
-                    }
-
-                    & figcaption {
-                        position: absolute;
-                        margin: 5px 15px;
-                        bottom: 10px;
-                    }
+                & img {
+                    object-fit: contain;
+                    width: 100%;
+                    margin: 0;
                 }
 
-                &__text {
-                    margin: 0 0 0 0;
-                    padding: 5px 15px;
-                    background-color: white;
-                    border-radius: 0 0 25px 25px;
-                    height: 35%;
+                & figcaption {
+                    color: white;
+                    position: absolute;
+                    bottom: 10px;
+                    margin: 5px 15px;
+                }
 
-                    & h1 {
-                        font-family: shrikhand, serif;
-                        font-style: italic;
-                        letter-spacing: 1px;
-                        margin: 10px 0;
-                        text-transform: capitalize;
-                        font-size: 3.5rem;
-                    }
+                & img {
+                    border-radius: 25px 25px 0 0;
+                    width: 100%;
+                }
 
-                    & p {
-                        font-size: 1.4rem;
-                        margin: 10px 0;
-                    }
+                & figcaption {
+                    position: absolute;
+                    margin: 5px 15px;
+                    bottom: 10px;
+                }
+            }
+
+            &__text {
+                margin: 0 0 0 0;
+                padding: 5px 15px;
+                background-color: white;
+                border-radius: 0 0 25px 25px;
+                height: 35%;
+
+                & h1 {
+                    font-family: shrikhand, serif;
+                    font-style: italic;
+                    letter-spacing: 1px;
+                    margin: 10px 0;
+                    text-transform: capitalize;
+                    font-size: 3.5rem;
+                }
+
+                & p {
+                    font-size: 1.4rem;
+                    margin: 10px 0;
                 }
             }
         }
     }
 }
-    .bannerGroup--1 {
-        z-index: 3;
 
-        & figure {
-            background-color: black;
+.bannerGroup--1 {
+    z-index: 3;
 
-            & img {
-                object-fit: contain;
+    & figure {
+        background-color: black;
+
+        & img {
+            object-fit: contain;
+        }
+
+        & figcaption {
+            color: white;
+        }
+    }
+}
+
+.bannerGroup--2 {
+    z-index: 2;
+
+    & figure {
+        & img {
+            object-fit: cover;
+        }
+    }
+}
+
+.bannerGroup--3 {
+    z-index: 1;
+}
+
+@media only screen and (min-width: 1300px) {
+    .banner__group {
+        &__text {
+            & h1 {
+                font-size: 3.8rem;
             }
 
-            & figcaption {
-                color: white;
+            & p {
+                font-size: 1.7rem;
             }
         }
     }
-
-    .bannerGroup--2 {
-        z-index: 2;
-
-        & figure {
-            & img {
-                object-fit: cover;
-            }
-        }
-    }
-
-    .bannerGroup--3 {
-
-        z-index: 1;
-    }
-
-    @media only screen and (min-width: 1300px) {
-        .banner__group {
-            &__text {
-                & h1 {
-                    font-size: 3.8rem;
-                }
-
-                & p {
-                    font-size: 1.7rem;
-                }
-            }
-        }
-    }
+}
