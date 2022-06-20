@@ -34,7 +34,6 @@
         p {
             max-width: 300px;
             margin: 30px auto;
-            border: 2px dashed red;
         }
     }
 
@@ -107,9 +106,6 @@
     justify-content: center;
 }
 
-.containerIndex {
-    flex-basis: 85%;
-}
 
 .containerMenuIndex {
     padding: 0 10px;
@@ -160,7 +156,6 @@
     .banner {
         flex-basis: 100%;
         margin-top: 30px;
-        border: 2px dashed blue;
     }
 
 

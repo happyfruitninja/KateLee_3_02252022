@@ -1,22 +1,18 @@
 .header {
-    border: 3px dashed darkgrey;
-   
-    
     &__nav {
         display: flex;
         align-items: center;
-        border: 3px dashed hotpink;
 
         &__logo {
             margin: 15px auto;
             width: 250px;
-           padding-right:50px;
+            padding-right: 50px;
         }
 
         & a {
-           margin-left: 20px;
+            margin-left: 20px;
         }
     }
 
-    
+
 }

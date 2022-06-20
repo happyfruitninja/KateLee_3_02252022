@@ -90,7 +90,6 @@ body h3 {
 }
 .container__menu__simple__card__transform {
   width: 100%;
-  height: 70px;
 }
 .container__menu__simple__card:hover .container__menu__simple__card__transform {
   width: 82%;
@@ -323,7 +322,6 @@ body h3 {
 }
 
 .container__menu {
-  border: 2px dashed darkcyan;
   padding: 20px;
 }
 .container__menu :nth-last-child {
@@ -332,7 +330,6 @@ body h3 {
 }
 .container__menu__full {
   width: 100%;
-  min-width: 350px;
 }
 .container__menu__full figure {
   width: 100%;
@@ -368,7 +365,7 @@ body h3 {
 .container__menu__simple {
   width: 100%;
   margin: 15px 0;
-  height: 70px;
+  height: 100px;
 }
 .container__menu__simple__card {
   margin: 15px 0;
@@ -378,7 +375,7 @@ body h3 {
 }
 .container__menu__simple__card__static {
   width: 100%;
-  height: 70px;
+  height: 100%;
   justify-content: flex-end;
   position: absolute;
   display: flex;
@@ -400,14 +397,13 @@ body h3 {
 }
 .container__menu__simple__card__transform__text__subText {
   display: flex;
-  margin: 0;
   justify-content: space-between;
 }
 .container__menu__simple__card__transform__text__subText--bold {
-  margin-right: 0;
+  margin: 0 0 0 10px;
   font-weight: 700;
 }
-.container__menu__simple__card__transform__text__subText p {
+.container__menu__simple__card__transform__text__subText p:first-child {
   margin-left: 0;
 }
 
@@ -504,7 +500,6 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px dashed blue;
 }
 .container__title button {
   margin: 0;
@@ -526,13 +521,9 @@ main {
     margin: 10px;
   }
 }
-.header {
-  border: 3px dashed darkgrey;
-}
 .header__nav {
   display: flex;
   align-items: center;
-  border: 3px dashed hotpink;
 }
 .header__nav__logo {
   margin: 15px auto;
@@ -597,7 +588,6 @@ main {
 .header__explore p {
   max-width: 300px;
   margin: 30px auto;
-  border: 2px dashed red;
 }
 .header__howItWorks {
   padding: 40px 15px;
@@ -657,10 +647,6 @@ main {
   justify-content: center;
 }
 
-.containerIndex {
-  flex-basis: 85%;
-}
-
 .containerMenuIndex {
   padding: 0 10px;
 }
@@ -694,7 +680,6 @@ main {
   .banner {
     flex-basis: 100%;
     margin-top: 30px;
-    border: 2px dashed blue;
   }
 
   .containerIndex {
@@ -711,7 +696,6 @@ main {
   justify-content: center;
   align-items: center;
   z-index: 10;
-  border: 5px dashed green;
   width: 100vw;
   height: 100%;
   animation: loader 3000ms ease-in-out both;

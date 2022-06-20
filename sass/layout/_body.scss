@@ -1,6 +1,6 @@
-main{
+main {
     display: flex;
-   }
+}
 
 .mainRepeat {
     flex-direction: column;
@@ -31,7 +31,6 @@ main{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 2px dashed blue;
 
         & button {
             margin: 0;
@@ -41,7 +40,7 @@ main{
 
 @media only screen and (min-width: 768px) {
     .container {
-                &__menu {
+        &__menu {
             padding: 10px;
 
             &__simple {
@@ -60,7 +59,7 @@ main{
 }
 
 @media only screen and (min-width:1024px) {
-     .container__menu__simple__card {
+    .container__menu__simple__card {
         margin: 10px;
     }
 }
