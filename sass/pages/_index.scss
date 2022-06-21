@@ -38,7 +38,7 @@
     }
 
     &__howItWorks {
-        padding: 60px 15px 80px;
+        padding: 60px 10px 80px;
         background-color: white;
 
         & h2 {
@@ -106,8 +106,13 @@
     justify-content: center;
 }
 
+.mainIndex {
+    min-width: 375px;
+}
+
 .containerMenuIndex {
     padding: 0;
+    margin: 0 auto;
 }
 
 .container__title {
@@ -150,7 +155,7 @@
         max-width: 1500px;
         max-height: 1146px;
         overflow: hidden;
-      padding:0 10px;
+        padding: 0 10px;
     }
 
     .banner {
@@ -158,11 +163,10 @@
         margin: 10px auto 20px;
     }
 
-
     .containerIndex {
         flex-basis: 49%;
-        margin: 10px auto 20px ;
+        margin: 10px auto 20px;
         padding: 10px 20px;
-        border-radius: 0 25px 25px 0!important;
+        border-radius: 0 25px 25px 0 !important;
     }
 }

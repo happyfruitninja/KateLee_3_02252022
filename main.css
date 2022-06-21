@@ -7,6 +7,7 @@
 body {
   background-color: #f3f3f3;
   margin: 0 auto;
+  min-width: 375px;
 }
 
 li {
@@ -37,7 +38,6 @@ body {
   font-family: roboto, san-serif;
   font-size: 16px;
   font-weight: 300;
-  min-width: 380px;
   width: 100%;
 }
 
@@ -198,15 +198,15 @@ body h3 {
 }
 
 .bannerGroup--1 {
-  animation-delay: 4s;
+  animation-delay: 5s;
 }
 
 .bannerGroup--2 {
-  animation-delay: 9s;
+  animation-delay: 10s;
 }
 
 .bannerGroup--3 {
-  animation-delay: 14s;
+  animation-delay: 15s;
 }
 
 @keyframes bannerSlide {
@@ -262,7 +262,7 @@ body h3 {
     margin: 0;
   }
   .banner__group figure figcaption {
-    color: white;
+    color: black;
     position: absolute;
     bottom: 10px;
     margin: 5px 15px;
@@ -270,6 +270,7 @@ body h3 {
   .banner__group figure img {
     border-radius: 25px 25px 0 0;
     width: 100%;
+    object-fit: cover;
   }
   .banner__group figure figcaption {
     position: absolute;
@@ -311,9 +312,6 @@ body h3 {
 
 .bannerGroup--2 {
   z-index: 2;
-}
-.bannerGroup--2 figure img {
-  object-fit: cover;
 }
 
 .bannerGroup--3 {
@@ -565,10 +563,11 @@ main {
 }
 
 .container {
-  padding: 40px 15px 60px;
+  padding: 40px 10px 60px;
   order: 2;
   width: 100%;
   max-width: 1500px;
+  margin-top: -20px;
 }
 .container__menu__simple {
   height: 100%;
@@ -597,6 +596,9 @@ main {
   }
 }
 @media only screen and (min-width: 1024px) {
+  .container {
+    margin-top: 50px;
+  }
   .container__menu__simple__card {
     margin: 10px;
   }
@@ -670,7 +672,7 @@ main {
   margin: 30px auto;
 }
 .header__howItWorks {
-  padding: 60px 15px 80px;
+  padding: 60px 10px 80px;
   background-color: white;
 }
 .header__howItWorks h2 {
@@ -727,8 +729,13 @@ main {
   justify-content: center;
 }
 
+.mainIndex {
+  min-width: 375px;
+}
+
 .containerMenuIndex {
   padding: 0;
+  margin: 0 auto;
 }
 
 .container__title .secondary__mask {

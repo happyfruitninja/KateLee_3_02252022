@@ -1,5 +1,4 @@
 main {
-   
     background-color: white;
 }
 
@@ -16,10 +15,11 @@ main {
 }
 
 .container {
-    padding: 40px 15px 60px;   
+    padding: 40px 10px 60px;
     order: 2;
     width: 100%;
     max-width: 1500px;
+    margin-top: -20px;
     @extend border-top-radius-25;
 
     &__menu {
@@ -42,6 +42,7 @@ main {
 @media only screen and (min-width: 768px) {
     .container {
         padding: 40px 20px 60px;
+
         &__menu {
             padding: 10px;
 
@@ -61,7 +62,11 @@ main {
 }
 
 @media only screen and (min-width:1024px) {
-    .container__menu__simple__card {
-        margin: 10px;
+    .container {
+        margin-top: 50px;
+
+        &__menu__simple__card {
+            margin: 10px;
+        }
     }
 }
