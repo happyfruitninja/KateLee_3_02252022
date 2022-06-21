@@ -5,8 +5,8 @@
             width: 100%;
         }
 
-        &:hover &__transform { 
-            transition: width 400ms ease-out;          
+        &:hover &__transform {
+            transition: width 400ms ease-out;
             width: 82%;
             margin-left: 0;
             border-top-right-radius: 0;
@@ -21,28 +21,29 @@
             overflow: hidden;
             white-space: nowrap;
         }
-   
 
-    &:hover .tertiary {
-        transform: translateX(-100%);
+        &:hover .tertiary {
+            transform: translateX(-100%);
+        }
+
+        .tertiary {
+            width: 18%;
+            height: 100%;
+            margin: 0;
+            position: absolute;
+            right: -18%;
+            transition: transform 400ms ease;
+        }
+
+        &:hover svg {
+            transform: rotate(-360deg);
+        }
+
+        svg {
+            transition: transform 800ms ease;
+        }
     }
-    .tertiary {
-        width: 18%;
-        height: 100%;
-        margin: 0;
-        position: absolute;
-        right: -18%;
-        transition: transform 400ms ease;
-    }      
-
-    &:hover svg {
-        transform: rotate(-360deg);
-    }
-
-    svg {
-        transition: transform 800ms ease;
-    }   
-}}
+}
 
 .loadingCard {
     &--1 {
