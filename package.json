@@ -4,12 +4,12 @@
   "description": "web dev project",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss ./main.css -w --style compressed"
+    "sass": "sass --watch ./sass/main.scss ./main.css -w --style compressed",
     "prefix": "postcss ./main.css --use autoprefixer -d ./main/prefixed/"
   },
   "author": "Kate Lee",
   "license": "ISC",
-  "browserlist": "last 4 versions"
+  "browserslist": "last 4 versions",
   "devDependencies": {
     "node-sass": "^7.0.1"
   },
