@@ -29,6 +29,7 @@
     height: 50px;
     align-items: center;
     background-color: transparent;
+    margin:0;
 
     &:hover &__mask {
         transform: scaleY(0);

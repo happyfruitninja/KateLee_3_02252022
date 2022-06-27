@@ -2,11 +2,6 @@
   &__menu {
     padding: 10px;
 
-    & :nth-last-child {
-      background-color: cyan;
-      margin-bottom: 0;
-    }
-
     &__full {
       @extend card-full;
       width: 100%;

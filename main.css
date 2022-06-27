@@ -354,6 +354,7 @@ body h3 {
   height: 50px;
   align-items: center;
   background-color: transparent;
+  margin: 0;
 }
 .secondary:hover .secondary__mask {
   transform: scaleY(0);
@@ -397,10 +398,6 @@ body h3 {
 
 .container__menu {
   padding: 10px;
-}
-.container__menu :nth-last-child {
-  background-color: cyan;
-  margin-bottom: 0;
 }
 .container__menu__full {
   width: 100%;
@@ -576,6 +573,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 20px;
 }
 .container__title button {
   margin: 0;
