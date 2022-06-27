@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss ./main.css -w --style compressed",
-    "prefix": "postcss ./main.css --use autoprefixer -d ./main/prefixer/"
+    "prefix": "postcss ./main.css --use autoprefixer -d ./styles/prefixer/"
   },
   "author": "Kate Lee",
   "license": "ISC",

@@ -21,6 +21,15 @@
 }
 
 //heart icon button
+
+.maskWhite {
+    background-color: white;
+}
+
+.maskGrey {
+    background-color: #ebe9e9;
+}
+
 .secondary {
     border: none;
     display: flex;
@@ -29,21 +38,7 @@
     height: 50px;
     align-items: center;
     background-color: transparent;
-    margin:0;
-
-    &:hover &__mask {
-        transform: scaleY(0);
-        transform-origin: top;
-        transition: transform 0.51s linear;
-    }
-
-    &:focus &__mask {
-        transform: scaleY(0);
-    }
-
-    & svg {
-        width: 25px;
-    }
+    margin: 0;
 
     &__line,
     &__solid,
@@ -62,11 +57,23 @@
     &__mask {
         width: 27px;
         height: 27px;
-        background-color: white;
         right: 10px;
     }
-}
 
+    &:hover &__mask {
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.51s linear;
+    }
+
+    &:focus &__mask {
+        transform: scaleY(0);
+    }
+
+    & svg {
+        width: 25px;
+    }
+}
 
 //menu-item like button
 .tertiary {
