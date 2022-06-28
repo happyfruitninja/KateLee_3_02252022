@@ -68,7 +68,9 @@
 
     &:focus &__mask {
         transform: scaleY(0);
+       
     }
+
 
     & svg {
         width: 25px;
