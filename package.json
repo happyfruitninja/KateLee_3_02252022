@@ -4,8 +4,8 @@
   "description": "web dev project",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss ./main.css -w --style compressed",
-    "prefix": "postcss ./main.css --use autoprefixer -d ./styles/prefixer/"
+    "sass": "sass --watch ./sass/main.scss ./styles/main.css -w --style compressed",
+    "prefix": "postcss ./styles/main.css --use autoprefixer -d ./styles/prefixer/"
   },
   "author": "Kate Lee",
   "license": "ISC",

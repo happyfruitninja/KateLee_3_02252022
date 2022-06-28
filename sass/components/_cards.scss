@@ -1,6 +1,6 @@
 .container {
   &__menu {
-    padding: 10px;
+    padding: 20px 10px;
 
     &__full {
       @extend card-full;
@@ -99,7 +99,7 @@
       }
     }
   }
-}
+  }
 
 .container__menu__full {
   position: relative;
