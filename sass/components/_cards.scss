@@ -5,7 +5,8 @@
     &__full {
       @extend card-full;
       width: 100%;
-
+      position: relative;
+  
       & figure {
         width: 100%;
         background-color: white;
@@ -46,7 +47,7 @@
     &__simple {
       width: 100%;
       margin: 15px 0;
-      height: 100px;
+      height: 100px;     
 
       &__card {
         margin: 15px 0;
@@ -73,10 +74,11 @@
 
         &__transform {
           background-color: white;
-          @extend card-simple;
+         border-radius: 15px 0 0 15px;
           margin: 0 !important;
           padding: 10px;
           z-index: 1;
+          width: 110%;
 
           &__text {
             margin: 0;

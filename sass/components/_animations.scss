@@ -2,16 +2,19 @@
 .container__menu__simple {
     &__card {
         &__transform {
-            width: 100%;
         }
 
         &:hover &__transform {
             transition: width 400ms ease-out;
             width: 82%;
             margin-left: 0;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
             position: relative;
+        }
+
+        &:not(hover) &__transform {
+            transition: width 400ms ease-out;
+            width: 100%;
+            transition-delay: 100ms;
         }
 
         &__text__subText,
@@ -20,10 +23,18 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
+
         }
 
         &:hover .tertiary {
+            transition: transform 400ms ease-out;
             transform: translateX(-100%);
+        }
+
+        &:not(hover) .tertiary {
+            transform: translateX(100%);
+            transition: transform 500ms ease-out;
+            transition-delay:100ms;
         }
 
         .tertiary {
@@ -36,7 +47,7 @@
         }
 
         &:hover svg {
-            transform: rotate(-360deg);
+            transform: rotate(-720deg);
         }
 
         svg {
