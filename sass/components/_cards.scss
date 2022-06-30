@@ -6,7 +6,7 @@
       @extend card-full;
       width: 100%;
       position: relative;
-  
+
       & figure {
         width: 100%;
         background-color: white;
@@ -47,7 +47,7 @@
     &__simple {
       width: 100%;
       margin: 15px 0;
-      height: 100px;     
+      height: 100px;
 
       &__card {
         margin: 15px 0;
@@ -74,7 +74,7 @@
 
         &__transform {
           background-color: white;
-         border-radius: 15px 0 0 15px;
+          border-radius: 15px 0 0 15px;
           margin: 0 !important;
           padding: 10px;
           z-index: 1;
@@ -85,14 +85,16 @@
 
             &__subText {
               display: flex;
-              justify-content: space-between;     
-              width: 100%;      
-        
+              justify-content: space-between;
+              width: 100%;
+
               & p:first-child {
                 margin-left: 0;
                 text-overflow: ellipsis;
                 overflow: hidden;
+                white-space: nowrap;
               }
+
               &--bold {
                 margin: 0 0 0 10px;
                 font-weight: 700;
@@ -103,7 +105,7 @@
       }
     }
   }
-  }
+}
 
 .container__menu__full {
   position: relative;
@@ -123,8 +125,14 @@
       &__transform {
         padding: 10px;
 
-        &__subText {
-          margin-bottom: 10px;
+        &__text {
+          &__subText {
+            margin-bottom: 10px;
+
+            & p:first-child {
+              white-space: normal;
+            }
+          }
         }
       }
     }

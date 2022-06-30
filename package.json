@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss ./styles/main.css -w --style compressed",
-    "prefix": "postcss ./styles/main.css --use autoprefixer -d ./styles/prefixer/"
+    "prefix": "postcss ./styles/main.css --use autoprefixer -d ./styles/prefixer"
   },
   "author": "Kate Lee",
   "license": "ISC",
@@ -164,7 +164,6 @@
     "path-key": "^3.1.1",
     "path-parse": "^1.0.7",
     "performance-now": "^2.1.0",
-    "postcss-cli-simple": "^4.0.0",
     "process-nextick-args": "^2.0.1",
     "promise-inflight": "^1.0.1",
     "promise-retry": "^2.0.1",
