@@ -1,8 +1,7 @@
 //cards//
 .container__menu__simple {
     &__card {
-        &__transform {
-        }
+        &__transform {}
 
         &:hover &__transform {
             transition: width 400ms ease-out;
@@ -20,10 +19,6 @@
         &__text__subText,
         &:hover p:first-child {
             width: 100%;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-
         }
 
         &:hover .tertiary {
@@ -34,7 +29,7 @@
         &:not(hover) .tertiary {
             transform: translateX(100%);
             transition: transform 500ms ease-out;
-            transition-delay:100ms;
+            transition-delay: 100ms;
         }
 
         .tertiary {

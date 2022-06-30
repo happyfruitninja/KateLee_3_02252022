@@ -8,11 +8,11 @@ $color-footer: #353535;
 //oblong button
 .primary {
   background-image: linear-gradient(170deg, $color-secondary, $color-primary);
-  filter: drop-shadow(3px 3px 3px darken($color-primary, 5%));
+  filter: box-shadow(3px 3px 3px darken($color-primary, 5%));
 
   &:hover {
     background: linear-gradient(170deg, lighten($color-secondary, 2%), lighten($color-primary, 2%));
-    filter: drop-shadow(3px 3px 3px darken($color-primary, 15%));
+    filter: box-shadow(3px 3px 3px darken($color-primary, 15%));
 
   }
 }
@@ -40,7 +40,7 @@ $color-footer: #353535;
 
 .header__howItWorks__steps {
   background-color: $color-lightGrey;
-  filter: drop-shadow(3px 3px 3px darken($color-lightGrey, 15%));
+  filter: box-shadow(3px 3px 3px darken($color-lightGrey, 15%));
 }
 
 .footer {
@@ -54,7 +54,7 @@ $color-footer: #353535;
     background-color: $color-lightGrey;
 
     &__simple__card {
-      filter: drop-shadow(5px 5px 5px darken($color-lightGrey, 15%));
+      filter: box-shadow(5px 5px 5px darken($color-lightGrey, 15%));
 
       &__static {
         background-color: $color-tertiary;
