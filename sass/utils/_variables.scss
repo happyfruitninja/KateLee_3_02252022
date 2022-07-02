@@ -39,7 +39,7 @@ $color-footer: #353535;
 
 .header__howItWorks__steps {
   background-color: $color-lightGrey;
-  filter: box-shadow(3px 3px 3px darken($color-lightGrey, 15%));
+  box-shadow: 3px 3px 3px darken($color-lightGrey, 15%);
 }
 
 .footer {
@@ -53,7 +53,7 @@ $color-footer: #353535;
     background-color: $color-lightGrey;
 
     &__simple__card {
-      filter: box-shadow(5px 5px 5px darken($color-lightGrey, 15%));
+      box-shadow: 5px 5px 5px darken($color-lightGrey, 15%);
 
       &__static {
         background-color: $color-tertiary;
